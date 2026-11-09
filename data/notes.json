@@ -25,7 +25,31 @@
         "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-18-issue-1-apr-to-jun-2022-evolution-chinese-food-singapore/"
       }
     ],
-    "family": "greens"
+    "family": "greens",
+    "everyday": [
+      {
+        "text": "Pandan chiffon cake is the green, cloud-light cake of every Singapore bakery. The earliest local newspaper mention is a 1972 review of Bali Café.",
+        "src": {
+          "title": "NLB Infopedia: Pandan",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2021-11-15_140111.html"
+        }
+      },
+      {
+        "text": "Pandan chicken is marinated chicken wrapped in the leaves and fried, so the smell cooks right into it.",
+        "src": {
+          "title": "NLB Infopedia: Pandan",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2021-11-15_140111.html"
+        }
+      },
+      {
+        "text": "Many Singaporeans tuck fresh pandan leaves into cars and cupboards to keep cockroaches away. Pest experts say fresh leaves only mildly repel them, and dried ones can turn into food.",
+        "src": {
+          "title": "Rentokil Singapore: is pandan a cockroach repellent?",
+          "url": "https://www.rentokil.com/sg/blog/my-pest-control-quick-tips/pest-myths/myth-busted-is-pandan-leaf-an-effective-cockroach-repellent"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "jasmine",
@@ -56,7 +80,39 @@
         "url": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/little-india-heritage-trail-shop-till-you-drop/jothi-store-flower-shop"
       }
     ],
-    "family": "white-flowers"
+    "family": "white-flowers",
+    "everyday": [
+      {
+        "text": "At Tamil Hindu weddings, the couple exchange garlands as a sign of union and mutual trust.",
+        "src": {
+          "title": "NHB Roots: Making of Flower Garlands",
+          "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+        }
+      },
+      {
+        "text": "Garlands come out for Pongal and Deepavali, for Thaipusam processions, and to bless a new home, car or shop.",
+        "src": {
+          "title": "NHB Roots: Making of Flower Garlands",
+          "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+        }
+      },
+      {
+        "text": "Across South India and its diaspora, women string jasmine into their hair for festivals and offer it to the gods.",
+        "src": {
+          "title": "Deccan Herald: The many lives of the jasmine",
+          "url": "https://www.deccanherald.com/features/the-many-lives-of-the-jasmine-1139494.html"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "Prayer flowers are never just thrown away: unsold puja garlands are returned to nature, at the foot of a tree or in compost.",
+        "src": {
+          "title": "NHB Roots: Making of Flower Garlands",
+          "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+        }
+      }
+    ]
   },
   {
     "id": "nutmeg",
@@ -86,7 +142,24 @@
         "url": "https://biblioasia.nlb.gov.sg/vol-17/issue-1/apr-jun-2021/agriculture/"
       }
     ],
-    "family": "spices"
+    "family": "spices",
+    "everyday": [
+      {
+        "text": "Nutmeg trees still grow in the Singapore Botanic Gardens, some of them listed on NParks' Heritage Tree Register.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Nutmeg",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3037"
+        }
+      },
+      {
+        "text": "In traditional remedies, nutmeg has been used for rheumatism and an upset stomach.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Nutmeg",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3037"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "clove",
@@ -112,7 +185,31 @@
         "url": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/special-features"
       }
     ],
-    "family": "spices"
+    "family": "spices",
+    "everyday": [
+      {
+        "text": "Biting on a clove is an old toothache remedy. Its oil, mostly eugenol, numbs pain, which is why clove still turns up in toothpaste.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Clove",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/1/3154"
+        }
+      },
+      {
+        "text": "Cloves were also used to freshen linens and clothes, and next door in Indonesia they scent kretek cigarettes.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Clove",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/1/3154"
+        }
+      },
+      {
+        "text": "NParks runs free guided tours of the Fort Canning Spice Garden, where you can smell clove and nutmeg on the tree.",
+        "src": {
+          "title": "NParks: Spice Garden tour",
+          "url": "https://www.nparks.gov.sg/visit/events/event-detail/FCP_SG1/1039_Heritage-Festival-Spice-Garden-Tour"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "pepper",
@@ -144,7 +241,24 @@
         "url": "https://biblioasia.nlb.gov.sg/vol-17/issue-1/apr-jun-2021/deforestation/"
       }
     ],
-    "family": "spices"
+    "family": "spices",
+    "everyday": [
+      {
+        "text": "Pepper is the soul of Teochew bak kut teh: a clear pork-rib soup seasoned only with garlic, soy sauce and pepper.",
+        "src": {
+          "title": "NLB Infopedia: Bak kut teh",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1800_2011-03-18.html"
+        }
+      },
+      {
+        "text": "Kai Juan Bak Kut Teh on the Balestier food trail has served the clear, peppery Teochew style for about 50 years.",
+        "src": {
+          "title": "NHB Roots: Kai Juan Bak Kut Teh",
+          "url": "https://www.roots.gov.sg/en/places/places-landing/Places/landmarks/balestier-food-trail/kai-juan-bak-kut-teh"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "orchid",
@@ -176,7 +290,31 @@
         "url": "https://biblioasia.nlb.gov.sg/vol-14/issue-1/apr-jun-2018/blooming-lies-vandaj/"
       }
     ],
-    "family": "flowers"
+    "family": "flowers",
+    "everyday": [
+      {
+        "text": "Orchid diplomacy: since 1956, Singapore has named orchid hybrids after visiting leaders and guests. The first was Aranthera Anne Black; there are now more than 280.",
+        "src": {
+          "title": "MFA: Orchid book launch (2024)",
+          "url": "https://mfa.gov.sg/Newsroom/Press-Statements-Transcripts-and-Photos/2024/07/240729_Orchid-Book-Launch-Transcript"
+        }
+      },
+      {
+        "text": "The VIP orchids grow in the VIP Orchid Garden at the National Orchid Garden, inside the Botanic Gardens.",
+        "src": {
+          "title": "BiblioAsia: Singapore's Orchid Diplomacy",
+          "url": "https://biblioasia.nlb.gov.sg/vol-18/issue-1/apr-to-jun-2022/singapore-orchid-diplomacy/"
+        }
+      },
+      {
+        "text": "Orchids are the garland flower for secular events, chosen for their colour and their almost neutral scent.",
+        "src": {
+          "title": "NHB Roots: Making of Flower Garlands",
+          "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "agarwood-sandalwood",
@@ -208,7 +346,32 @@
         "url": "https://roots.gov.sg/ich-landing/ich/making-of-joss-sticks"
       }
     ],
-    "family": "woods"
+    "family": "woods",
+    "everyday": [
+      {
+        "text": "Muslims in Singapore still burn agarwood chips as incense at religious gatherings, such as Ramadan prayers in the lead-up to Hari Raya Haji.",
+        "src": {
+          "title": "NHB Roots: Minyak Attar",
+          "url": "https://roots.gov.sg/ich-landing/ich/minyak-attar"
+        }
+      },
+      {
+        "text": "During the seventh lunar month, joss sticks, paper offerings and food appear along pavements and void decks to feed wandering spirits.",
+        "src": {
+          "title": "NHB Roots: Zhong Yuan Jie (Hungry Ghost Festival)",
+          "url": "https://www.roots.gov.sg/en/ich-landing/ich/zhong-yuan-jie-hungry-ghost-festival"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "The Hungry Ghost Festival rests on the belief that spirits without descendants to make offerings to them go hungry, so believers burn incense and paper for them.",
+        "src": {
+          "title": "NHB Roots: Zhong Yuan Jie (Hungry Ghost Festival)",
+          "url": "https://www.roots.gov.sg/en/ich-landing/ich/zhong-yuan-jie-hungry-ghost-festival"
+        }
+      }
+    ]
   },
   {
     "id": "native-flowers",
@@ -237,7 +400,17 @@
         "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
       }
     ],
-    "family": "flowers"
+    "family": "flowers",
+    "everyday": [
+      {
+        "text": "Another native, the simpoh air, has leaves so big that hawkers once wrapped tempeh and rojak in them, before plastic bags took over.",
+        "src": {
+          "title": "NParks: Simpoh Air",
+          "url": "https://biodiversitysg.nparks.gov.sg/our-biodiversity/flowering-plants/shrubs-herbaceous-plants/simpoh-air/"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "kopi-teh",
@@ -270,7 +443,31 @@
         "url": "https://guide.michelin.com/hk/en/article/features/singaporean-breakfast-kopitiam-kaya-toast-eggs"
       }
     ],
-    "family": "beverages"
+    "family": "beverages",
+    "everyday": [
+      {
+        "text": "Kopitiam code: kopi comes with condensed milk, O means no milk, C means evaporated milk, kosong means no sugar, siew dai less sugar, peng iced.",
+        "src": {
+          "title": "Honeycombers: how to order kopi",
+          "url": "https://thehoneycombers.com/singapore/order-kopi-singapore/"
+        }
+      },
+      {
+        "text": "Teh tarik, pulled tea, was first sold by Indian-Muslim drink stalls after World War II. It is poured back and forth between two cups until it froths, ideally further than arm's length.",
+        "src": {
+          "title": "NHB: Teh tarik photo story",
+          "url": "https://www.nhb.gov.sg/acm/-/media/acm/acm2017/documents/singapore-heritagefest-2021/teh-tarik-photo-story.pdf?la=en"
+        }
+      },
+      {
+        "text": "It's also called a mamak drink, from the Tamil word for uncle.",
+        "src": {
+          "title": "NLB Infopedia: Teh tarik",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-07-19_103055.html"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "calamansi",
@@ -301,7 +498,31 @@
         "url": "https://en.wikipedia.org/wiki/Calamansi"
       }
     ],
-    "family": "citrus"
+    "family": "citrus",
+    "everyday": [
+      {
+        "text": "Fried Hokkien prawn noodles always come with sambal and a calamansi lime on the side. You squeeze it yourself.",
+        "src": {
+          "title": "NLB Infopedia: Fried Hokkien prawn noodles",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1139_2011-04-01.html"
+        }
+      },
+      {
+        "text": "In December 2020, Singapore's hawker culture became its first entry on UNESCO's list of Intangible Cultural Heritage.",
+        "src": {
+          "title": "AFAR: UNESCO adds Singapore's hawker culture",
+          "url": "https://www.afar.com/magazine/unesco-adds-singapore-hawker-street-food-to-cultural-heritage-list"
+        }
+      },
+      {
+        "text": "Citrus plants like kumquat and four-season lime crowd doorways at Chinese New Year. Kumquat's Cantonese name, gam gat, sounds like 'gold and luck'.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Kumquat",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/7/4/7427"
+        }
+      }
+    ],
+    "lore": []
   },
   {
     "id": "frangipani",
@@ -321,8 +542,7 @@
       "Hindu"
     ],
     "story": [
-      "NParks lists the white frangipani as the 'Singapore graveyard flower'. Its Malay names include kemboja and bunga kubur, 'grave flower'. Indian and Malay Muslims and Buddhists often plant it in cemeteries. Some Malay Muslims see its fallen morning flowers as an offering to the dead, and Hindus sometimes plant it near temples.",
-      "The name itself comes from perfume. A Marquis Frangipani created a scent that was later found to smell like the flower."
+      "NParks lists the white frangipani as the 'Singapore graveyard flower'. Its Malay names include kemboja and bunga kubur, 'grave flower'. Indian and Malay Muslims and Buddhists often plant it in cemeteries. Some Malay Muslims see its fallen morning flowers as an offering to the dead, and Hindus sometimes plant it near temples."
     ],
     "sources": [
       {
@@ -330,7 +550,24 @@
         "url": "https://nparks.gov.sg/florafaunaweb/flora/3/0/3072"
       }
     ],
-    "family": "white-flowers"
+    "family": "white-flowers",
+    "everyday": [],
+    "lore": [
+      {
+        "text": "In Malay folklore, the pontianak, the ghost of a woman who died in childbirth, gives off a strong smell of frangipani when she is near.",
+        "src": {
+          "title": "Wikipedia: Ghosts in Malay culture",
+          "url": "https://en.wikipedia.org/wiki/Malay_ghost_myths"
+        }
+      },
+      {
+        "text": "The flower was named after a perfume: a 17th-century almond glove scent made by the Marquis Muzio Frangipani. Its smell reminded botanists of his perfume.",
+        "src": {
+          "title": "JSTOR Daily: Plant of the month, frangipani",
+          "url": "https://daily.jstor.org/plant-of-the-month-frangipani"
+        }
+      }
+    ]
   },
   {
     "id": "torch-ginger",
@@ -362,6 +599,8 @@
         "url": "https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/diy-walk/diy-walk-pdf-files/ancient-history-trail-at-fcp.ashx"
       }
     ],
-    "family": "spices"
+    "family": "spices",
+    "everyday": [],
+    "lore": []
   }
 ]

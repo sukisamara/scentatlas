@@ -73,3 +73,9 @@ Bright Retro and AC Real Adult are Canva fonts, and there may not be web version
 - **Nanum Pen Script**, in capitals, for AC Real Adult (handwritten accents)
 
 To use different fonts, change the `--font-display` and `--font-hand` lines at the top of `style.css`. For the logo, you can do what you did for Cami: export the wordmark from Canva as a transparent PNG and put it in the header.
+
+## Data formats added in November 2026
+
+- **Trail stops** (`data/trail.json`): each stop has `address`, `lat`, `lon` and `highlight` (true for must-go stops, with a one-line `why`). The map uses Leaflet (in `lib/`) with CARTO street tiles; Google Maps links are built from the name and address.
+- **Brands** (`data/brands.json`): `links` holds `website`, `instagram`, `tiktok` and `facebook` (leave out any you can't confirm), and `sources` lists where the facts come from.
+- **Notes** (`data/notes.json`): besides `story` (history and heritage), each note can have `everyday` and `lore` lists. Every item is `{ "text": ..., "src": { "title": ..., "url": ... } }`, so each fact carries its own source.

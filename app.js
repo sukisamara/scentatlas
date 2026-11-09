@@ -255,6 +255,14 @@ function pageNotes(id) {
   </section>`).join("")}`;
 }
 
+// A list of facts, each with its own source link
+function factList(title, mark, facts) {
+  if (!facts || !facts.length) return "";
+  return `<h3 class="note-h">${title}</h3>
+    <ul class="facts-list">${facts.map(f => `<li><span class="fact-mark" aria-hidden="true">${mark}</span><span>${esc(f.text)}
+      <a class="fact-src" href="${esc(f.src.url)}" target="_blank" rel="noopener" title="${esc(f.src.title)}">${esc(f.src.title)} ↗</a></span></li>`).join("")}</ul>`;
+}
+
 function noteTile(n) {
   const count = n.perfumes.length;
   return `<a class="note-tile${n.story ? " has-story" : ""}" href="#/notes/${n.key}">
@@ -291,9 +299,12 @@ function pageNote(key) {
       <div>
         ${st ? `
           <p class="hand" style="color:var(--maroon);margin-top:0">${esc(st.tagline)}</p>
+          <div class="chips" style="margin:0 0 14px">${st.communities.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
+          <h3 class="note-h">History &amp; heritage</h3>
           ${st.story.map(s => `<p>${esc(s)}</p>`).join("")}
-          <div class="chips" style="margin:12px 0">${st.communities.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
-          ${sourcesList(st.sources)}`
+          ${sourcesList(st.sources)}
+          ${factList("In everyday life", "✦", st.everyday)}
+          ${factList("Folklore &amp; ritual", "☾", st.lore)}`
         : `<p>${esc(fam.blurb)}</p>
            <p class="muted">This note shows up in local perfumes but doesn't have a Singapore story yet.</p>`}
       </div>
