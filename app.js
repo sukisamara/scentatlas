@@ -1,7 +1,7 @@
 /* Scent Atlas · Singapore Edition
    ---------------------------------------------------------------
    How it works:
-   1. Load the five JSON files in /data.
+   1. Load the JSON files in /data.
    2. Read the part of the URL after "#" (e.g. #/perfume/nanyang).
    3. Draw the matching page into <main id="app">.
 
@@ -46,11 +46,51 @@ function perfumesWith(noteId) {
 function brandById(id) { return DATA.brands.find(b => b.id === id); }
 function noteById(id) { return DATA.notes.find(n => n.id === id); }
 
-// One note chip: linked + coloured if it has a story, plain if not
-function noteChip(noteName) {
+function familyById(id) { return DATA.families.find(f => f.id === id); }
+function slug(text) { return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+function titleCase(text) { return text.replace(/(^|[\s-])\w/g, c => c.toUpperCase()); }
+
+// Every note on the site gets a key: the story id if it has one, otherwise a slug of its name
+function noteKey(noteName) {
   const story = findStoryNote(noteName);
-  if (!story) return `<span class="chip">${esc(noteName)}</span>`;
-  return `<a class="chip story c-${story.color}" href="#/notes/${story.id}">${noteIcon(story.id, 18)}${esc(noteName)}</a>`;
+  return story ? story.id : slug(noteName);
+}
+
+// The full notes index: every note, its family, its story (if any) and the perfumes that use it.
+// Families come from data/families.json (inspired by Fragrantica's note groups).
+function noteIndex() {
+  if (DATA._index) return DATA._index;
+  const index = new Map();
+  DATA.notes.forEach(n => index.set(n.id, { key: n.id, name: n.name, family: n.family, story: n, perfumes: [] }));
+  DATA.families.forEach(f => f.notes.forEach(name =>
+    index.set(slug(name), { key: slug(name), name: titleCase(name), family: f.id, story: null, perfumes: [] })));
+  DATA.perfumes.forEach(p => new Set(allNotesOf(p).map(noteKey)).forEach(k => {
+    if (index.has(k)) index.get(k).perfumes.push(p);
+    else console.warn("Note without a family:", k);
+  }));
+  return (DATA._index = index);
+}
+
+// One note chip. Story notes are filled and starred; every note links to its own page
+// and carries a dot in its family colour.
+function noteChip(noteName) {
+  const n = noteIndex().get(noteKey(noteName));
+  return n ? noteChipFor(n, noteName) : `<span class="chip">${esc(noteName)}</span>`;
+}
+function noteChipFor(n, label = n.name) {
+  const fam = familyById(n.family);
+  if (n.story) return `<a class="chip story c-${n.story.color}" href="#/notes/${n.key}" title="${esc(fam.name)}">${noteIcon(n.story.id, 18)}${esc(label)}</a>`;
+  return `<a class="chip plain" href="#/notes/${n.key}" title="${esc(fam.name)}"><span class="fam-dot bg-${fam.color}"></span>${esc(label)}</a>`;
+}
+
+// The families a perfume belongs to, most notes first
+function familiesOf(perfume) {
+  const counts = new Map();
+  allNotesOf(perfume).forEach(name => {
+    const n = noteIndex().get(noteKey(name));
+    if (n) counts.set(n.family, (counts.get(n.family) || 0) + 1);
+  });
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => familyById(id));
 }
 
 function storyChip(note) {
@@ -83,7 +123,7 @@ function pageHome() {
   <section class="section">
     <h2>Start here</h2>
     <div class="grid">
-      ${homeCard("Notes", `${DATA.notes.length} notes with a Singapore story, from pandan to agarwood.`, "#/notes", "olive")}
+      ${homeCard("Notes", `${noteIndex().size} notes in ${DATA.families.filter(f => [...noteIndex().values()].some(n => n.family === f.id)).length} families, ${DATA.notes.length} with a Singapore story.`, "#/notes", "olive")}
       ${homeCard("Perfumes", "Local perfumes, with every note linked to its history.", "#/perfumes", "coral")}
       ${homeCard("Scent trail", "One walkable day: garlands, attar, spices, incense.", "#/trail", "pink")}
       ${homeCard("Brands", `${DATA.brands.length} homegrown perfume houses, old and new.`, "#/brands", "maroon")}
@@ -91,14 +131,6 @@ function pageHome() {
     </div>
   </section>
 
-  <section class="section">
-    <h2>Experience it in person</h2>
-    <div class="grid">
-      ${homeCard("Scent walks", "Small-group guided walks through the places behind the notes.", "#/walks", "coral")}
-      ${homeCard("Singapore in Six Scents", "A discovery set of local perfumes, each with its story.", "#/discovery-set", "pink")}
-      ${homeCard("For businesses", "Scent storytelling, team trails and insight for brands and hotels.", "#/for-business", "olive")}
-    </div>
-  </section>
 
   <section class="section">
     <h2>Perfumes to start with</h2>
@@ -120,17 +152,25 @@ function perfumeCard(p) {
     <div class="card-art tint-${tint}">${perfumeVisual(p, 100)}</div>
     <span class="kicker">${esc(brand ? brand.name : "")}</span>
     <h3>${esc(p.name)}</h3>
+    <p class="fam-line">${familiesOf(p).slice(0, 3).map(f => `<span><span class="fam-dot bg-${f.color}"></span>${esc(f.name)}</span>`).join("")}</p>
     <p>${esc(p.about)}</p>
     <div class="chips">${stories.map(n =>
       `<span class="chip story c-${n.color}" style="pointer-events:none">${noteIcon(n.id, 16)}${esc(n.name)}</span>`).join("")}</div>
   </a>`;
 }
 
+let perfumeFamily = "all";
 function pagePerfumes() {
+  const used = DATA.families.filter(f => DATA.perfumes.some(p => familiesOf(p).includes(f)));
+  const list = DATA.perfumes.filter(p => perfumeFamily === "all" || familiesOf(p).some(f => f.id === perfumeFamily));
   return `
   <h1>Perfumes</h1>
-  <p class="lead">Each perfume links its notes to Singapore's history. Filled notes have a story; outlined ones are part of the scent but don't have a Singapore link.</p>
-  <div class="grid section" style="margin-top:28px">${DATA.perfumes.map(perfumeCard).join("")}</div>`;
+  <p class="lead">Each perfume links its notes to Singapore's history. Filled, starred notes have a Singapore story; the others link to their note family.</p>
+  <div class="filter">
+    <button data-family="all" aria-pressed="${perfumeFamily === "all"}">All (${DATA.perfumes.length})</button>
+    ${used.map(f => `<button data-family="${f.id}" aria-pressed="${perfumeFamily === f.id}">${esc(f.name)}</button>`).join("")}
+  </div>
+  <div class="grid section" style="margin-top:28px">${list.map(perfumeCard).join("")}</div>`;
 }
 
 function pagePerfume(id) {
@@ -161,6 +201,7 @@ function pagePerfume(id) {
       </div>
     </div>
     <div>
+      <p class="fam-line big">${familiesOf(p).map(f => `<a href="#/notes/family-${f.id}">${familyIcon(f.id, 22)}${esc(f.name)}</a>`).join("")}</p>
       ${notesHtml}
       ${p.notesComplete ? "" : `<p class="notice">We've only found part of this perfume's notes so far. Full list coming soon.</p>`}
     </div>
@@ -180,53 +221,99 @@ function pagePerfume(id) {
   <section class="section">${sourcesList(p.sources)}</section>`;
 }
 
-function pageNotes(focusId) {
-  const trailStopsFor = id => DATA.trail.stops.filter(s => s.notes.includes(id));
-  const placesFor = id => DATA.experiences.filter(e => e.notes.includes(id));
+let storiesOnly = false;
+function pageNotes(id) {
+  if (id && !id.startsWith("family-")) return pageNote(id);
+  const index = noteIndex();
+  if (id) setTimeout(() => document.getElementById(id)?.scrollIntoView(), 0);   // #/notes/family-spices
 
-  setTimeout(() => {   // jump to a note if the URL asked for one
-    if (focusId) document.getElementById("note-" + focusId)?.scrollIntoView();
-  }, 0);
+  const familyNotes = f => [...index.values()]
+    .filter(n => n.family === f.id && (!storiesOnly || n.story))
+    .sort((a, b) => (!!b.story - !!a.story) || b.perfumes.length - a.perfumes.length || a.name.localeCompare(b.name));
+  const families = DATA.families.filter(f => familyNotes(f).length);
+  const storyCount = DATA.notes.length;
 
   return `
   <h1>The notes</h1>
-  <p class="lead">${DATA.notes.length} scents with a documented place in Singapore's history, from the spice trade to the national flower.</p>
-  <div class="note-index">${DATA.notes.map(storyChip).join("")}</div>
+  <p class="lead">Every note found in Singapore's local perfumes, grouped into families the way perfumers group them. ${storyCount} of them have a Singapore story, marked with a star.</p>
 
-  ${DATA.notes.map(n => {
-    const perfumes = perfumesWith(n.id);
-    const stops = trailStopsFor(n.id);
-    const places = placesFor(n.id);
-    return `
-    <article class="note-block" id="note-${n.id}">
-      <div class="note-banner c-${n.color}">
-        <div>
-          <h2>${esc(n.name)}</h2>
-          <div class="local">${esc(n.local)}</div>
-        </div>
-        <div class="icon-medallion">${noteIcon(n.id, 64)}</div>
+  <div class="family-bar">
+    ${families.map(f => `<a class="family-pill" href="#/notes/family-${f.id}">${familyIcon(f.id, 26)}<span>${esc(f.name)}</span><small>${familyNotes(f).length}</small></a>`).join("")}
+  </div>
+  <div class="filter" style="margin-top:14px">
+    <button data-stories="0" aria-pressed="${!storiesOnly}">All notes (${index.size})</button>
+    <button data-stories="1" aria-pressed="${storiesOnly}">★ Singapore stories only (${storyCount})</button>
+  </div>
+
+  ${families.map(f => `
+  <section class="family-block" id="family-${f.id}">
+    <header class="family-head">
+      <div class="icon-medallion fam-medallion bg-${f.color}">${familyIcon(f.id, 54)}</div>
+      <div><h2>${esc(f.name)}</h2><p class="muted">${esc(f.blurb)}</p></div>
+    </header>
+    <div class="note-tiles">${familyNotes(f).map(noteTile).join("")}</div>
+  </section>`).join("")}`;
+}
+
+function noteTile(n) {
+  const count = n.perfumes.length;
+  return `<a class="note-tile${n.story ? " has-story" : ""}" href="#/notes/${n.key}">
+    <div class="tile-icon">${n.story ? noteIcon(n.story.id, 46) : familyIcon(n.family, 40)}</div>
+    <strong>${n.story ? "★ " : ""}${esc(n.name)}</strong>
+    ${n.story ? `<span class="tile-tag">${esc(n.story.tagline)}</span>` : ""}
+    <small>${count ? `${count} perfume${count > 1 ? "s" : ""}` : "On the trail"}</small>
+  </a>`;
+}
+
+// One note's own page: its family, its Singapore story (if any), and the perfumes that use it
+function pageNote(key) {
+  const n = noteIndex().get(key);
+  if (!n) return pageNotFound();
+  const fam = familyById(n.family);
+  const st = n.story;
+  const stops = st ? DATA.trail.stops.filter(s => s.notes.includes(st.id)) : [];
+  const places = st ? DATA.experiences.filter(e => e.notes.includes(st.id)) : [];
+  const siblings = [...noteIndex().values()].filter(x => x.family === n.family && x.key !== n.key);
+  const color = st ? st.color : fam.color;
+
+  return `
+  <a class="back" href="#/notes">← All notes</a>
+  <article class="note-block">
+    <div class="note-banner c-${color}">
+      <div>
+        <a class="family-kicker" href="#/notes/family-${fam.id}">${esc(fam.name)}</a>
+        <h1 class="note-title">${esc(n.name)}</h1>
+        ${st ? `<div class="local">${esc(st.local)}</div>` : ""}
       </div>
-      <div class="note-body">
-        <div>
-          <p class="hand" style="color:var(--maroon);margin-top:0">${esc(n.tagline)}</p>
-          ${n.story.map(s => `<p>${esc(s)}</p>`).join("")}
-          <div class="chips" style="margin:12px 0">${n.communities.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
-          ${sourcesList(n.sources)}
-        </div>
-        <div>
-          <h3>Perfumes with this note</h3>
-          ${perfumes.length
-            ? `<div class="mini-bottles">${perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>`
-            : `<p class="muted">None listed yet.</p>`}
-          <h3 style="margin-top:22px">Smell it in Singapore</h3>
+      <div class="icon-medallion">${st ? noteIcon(st.id, 64) : familyIcon(fam.id, 64)}</div>
+    </div>
+    <div class="note-body">
+      <div>
+        ${st ? `
+          <p class="hand" style="color:var(--maroon);margin-top:0">${esc(st.tagline)}</p>
+          ${st.story.map(s => `<p>${esc(s)}</p>`).join("")}
+          <div class="chips" style="margin:12px 0">${st.communities.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
+          ${sourcesList(st.sources)}`
+        : `<p>${esc(fam.blurb)}</p>
+           <p class="muted">This note shows up in local perfumes but doesn't have a Singapore story yet.</p>`}
+      </div>
+      <div>
+        <h3>Perfumes with this note</h3>
+        ${n.perfumes.length
+          ? `<div class="mini-bottles">${n.perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>`
+          : `<p class="muted">None listed yet.</p>`}
+        ${st ? `<h3 style="margin-top:22px">Smell it in Singapore</h3>
           ${places.length || stops.length
             ? `<ul>${places.map(e => `<li>${esc(e.name)} <span class="muted">(${esc(e.area)})</span></li>`).join("")}
                  ${stops.length ? `<li><a href="#/trail">On the scent trail</a></li>` : ""}</ul>`
-            : `<p class="muted">Coming soon.</p>`}
-        </div>
+            : `<p class="muted">Coming soon.</p>`}` : ""}
       </div>
-    </article>`;
-  }).join("")}`;
+    </div>
+  </article>
+  ${siblings.length ? `<section class="section">
+    <h2>More ${esc(fam.name.toLowerCase())}</h2>
+    <div class="chips">${siblings.map(x => noteChipFor(x)).join("")}</div>
+  </section>` : ""}`;
 }
 
 function pageTrail() {
@@ -299,122 +386,6 @@ function pageExperiences() {
   <p class="lead">Make your own perfume, or go and smell the history for yourself. Book directly or through the third-party links.</p>
   ${block("Workshop", "Make your own", "Perfume-making workshops around the island.")}
   ${block("Place", "Smell the history", "Gardens, streets and temples where the notes come from. Most are free.")}`;
-}
-
-
-/* ---------- Offer pages (walks, discovery set, business) ---------- */
-
-// The "register interest" button. Shows "Opening soon" until a form link is added in offers.json
-function interestButton(url, label) {
-  return url
-    ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`
-    : `<span class="btn btn-disabled" aria-disabled="true">${esc(label)} · opening soon</span>`;
-}
-
-function offerHero(o, color) {
-  return `<section class="offer-hero bg-${color}">
-    <p class="hand">${esc(o.tagline)}</p>
-    <h1>${esc(o.title)}</h1>
-    <p class="lead">${esc(o.intro)}</p>
-  </section>`;
-}
-
-function pageWalks() {
-  const w = DATA.offers.walks;
-  return `
-  ${offerHero(w, "coral")}
-  <div class="facts">
-    <div><span class="kicker">When</span><p>${esc(w.dates)}</p></div>
-    <div><span class="kicker">Group</span><p>${esc(w.groupSize)}</p></div>
-    <div><span class="kicker">Price</span><p>${esc(w.price)}</p></div>
-  </div>
-
-  <section class="section">
-    <h2>Choose your walk</h2>
-    <div class="grid">${w.options.map(opt => `
-      <div class="card">
-        <span class="kicker">${esc(opt.duration)}</span>
-        <h3>${esc(opt.name)}</h3>
-        <ol class="stop-list">${opt.stops.map(s => `<li>${esc(s)}</li>`).join("")}</ol>
-        <div class="chips">${opt.notes.map(id => storyChip(noteById(id))).join("")}</div>
-      </div>`).join("")}
-    </div>
-  </section>
-
-  <section class="section two-col">
-    <div><h3>Included</h3><ul>${w.included.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>
-    <div><h3>Not included</h3><ul>${w.notIncluded.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>
-  </section>
-
-  <section class="section cta-band">
-    <h2>Want to join a walk?</h2>
-    <p>Dates are limited. Register your interest and you'll be the first to hear when bookings open.</p>
-    ${interestButton(w.interestUrl, "Register interest")}
-    <p class="muted" style="margin-top:14px">Prefer to go on your own? <a href="#/trail">Use the free self-guided trail</a>.</p>
-  </section>`;
-}
-
-function pageSet() {
-  const st = DATA.offers.set;
-  const items = st.lineup.map(l => {
-    const p = DATA.perfumes.find(x => x.id === l.perfume);
-    const n = noteById(l.note);
-    const b = p ? brandById(p.brand) : null;
-    return { p, n, b };
-  }).filter(x => x.p && x.n);
-
-  return `
-  ${offerHero(st, "pink")}
-  <p class="notice">${esc(st.status)}</p>
-
-  <section class="section">
-    <h2>The six</h2>
-    <div class="grid">${items.map(({ p, n, b }, i) => `
-      <a class="card story-card" href="#/perfume/${p.id}" style="border-left-color:var(--${n.color === "cream" ? "olive" : n.color})">
-        <div class="set-art">${perfumeVisual(p, 70)}${noteIcon(n.id, 40)}</div>
-        <span class="kicker">No. ${i + 1} · ${esc(n.name)}</span>
-        <h3>${esc(p.name)}</h3>
-        <p class="muted">${esc(b ? b.name : "")}</p>
-        <p class="tagline">${esc(n.tagline)}</p>
-      </a>`).join("")}
-    </div>
-  </section>
-
-  <section class="section two-col">
-    <div><h3>In the box</h3><ul>${st.inTheBox.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>
-    <div><h3>Price</h3><p>${esc(st.price)}</p></div>
-  </section>
-
-  <section class="section cta-band">
-    <h2>Join the waitlist</h2>
-    <p>Tell us you're interested and you'll hear first when the set is ready.</p>
-    ${interestButton(st.interestUrl, "Join the waitlist")}
-  </section>`;
-}
-
-function pageBusiness() {
-  const bz = DATA.offers.business;
-  return `
-  ${offerHero(bz, "olive")}
-
-  <section class="section">
-    <h2>What I offer</h2>
-    <div class="grid">${bz.services.map(sv => `
-      <div class="card"><h3>${esc(sv.name)}</h3><p>${esc(sv.what)}</p></div>`).join("")}
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>The market already exists</h2>
-    <p class="lead">Singapore organisations already invest in scent. These are public examples, not my clients:</p>
-    <ul class="proof">${bz.proof.map(pr => `<li>${esc(pr.text)} <a href="${esc(pr.url)}" target="_blank" rel="noopener">Source ↗</a></li>`).join("")}</ul>
-  </section>
-
-  <section class="section cta-band">
-    <h2>Let's talk</h2>
-    <p>${esc(bz.about)}</p>
-    ${interestButton(bz.interestUrl, "Send an enquiry")}
-  </section>`;
 }
 
 
@@ -675,7 +646,7 @@ function setUpWorldMap() {
         <span class="kicker">${esc(ed.edition)} · Live</span>
         <h3>${esc(city.n)}</h3>
         <p class="hand popup-tag">${esc(ed.tagline)}</p>
-        <p class="popup-stats"><strong>${DATA.notes.length}</strong> notes · <strong>${DATA.perfumes.length}</strong> perfumes · <strong>${DATA.brands.length}</strong> brands · <strong>1</strong> scent trail</p>
+        <p class="popup-stats"><strong>${noteIndex().size}</strong> notes · <strong>${DATA.perfumes.length}</strong> perfumes · <strong>${DATA.brands.length}</strong> brands · <strong>1</strong> scent trail</p>
         <a class="btn" href="${esc(ed.link)}">Enter ${esc(ed.name)} →</a>`;
     } else if (ed && ed.status === "origin") {
       html = `
@@ -746,9 +717,6 @@ function render() {
     "trail": pageTrail,
     "brands": pageBrands,
     "experiences": pageExperiences,
-    "walks": pageWalks,
-    "discovery-set": pageSet,
-    "for-business": pageBusiness,
   };
   app.innerHTML = (routes[page] || pageNotFound)();
 
@@ -765,17 +733,22 @@ function render() {
     a.classList.toggle("active", target === page || (page === "perfume" && target === "perfumes"));
   });
 
-  if (!(page === "notes" && id)) window.scrollTo(0, 0);
+  if (!(page === "notes" && id && id.startsWith("family-"))) window.scrollTo(0, 0);
 
   // Brand filter buttons
-  app.querySelectorAll(".filter button").forEach(btn =>
-    btn.addEventListener("click", () => { brandFilter = btn.dataset.tier; render(); }));
+  // Filter buttons (brands by tier, perfumes by family, notes by story)
+  app.querySelectorAll(".filter button").forEach(btn => btn.addEventListener("click", () => {
+    if (btn.dataset.tier) brandFilter = btn.dataset.tier;
+    if (btn.dataset.family) perfumeFamily = btn.dataset.family;
+    if (btn.dataset.stories) storiesOnly = btn.dataset.stories === "1";
+    render();
+  }));
 }
 
 /* ---------- Start ---------- */
 
 async function loadData() {
-  const files = ["notes", "perfumes", "brands", "experiences", "trail", "offers", "editions", "cities", "world"];
+  const files = ["notes", "perfumes", "brands", "experiences", "trail", "families", "editions", "cities", "world"];
   const results = await Promise.all(files.map(f => fetch(`data/${f}.json`).then(r => r.json())));
   files.forEach((f, i) => DATA[f] = results[i]);
 }

@@ -168,3 +168,40 @@ function noteIcon(noteId, size = 48) {
   if (!art) return "";
   return `<svg class="note-icon" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">${art}</svg>`;
 }
+
+/* ---------- Note family icons ----------
+   One small drawing per family (families are in data/families.json).
+   Families that already have a Singapore note reuse that note's drawing. */
+const FAMILY_ICONS = {
+  citrus: NOTE_ICONS.calamansi,
+  flowers: NOTE_ICONS.orchid,
+  "white-flowers": NOTE_ICONS.jasmine,
+  greens: NOTE_ICONS.pandan,
+  spices: NOTE_ICONS.clove,
+  woods: NOTE_ICONS["agarwood-sandalwood"],
+  beverages: NOTE_ICONS["kopi-teh"],
+  fruits: `
+    <path ${S} fill="${PALETTE.olive}" d="M32 14 Q36 6 44 6 Q42 14 34 16 Z"/>
+    <circle ${S} fill="${PALETTE.pink}" cx="32" cy="38" r="20"/>
+    ${[[24, 30], [36, 28], [28, 42], [40, 40], [32, 50], [20, 42]].map(([x, y]) => `<circle fill="${PALETTE.maroon}" cx="${x}" cy="${y}" r="2"/>`).join("")}`,
+  gourmand: `
+    <path ${S} fill="#3a2418" d="M14 52 Q30 34 50 10 Q54 12 52 16 Q34 38 18 56 Q14 56 14 52 Z"/>
+    <path ${S} fill="#fffdf0" d="M40 40 Q48 34 56 40 Q52 52 44 54 Q36 52 40 40 Z"/>
+    <circle fill="${PALETTE.coral}" cx="47" cy="46" r="3"/>`,
+  resins: `
+    <path ${S} fill="${PALETTE.coral}" d="M32 8 Q48 30 48 40 A16 16 0 0 1 16 40 Q16 30 32 8 Z"/>
+    <path fill="#fffdf0" opacity=".7" d="M24 38 Q24 30 30 24 Q28 34 28 40 Z"/>`,
+  musk: `
+    <path ${S} fill="#fffdf0" d="M14 40 Q10 28 22 26 Q24 14 36 18 Q48 12 52 26 Q60 32 52 42 Q46 52 32 48 Q20 54 14 40 Z"/>
+    <circle fill="${PALETTE.pink}" cx="26" cy="36" r="5"/><circle fill="${PALETTE.coral}" cx="38" cy="32" r="4"/><circle fill="${PALETTE.olive}" cx="42" cy="42" r="3"/>`,
+  natural: `
+    <path ${S} fill="none" d="M6 26 Q14 18 22 26 T38 26 T54 26 T62 26"/>
+    <path ${S} fill="none" d="M6 38 Q14 30 22 38 T38 38 T54 38 T62 38"/>
+    <path ${S} fill="none" d="M6 50 Q14 42 22 50 T38 50 T54 50 T62 50"/>`,
+};
+
+function familyIcon(familyId, size = 48) {
+  const art = FAMILY_ICONS[familyId];
+  if (!art) return "";
+  return `<svg class="note-icon family-icon" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">${art}</svg>`;
+}

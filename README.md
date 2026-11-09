@@ -28,7 +28,7 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 | `data/brands.json` | All brands. `"check": true` shows a "To verify" badge |
 | `data/experiences.json` | Workshops (`"kind": "Workshop"`) and places (`"kind": "Place"`) |
 | `data/trail.json` | The one-day scent trail |
-| `data/offers.json` | The Walks, Discovery set and For business pages: prices, dates and form links |
+| `data/families.json` | The note families (Citrus, White flowers, Spices…), inspired by Fragrantica's note groups. Every perfume note must be listed in one family, or be an alias of a story note in `notes.json` |
 | `app.js` | Reads the JSON and draws each page. Links notes to stories automatically |
 | `graphics.js` | The illustrated bottles and note icons |
 | `style.css` | Palette and fonts at the top, under `:root` |
@@ -49,16 +49,12 @@ Credits: map data from Natural Earth; city data from GeoNames (CC BY 4.0), which
 
 Copy one entry in `perfumes.json`, change the fields, and save. Any note that matches an alias in `notes.json` (e.g. "Jasmine", "Oud", "Nutmeg") becomes a link to its story automatically. Set `"notesComplete": false` if you only have part of the notes list.
 
-## Turn on the sign-up buttons
+## Adding a note
 
-The Walks, Discovery set and For business pages each have a button that shows "opening soon" until you add a form link.
+- **A note with a Singapore story:** add it to `data/notes.json` with a `"family"` (an id from `families.json`).
+- **Any other note:** add its name, in lowercase, to the `"notes"` list of the right family in `data/families.json`.
 
-1. Make a free Google Form for each page. Suggested questions: name, email, and for walks, preferred date and group size; for business, company and what they need.
-2. In each form, click **Send → link icon** and copy the link.
-3. Paste it into `data/offers.json` as the `interestUrl` for that page. Keep the quote marks.
-4. Upload the updated `offers.json` to GitHub. The button goes live in about a minute.
-
-Also replace "Price to be confirmed" and the dates in `offers.json` once you've decided them.
+Every note then gets its own page at `#/notes/<name>`, shows up in its family on the Notes page, and becomes a link on every perfume that uses it.
 
 ## Graphics and real bottle photos
 
