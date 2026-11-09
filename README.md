@@ -26,6 +26,7 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 | `data/trail.json` | The one-day scent trail |
 | `data/offers.json` | The Walks, Discovery set and For business pages: prices, dates and form links |
 | `app.js` | Reads the JSON and draws each page. Links notes to stories automatically |
+| `graphics.js` | The illustrated bottles and note icons |
 | `style.css` | Palette and fonts at the top, under `:root` |
 
 ## Add a perfume
@@ -42,6 +43,15 @@ The Walks, Discovery set and For business pages each have a button that shows "o
 4. Upload the updated `offers.json` to GitHub. The button goes live in about a minute.
 
 Also replace "Price to be confirmed" and the dates in `offers.json` once you've decided them.
+
+## Graphics and real bottle photos
+
+`graphics.js` draws every bottle and note icon in code, using the site palette. Each perfume always gets the same bottle shape, with the liquid coloured by its main Singapore note.
+
+To use a real product photo instead (only with the brand's permission):
+1. Upload the photo into an `images` folder, e.g. `images/nanyang.jpg`
+2. In `data/perfumes.json`, add `"image": "images/nanyang.jpg"` to that perfume
+3. The photo replaces the illustration everywhere that perfume appears
 
 ## Fonts
 

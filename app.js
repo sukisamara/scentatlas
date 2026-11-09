@@ -50,11 +50,11 @@ function noteById(id) { return DATA.notes.find(n => n.id === id); }
 function noteChip(noteName) {
   const story = findStoryNote(noteName);
   if (!story) return `<span class="chip">${esc(noteName)}</span>`;
-  return `<a class="chip story c-${story.color}" href="#/notes/${story.id}">${esc(noteName)}</a>`;
+  return `<a class="chip story c-${story.color}" href="#/notes/${story.id}">${noteIcon(story.id, 18)}${esc(noteName)}</a>`;
 }
 
 function storyChip(note) {
-  return `<a class="chip story c-${note.color}" href="#/notes/${note.id}">${esc(note.name)}</a>`;
+  return `<a class="chip story c-${note.color}" href="#/notes/${note.id}">${noteIcon(note.id, 18)}${esc(note.name)}</a>`;
 }
 
 function sourcesList(sources) {
@@ -69,6 +69,7 @@ function pageHome() {
   return `
   <section class="hero">
     <div class="hero-blob"></div><div class="hero-blob two"></div>
+    <div class="hero-art" aria-hidden="true">${DATA.perfumes.slice(0, 3).map(p => bottleSVG(p, 130)).join("")}</div>
     <h1>Smell the story<br>of a place</h1>
     <p class="hand">Local perfumes · the history in every note</p>
     <p class="lead">A guide to Singapore's homegrown perfumes, the history behind their notes, and where to smell them for yourself.</p>
@@ -114,12 +115,14 @@ function homeCard(title, text, href, color) {
 function perfumeCard(p) {
   const brand = brandById(p.brand);
   const stories = storyNotesOf(p);
-  return `<a class="card" href="#/perfume/${p.id}">
+  const tint = stories[0] ? (stories[0].color === "navy" ? "coral" : stories[0].color) : "pink";
+  return `<a class="card perfume-card" href="#/perfume/${p.id}">
+    <div class="card-art tint-${tint}">${perfumeVisual(p, 100)}</div>
     <span class="kicker">${esc(brand ? brand.name : "")}</span>
     <h3>${esc(p.name)}</h3>
     <p>${esc(p.about)}</p>
     <div class="chips">${stories.map(n =>
-      `<span class="chip story c-${n.color}" style="pointer-events:none">${esc(n.name)}</span>`).join("")}</div>
+      `<span class="chip story c-${n.color}" style="pointer-events:none">${noteIcon(n.id, 16)}${esc(n.name)}</span>`).join("")}</div>
   </a>`;
 }
 
@@ -147,12 +150,15 @@ function pagePerfume(id) {
   return `
   <a class="back" href="#/perfumes">← All perfumes</a>
   <div class="perfume-head">
-    <div>
+    <div class="perfume-intro">
+      <div class="bottle-stage">${perfumeVisual(p, 150)}</div>
+      <div>
       <p class="brand-line">${esc(brand ? brand.name : "")}</p>
       <h1>${esc(p.name)}</h1>
       <p class="lead">${esc(p.about)}</p>
       <p class="muted">${esc(p.type)}${brand && brand.founded ? ` · Brand founded ${esc(brand.founded)}` : ""}</p>
       ${brand ? `<p><a href="#/brands">About ${esc(brand.name)}</a></p>` : ""}
+      </div>
     </div>
     <div>
       ${notesHtml}
@@ -164,7 +170,7 @@ function pagePerfume(id) {
     <h2>The stories in this bottle</h2>
     ${stories.length ? `<div class="grid">${stories.map(n => `
       <a class="card story-card" href="#/notes/${n.id}" style="border-left-color:var(--${n.color})">
-        <span class="kicker">${esc(n.name)}</span>
+        <div class="icon-row">${noteIcon(n.id, 44)}<span class="kicker">${esc(n.name)}</span></div>
         <p class="tagline">${esc(n.tagline)}</p>
         <p>${esc(n.story[0])}</p>
         <p><strong>Read the full story →</strong></p>
@@ -194,8 +200,11 @@ function pageNotes(focusId) {
     return `
     <article class="note-block" id="note-${n.id}">
       <div class="note-banner c-${n.color}">
-        <h2>${esc(n.name)}</h2>
-        <div class="local">${esc(n.local)}</div>
+        <div>
+          <h2>${esc(n.name)}</h2>
+          <div class="local">${esc(n.local)}</div>
+        </div>
+        <div class="icon-medallion">${noteIcon(n.id, 64)}</div>
       </div>
       <div class="note-body">
         <div>
@@ -207,7 +216,7 @@ function pageNotes(focusId) {
         <div>
           <h3>Perfumes with this note</h3>
           ${perfumes.length
-            ? `<ul>${perfumes.map(p => `<li><a href="#/perfume/${p.id}">${esc(p.name)}</a> · ${esc(brandById(p.brand)?.name || "")}</li>`).join("")}</ul>`
+            ? `<div class="mini-bottles">${perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>`
             : `<p class="muted">None listed yet.</p>`}
           <h3 style="margin-top:22px">Smell it in Singapore</h3>
           ${places.length || stops.length
@@ -229,7 +238,7 @@ function pageTrail() {
     ${t.stops.map(s => `
       <li>
         <div class="time">${esc(s.time)}</div>
-        <div class="dot ${s.notes.length ? "" : "quiet"}"></div>
+        <div class="dot ${s.notes.length ? "has-icon" : "quiet"}">${s.notes.length ? noteIcon(s.notes[0], 30) : ""}</div>
         <div>
           <div class="area">${esc(s.area)}</div>
           <h3>${esc(s.name)}</h3>
@@ -362,6 +371,7 @@ function pageSet() {
     <h2>The six</h2>
     <div class="grid">${items.map(({ p, n, b }, i) => `
       <a class="card story-card" href="#/perfume/${p.id}" style="border-left-color:var(--${n.color === "cream" ? "olive" : n.color})">
+        <div class="set-art">${perfumeVisual(p, 70)}${noteIcon(n.id, 40)}</div>
         <span class="kicker">No. ${i + 1} · ${esc(n.name)}</span>
         <h3>${esc(p.name)}</h3>
         <p class="muted">${esc(b ? b.name : "")}</p>
