@@ -19,6 +19,8 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 
 | File | What it holds |
 | --- | --- |
+| `data/editions.json` | The pins on the world map: which countries are live, coming soon, or the origin story |
+| `worldmap.js` | The world map shapes (Natural Earth, public domain). No need to edit |
 | `data/notes.json` | The Singapore notes: story, sources, and `aliases` (the words that link a perfume note to this story) |
 | `data/perfumes.json` | One entry per perfume: `top` / `heart` / `base` lists, or a flat `notes` list if the pyramid isn't published |
 | `data/brands.json` | All brands. `"check": true` shows a "To verify" badge |
@@ -28,6 +30,10 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 | `app.js` | Reads the JSON and draws each page. Links notes to stories automatically |
 | `graphics.js` | The illustrated bottles and note icons |
 | `style.css` | Palette and fonts at the top, under `:root` |
+
+## Add a new edition to the world map
+
+In `data/editions.json`, change a country's `"status"` from `"soon"` to `"live"` and give it an `"edition"`, `"tagline"`, `"link"` and `"icons"` (copy Singapore's entry). It then gets a red pin and its own pop-up window. To add a country that isn't on the list yet, ask for its pin position to be added to `worldmap.js`.
 
 ## Add a perfume
 

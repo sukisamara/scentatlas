@@ -417,8 +417,143 @@ function pageBusiness() {
   </section>`;
 }
 
+
+/* ---------- World map (the atlas cover) ---------- */
+
+function pinPercent(id) {
+  const [x, y] = WORLD_MAP.pins[id];
+  return { left: (x / WORLD_MAP.width) * 100, top: (y / WORLD_MAP.height) * 100 };
+}
+
+function pageWorld() {
+  const eds = DATA.editions;
+  const live = eds.filter(e => e.status === "live");
+  const editionCountries = new Set(eds.map(e => e.name));
+
+  const countries = WORLD_MAP.countries.map(c =>
+    `<path d="${c.d}" class="land ${editionCountries.has(c.name) ? "land-edition" : ""}"><title>${esc(c.name)}</title></path>`).join("");
+
+  // Grey dots for editions still to come
+  const dots = eds.filter(e => e.status !== "live" && e.showDot !== false).map(e => {
+    const p = pinPercent(e.id);
+    return `<button class="map-dot ${e.status}" style="left:${p.left}%;top:${p.top}%" data-tip="${esc(e.name)}: ${esc(e.tagline)}" aria-label="${esc(e.name)}, ${esc(e.tagline)}"></button>`;
+  }).join("");
+
+  // Red pins + pop-up windows for live editions
+  const pins = live.map(e => {
+    const p = pinPercent(e.id);
+    return `
+    <button class="map-pin" style="left:${p.left}%;top:${p.top}%" data-edition="${e.id}" aria-label="Open ${esc(e.name)}" aria-expanded="false">
+      <span class="pin-pulse"></span>
+      <svg viewBox="0 0 40 56" width="34" height="48" aria-hidden="true">
+        <path d="M20 54 C20 54 4 32 4 20 A16 16 0 0 1 36 20 C36 32 20 54 20 54 Z" fill="#D63B2F" stroke="#0B0F2E" stroke-width="3"/>
+        <circle cx="20" cy="20" r="6.5" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="2.5"/>
+      </svg>
+    </button>`;
+  }).join("");
+
+  const popups = live.map(e => {
+    const p = pinPercent(e.id);
+    return `
+    <div class="map-popup" id="popup-${e.id}" style="left:${p.left}%;top:${p.top}%" role="dialog" aria-label="${esc(e.name)}" hidden>
+      <button class="popup-close" aria-label="Close">×</button>
+      <div class="popup-art">${(e.icons || []).map(id => noteIcon(id, 34)).join("")}</div>
+      <span class="kicker">${esc(e.edition)} · Live</span>
+      <h3>${esc(e.name)}</h3>
+      <p class="hand popup-tag">${esc(e.tagline)}</p>
+      <p class="popup-stats"><strong>${DATA.notes.length}</strong> notes · <strong>${DATA.perfumes.length}</strong> perfumes · <strong>${DATA.brands.length}</strong> brands · <strong>1</strong> scent trail</p>
+      <a class="btn" href="${esc(e.link)}">Enter ${esc(e.name)} →</a>
+    </div>`;
+  }).join("");
+
+  const stamps = eds.map(e => `
+    <${e.status === "live" ? `a href="${esc(e.link)}"` : "div"} class="stamp stamp-${e.status}">
+      <span class="stamp-status">${e.status === "live" ? esc(e.edition) : e.status === "origin" ? "Origin story" : "Coming soon"}</span>
+      <strong>${esc(e.name)}</strong>
+      <small>${esc(e.status === "soon" ? e.tagline.replace(/^Coming soon:?\s*/, "") || "Notes to be mapped" : e.tagline)}</small>
+    </${e.status === "live" ? "a" : "div"}>`).join("");
+
+  return `
+  <section class="world-intro">
+    <p class="hand">An atlas of scent</p>
+    <h1>Smell the world,<br>one city at a time</h1>
+    <p class="lead">Each edition maps a place through the scents in its history: the spices it traded, the flowers it prays with, the breakfasts it wakes up to. Tap the red pin to begin.</p>
+  </section>
+
+  <section class="map-frame">
+    <div class="map-cartouche"><span class="hand">Scent Atlas</span><small>Edition 01 · 2026</small></div>
+    <div class="map-wrap">
+      <div class="map-canvas">
+        <svg class="world-svg" viewBox="0 0 ${WORLD_MAP.width} ${WORLD_MAP.height}" role="img" aria-label="World map with Scent Atlas editions">
+          <path d="${WORLD_MAP.sphere}" class="ocean"/>
+          <path d="${WORLD_MAP.graticule}" class="graticule"/>
+          ${countries}
+          <path d="${WORLD_MAP.sphere}" class="sphere-edge"/>
+        </svg>
+        ${dots}
+        ${pins}
+        <div class="map-tip" hidden></div>
+      </div>
+      ${popups}
+    </div>
+    ${compassRose()}
+  </section>
+
+  <section class="section">
+    <h2>Editions</h2>
+    <div class="stamps">${stamps}</div>
+  </section>`;
+}
+
+function compassRose() {
+  return `<svg class="compass" viewBox="0 0 100 100" width="92" height="92" aria-hidden="true">
+    <circle cx="50" cy="50" r="30" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="2"/>
+    <circle cx="50" cy="50" r="24" fill="none" stroke="#0B0F2E" stroke-width="1" stroke-dasharray="2 3"/>
+    <path d="M50 8 L57 50 L50 92 L43 50 Z" fill="#E57B62" stroke="#0B0F2E" stroke-width="2"/>
+    <path d="M8 50 L50 43 L92 50 L50 57 Z" fill="#B8B455" stroke="#0B0F2E" stroke-width="2"/>
+    <path d="M50 8 L57 50 L43 50 Z" fill="#6B1C1E"/>
+    <circle cx="50" cy="50" r="4" fill="#0B0F2E"/>
+    <text x="50" y="6" text-anchor="middle" font-family="Rozha One, Georgia, serif" font-size="11" fill="#0B0F2E">N</text>
+  </svg>`;
+}
+
+function setUpWorldMap() {
+  const wrap = app.querySelector(".map-wrap");
+  if (!wrap) return;
+  const tip = wrap.querySelector(".map-tip");
+
+  function closeAll() {
+    wrap.querySelectorAll(".map-popup").forEach(p => p.hidden = true);
+    wrap.querySelectorAll(".map-pin").forEach(b => b.setAttribute("aria-expanded", "false"));
+  }
+
+  wrap.querySelectorAll(".map-pin").forEach(pin => {
+    pin.addEventListener("click", ev => {
+      ev.stopPropagation();
+      const popup = document.getElementById("popup-" + pin.dataset.edition);
+      const willOpen = popup.hidden;
+      closeAll();
+      popup.hidden = !willOpen;
+      pin.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+  wrap.querySelectorAll(".popup-close").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); closeAll(); }));
+  wrap.querySelectorAll(".map-popup").forEach(p => p.addEventListener("click", ev => ev.stopPropagation()));
+  wrap.addEventListener("click", closeAll);
+
+  // Little tooltips on the "coming soon" dots
+  wrap.querySelectorAll(".map-dot").forEach(dot => {
+    const show = () => { tip.textContent = dot.dataset.tip; tip.style.left = dot.style.left; tip.style.top = dot.style.top; tip.hidden = false; };
+    dot.addEventListener("mouseenter", show);
+    dot.addEventListener("focus", show);
+    dot.addEventListener("click", ev => { ev.stopPropagation(); show(); });
+    dot.addEventListener("mouseleave", () => tip.hidden = true);
+    dot.addEventListener("blur", () => tip.hidden = true);
+  });
+}
+
 function pageNotFound() {
-  return `<h1>Lost the scent</h1><p class="lead">That page doesn't exist. <a href="#/">Go home</a>.</p>`;
+  return `<h1>Lost the scent</h1><p class="lead">That page doesn't exist. <a href="#/">Back to the world map</a>.</p>`;
 }
 
 /* ---------- Router ---------- */
@@ -428,7 +563,8 @@ function render() {
   const [page, id] = parts;
 
   const routes = {
-    "": pageHome,
+    "": pageWorld,
+    "singapore": pageHome,
     "notes": () => pageNotes(id),
     "perfumes": pagePerfumes,
     "perfume": () => pagePerfume(id),
@@ -440,6 +576,13 @@ function render() {
     "for-business": pageBusiness,
   };
   app.innerHTML = (routes[page] || pageNotFound)();
+
+  // The world map is the atlas cover; every other page belongs to the Singapore edition
+  const onWorld = page === "";
+  document.body.classList.toggle("is-world", onWorld);
+  document.querySelector(".wordmark-sub").textContent = onWorld ? "Smell the world" : "Singapore edition";
+  document.querySelector(".wordmark").setAttribute("href", onWorld ? "#/" : "#/singapore");
+  if (onWorld) setUpWorldMap();
 
   // Highlight the current menu item
   document.querySelectorAll(".site-nav a").forEach(a => {
@@ -457,7 +600,7 @@ function render() {
 /* ---------- Start ---------- */
 
 async function loadData() {
-  const files = ["notes", "perfumes", "brands", "experiences", "trail", "offers"];
+  const files = ["notes", "perfumes", "brands", "experiences", "trail", "offers", "editions"];
   const results = await Promise.all(files.map(f => fetch(`data/${f}.json`).then(r => r.json())));
   files.forEach((f, i) => DATA[f] = results[i]);
 }

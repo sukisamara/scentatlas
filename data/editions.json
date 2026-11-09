@@ -1,0 +1,17 @@
+[
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "status": "live",
+    "edition": "Edition 01",
+    "tagline": "Spice trade, garden city, kopitiam mornings.",
+    "link": "#/singapore",
+    "icons": ["orchid", "pandan", "jasmine", "agarwood-sandalwood", "nutmeg"]
+  },
+  { "id": "malaysia", "name": "Malaysia", "status": "soon", "tagline": "Coming soon", "showDot": false },
+  { "id": "indonesia", "name": "Indonesia", "status": "soon", "tagline": "Coming soon: clove, patchouli, vetiver" },
+  { "id": "thailand", "name": "Thailand", "status": "soon", "tagline": "Coming soon" },
+  { "id": "philippines", "name": "Philippines", "status": "soon", "tagline": "Coming soon: ylang-ylang" },
+  { "id": "vietnam", "name": "Vietnam", "status": "soon", "tagline": "Coming soon: agarwood, cinnamon" },
+  { "id": "taiwan", "name": "Taiwan", "status": "origin", "tagline": "Where it started: making a scent in Amping, Tainan" }
+]
