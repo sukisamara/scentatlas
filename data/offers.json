@@ -1,0 +1,74 @@
+{
+  "_howto": "Paste your Google Form (or Tally/Typeform) links into each interestUrl. While a link is empty, the button shows 'Opening soon'. Change price, dates and groupSize whenever you decide.",
+
+  "walks": {
+    "title": "Singapore Scent Walks",
+    "tagline": "Smell the city with a guide",
+    "intro": "Small-group walks through the places behind Singapore's notes: jasmine garlands, attar shops, Raffles' spice garden and temple incense. Every stop comes with the history behind the scent.",
+    "dates": "December 2026 (limited dates)",
+    "groupSize": "Up to 6 people",
+    "price": "Price to be confirmed",
+    "interestUrl": "",
+    "options": [
+      {
+        "name": "The Kampong Gelam & Little India walk",
+        "duration": "About 3 hours",
+        "stops": ["Little India garland stalls", "Walk to Kampong Gelam", "Jamal Kazura Aromatics", "Bussorah Street attar shops"],
+        "notes": ["jasmine", "agarwood-sandalwood"]
+      },
+      {
+        "name": "The full-day scent trail",
+        "duration": "About 9 hours, with breaks",
+        "stops": ["Kopitiam breakfast", "Little India", "Kampong Gelam", "Fort Canning Spice Garden", "Chinatown temples", "Hawker dinner"],
+        "notes": ["pandan", "kopi-teh", "jasmine", "agarwood-sandalwood", "nutmeg", "clove", "torch-ginger", "calamansi"]
+      }
+    ],
+    "included": ["A guide who tells the story behind every stop", "Smelling samples of the raw notes along the way", "A printed note card for each scent you meet"],
+    "notIncluded": ["Workshop fees, if you add a perfume-making session", "Food and drinks", "Purchases at shops"]
+  },
+
+  "set": {
+    "title": "Singapore in Six Scents",
+    "tagline": "A discovery set of local perfumes",
+    "intro": "Six sample vials from Singapore perfume houses, each paired with a card telling the history of its key note. A souvenir you can actually smell.",
+    "status": "Proposed line-up. Brand partnerships are not confirmed yet.",
+    "price": "Price to be confirmed",
+    "interestUrl": "",
+    "lineup": [
+      { "perfume": "clouds-in-heaven", "note": "pandan" },
+      { "perfume": "nanyang", "note": "jasmine" },
+      { "perfume": "senator-im-singaporean", "note": "calamansi" },
+      { "perfume": "floral-fantasy", "note": "frangipani" },
+      { "perfume": "peranakan-oud", "note": "agarwood-sandalwood" },
+      { "perfume": "one-degree-north", "note": "orchid" }
+    ],
+    "inTheBox": ["6 sample vials (about 2ml each)", "6 note story cards with sources", "A fold-out map of the one-day scent trail"]
+  },
+
+  "business": {
+    "title": "Scent storytelling for businesses",
+    "tagline": "Culture, translated into scent",
+    "intro": "Hotels, airlines and brands already invest in signature scents. I help them root those scents in real local culture, using consumer insight and sourced history.",
+    "interestUrl": "",
+    "services": [
+      {
+        "name": "Cultural scent briefs",
+        "what": "A researched brief linking your brand or place to local notes and their history, ready to hand to a perfumer or fragrance house."
+      },
+      {
+        "name": "Heritage scent trails for teams",
+        "what": "Private guided scent walks for team-building, client hosting or offsites, with optional perfume-making."
+      },
+      {
+        "name": "Scent and trend insight",
+        "what": "Research on which notes local brands use, which they don't, and what that suggests about consumers."
+      }
+    ],
+    "proof": [
+      { "text": "Singapore Airlines' signature scent, Batik Flora, was built from six flowers in its batik motif, with local label Scent by SIX.", "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/" },
+      { "text": "Local brand Lynk Fragrances co-created signature scents for MRT stations with SBS Transit.", "url": "https://vulcanpost.com/888018/lynk-fragrances-all-natural-scents-brand-singapore" },
+      { "text": "For SG60, dsm-firmenich and the Singapore Botanic Gardens created Singapore Eco Orchid from living orchids.", "url": "https://dailyvanity.sg/?p=422846" }
+    ],
+    "about": "I'm Suki: a psychology graduate with a background in consumer insight and foresight in the fragrance and flavour industry, now building Scent Atlas."
+  }
+}

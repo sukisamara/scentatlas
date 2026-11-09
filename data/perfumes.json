@@ -1,0 +1,287 @@
+[
+  {
+    "id": "nanyang",
+    "name": "Nanyang",
+    "brand": "maison-de-lasie",
+    "type": "Extrait de parfum",
+    "about": "From Chapter 01: Singapore. Nanyang is an old name for the South Seas. The scent reflects founder Elizabeth Liau's homecoming to Singapore after years abroad.",
+    "top": [
+      "Green tea",
+      "Bergamot",
+      "Lemon"
+    ],
+    "heart": [
+      "Saffron",
+      "Jasmine"
+    ],
+    "base": [
+      "Leather",
+      "Sandalwood",
+      "Musk"
+    ],
+    "notesComplete": true,
+    "sources": [
+      {
+        "title": "Les Senteurs: Nanyang",
+        "url": "https://www.lessenteurs.com/collections/fragrance/products/nanyang"
+      }
+    ]
+  },
+  {
+    "id": "clouds-in-heaven",
+    "name": "Clouds In Heaven",
+    "brand": "scent-journer",
+    "type": "Perfume",
+    "about": "Inspired by the Nonya pandan chiffon cake: a sweet, creamy white floral.",
+    "top": [
+      "Pandan",
+      "Honeysuckle"
+    ],
+    "heart": [
+      "Jasmine",
+      "Ylang-ylang"
+    ],
+    "base": [
+      "Tuberose"
+    ],
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "Scent Journer press page",
+        "url": "https://scentjourner.com/blogs/press/homegrown-in-singapore-develops-mindfully-formulated-fragrances"
+      },
+      {
+        "title": "DORS (Design Orchard) listing",
+        "url": "https://dors.com.sg/collections/scent-journer"
+      }
+    ]
+  },
+  {
+    "id": "batik-flora",
+    "name": "Batik Flora",
+    "brand": "scent-by-six",
+    "type": "Home scent (with Singapore Airlines)",
+    "about": "Singapore Airlines' signature scent, made with six flowers from its batik motif. Sold as a reed diffuser on KrisShop.",
+    "notesComplete": true,
+    "sources": [
+      {
+        "title": "Singapore Airlines press release",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ],
+    "notes": [
+      "Aquatic ginger",
+      "Common dianella",
+      "Seashore purslane",
+      "Simpoh lak",
+      "Utania nervosa",
+      "White kopsia"
+    ]
+  },
+  {
+    "id": "senator-im-singaporean",
+    "name": "Senator, I'm Singaporean",
+    "brand": "epilogue",
+    "type": "Extrait de parfum",
+    "about": "From The Little Red Dot collection. A calamansi-led citrus made for Singapore's heat, built around void decks and CBD skylines.",
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "Grazia Singapore",
+        "url": "https://grazia.sg/beauty/senator-im-singaporean-the-story-behind-the-fragrance-the-home-grown-house-that-made-it/"
+      }
+    ],
+    "top": [
+      "Calamansi",
+      "Rambutan"
+    ],
+    "heart": [
+      "Orchid",
+      "Hibiscus"
+    ],
+    "base": []
+  },
+  {
+    "id": "peranakan-oud",
+    "name": "Peranakan Oud",
+    "brand": "singapore-memories",
+    "type": "Perfume",
+    "about": "Inspired by Peranakan culture: a deep oud with soft, sweet warmth.",
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "Home & Decor: 6 scents that evoke memories of Singapore",
+        "url": "https://www.homeanddecor.com.sg/shopping/6-scents-that-evoke-memories-of-singapore"
+      }
+    ],
+    "notes": [
+      "Oud",
+      "Tonka bean",
+      "Praline",
+      "Green tobacco leaf"
+    ]
+  },
+  {
+    "id": "a-new-page",
+    "name": "A New Page",
+    "brand": "frmytd",
+    "type": "Perfume",
+    "about": "A fresh, fruity everyday scent with teas and woods.",
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "Grazia Singapore",
+        "url": "https://grazia.sg/?p=102119"
+      }
+    ],
+    "notes": [
+      "Pear",
+      "Mandarin orange",
+      "Tea",
+      "Woods"
+    ]
+  },
+  {
+    "id": "singapore-girl",
+    "name": "Singapore Girl",
+    "brand": "singapore-memories",
+    "type": "Eau de parfum",
+    "about": "A revival of the 1960s–70s Singapore Girl perfume from the defunct Perfumes of Singapore, once sold in stores and on board Singapore Airlines.",
+    "top": [
+      "Citrus"
+    ],
+    "heart": [
+      "Lotus",
+      "Water lily"
+    ],
+    "base": [
+      "Teakwood"
+    ],
+    "notesComplete": true,
+    "sources": [
+      {
+        "title": "Shopee Singapore blog",
+        "url": "https://shopee.sg/blog/best-womens-perfumes/amp/"
+      },
+      {
+        "title": "Wikipedia: Perfumes of Singapore",
+        "url": "https://en.wikipedia.org/wiki/Perfumes_of_Singapore"
+      }
+    ]
+  },
+  {
+    "id": "floral-fantasy",
+    "name": "Floral Fantasy",
+    "brand": "singapore-memories",
+    "type": "Perfume",
+    "about": "A walk through Singapore's tropical gardens, with orchid-inspired notes including a touch of Vanda Miss Joaquim.",
+    "notes": [
+      "Orchid",
+      "Jasmine",
+      "Frangipani"
+    ],
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "iShopChangi: Floral Fantasy",
+        "url": "https://www.ishopchangi.com/en/product/floral-fantasy--20ml--mp00756881"
+      }
+    ]
+  },
+  {
+    "id": "one-degree-north",
+    "name": "One Degree North",
+    "brand": "singapore-memories",
+    "type": "Perfume",
+    "about": "Named for Singapore's latitude: orchids with sea salt and bright citrus.",
+    "notes": [
+      "Orchid",
+      "Sea salt",
+      "Aqua",
+      "Citrus"
+    ],
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "Home & Decor",
+        "url": "https://www.homeanddecor.com.sg/shopping/6-scents-that-evoke-memories-of-singapore"
+      }
+    ]
+  },
+  {
+    "id": "mother-x-love",
+    "name": "Mother x Love",
+    "brand": "maison-de-lasie",
+    "type": "Extrait de parfum",
+    "about": "From Chapter 01: Singapore. A soft white-musk scent about a mother's love and childhood memories.",
+    "top": [
+      "Litchi",
+      "Ginger",
+      "Vanilla"
+    ],
+    "heart": [
+      "Jasmine",
+      "Orange flower",
+      "Magnolia"
+    ],
+    "base": [
+      "Saffron",
+      "Musk",
+      "Suede"
+    ],
+    "notesComplete": true,
+    "sources": [
+      {
+        "title": "Les Senteurs: Mother x Love",
+        "url": "https://www.lessenteurs.com/products/mother-x-love"
+      }
+    ]
+  },
+  {
+    "id": "lost-lovers",
+    "name": "Lost Lovers",
+    "brand": "maison-de-lasie",
+    "type": "Extrait de parfum",
+    "about": "From Chapter 01: Singapore. A scent about time passing and love that might have been, with green notes warming into woods.",
+    "top": [
+      "Bergamot",
+      "Orange blossom",
+      "Myrtle",
+      "Rose"
+    ],
+    "heart": [
+      "Sandalwood",
+      "Violet",
+      "Cedar"
+    ],
+    "base": [
+      "Vetiver",
+      "Amber"
+    ],
+    "notesComplete": true,
+    "sources": [
+      {
+        "title": "Parfumo: Lost Lovers",
+        "url": "https://www.parfumo.com/Perfumes/maison-de-l-asie/lost-lovers"
+      }
+    ]
+  },
+  {
+    "id": "blanc-one",
+    "name": "Blanc One",
+    "brand": "code-deco",
+    "type": "Perfume",
+    "about": "A warm white floral that pairs jasmine sambac with white ginger lily.",
+    "notes": [
+      "Jasmine sambac",
+      "White ginger lily"
+    ],
+    "notesComplete": false,
+    "sources": [
+      {
+        "title": "The Beau Life",
+        "url": "https://thebeaulife.co/beauty-guides/best-perfume-scents-from-asian-brands-cj"
+      }
+    ]
+  }
+]

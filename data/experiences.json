@@ -1,0 +1,340 @@
+[
+  {
+    "name": "Premium Perfume Workshop",
+    "host": "Sifr Aromatics",
+    "kind": "Workshop",
+    "area": "Kampong Gelam",
+    "address": "42 Arab St",
+    "what": "A guided session with a third-generation perfumer. Take home a 50ml EDP.",
+    "notes": [
+      "agarwood-sandalwood"
+    ],
+    "links": [
+      {
+        "label": "Book (official)",
+        "url": "https://www.sifr.sg/products/premium-perfume-workshop"
+      },
+      {
+        "label": "1-hr 'Language of Perfume' (Klook)",
+        "url": "https://www.klook.com/activity/177294-language-of-perfume-workshop-in-singapore"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Custom attar blend",
+    "host": "Jamal Kazura Aromatics",
+    "kind": "Workshop",
+    "area": "Kampong Gelam",
+    "address": "728 North Bridge Rd",
+    "what": "Answer a short questionnaire and get a custom attar blended for you.",
+    "notes": [
+      "agarwood-sandalwood"
+    ],
+    "links": [
+      {
+        "label": "Time Out",
+        "url": "https://www.timeout.com/singapore/shopping/jamal-kazura-aromatics"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Personalised Perfume Workshop",
+    "host": "ZUBYR Parfums",
+    "kind": "Workshop",
+    "area": "Little India",
+    "address": "1 Syed Alwi Rd, #03-01",
+    "what": "Two hours of traditional blending. Take home a 30ml bottle.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Culture Pass",
+        "url": "https://www.sgculturepass.gov.sg/events/643470?lang=en"
+      },
+      {
+        "label": "Klook (via Luxury Escapes)",
+        "url": "https://luxuryescapes.com/us/experience/personalised-perfume-workshop-by-zubyr-parfums/klo:192908"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Orchid Perfume Workshop",
+    "host": "Scentopia",
+    "kind": "Workshop",
+    "area": "Sentosa",
+    "address": "36 Siloso Beach Walk",
+    "what": "Blend an orchid-themed perfume from about 200 scent oils.",
+    "notes": [
+      "orchid"
+    ],
+    "links": [
+      {
+        "label": "Sentosa",
+        "url": "https://www.sentosa.com.sg/en/things-to-do/attractions/scentopia/"
+      },
+      {
+        "label": "Klook",
+        "url": "https://www.klook.com/en-SG/activity/67646-scentopia-sentosa-singapore/"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Layers of Time",
+    "host": "Happy Together",
+    "kind": "Workshop",
+    "area": "Orchard",
+    "address": "Orchard Central",
+    "what": "A Singapore perfume journey in four chapters: Trading Port, Colonial Heritage, Garden City, Modern Singapore.",
+    "notes": [
+      "nutmeg",
+      "clove",
+      "orchid"
+    ],
+    "links": [
+      {
+        "label": "Official",
+        "url": "https://www.happytogetherparty.com/workshops"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Personality-based Perfume Workshop",
+    "host": "Freda'D",
+    "kind": "Workshop",
+    "area": "Jurong East",
+    "address": "Westgate, 3 Gateway Drive",
+    "what": "Take a perfume personality test, then hand-blend your own EDP.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Klook",
+        "url": "https://www.klook.com/activity/94194-personality-based-perfume-workshop-singapore-freda-d"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "DIY scent bar at Changi",
+    "host": "Lynk Fragrances",
+    "kind": "Workshop",
+    "area": "Changi Airport",
+    "address": "Changi Airport Terminal 2",
+    "what": "Mix your own scent at Lynk's airport store. Good for a last stop before your flight.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Vulcan Post",
+        "url": "https://vulcanpost.com/888018/lynk-fragrances-all-natural-scents-brand-singapore"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Scents of the Nusantara",
+    "host": "Aroma Nostalgia",
+    "kind": "Workshop",
+    "area": "Varies",
+    "address": "Varies",
+    "what": "Explore regional notes and their cultural stories, then blend your own.",
+    "notes": [],
+    "links": [
+      {
+        "label": "HeritageFest",
+        "url": "https://www.heritage.sg/sgheritagefest/programmes/scents-of-the-nusantara-perfumemaking-workshop"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Fragrance Design & Mixology",
+    "host": "Oo La Lab",
+    "kind": "Workshop",
+    "area": "Chinatown",
+    "address": "71 Amoy St",
+    "what": "Group or private perfume sessions, plus incense workshops.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Official",
+        "url": "https://sg.oola-lab.com/collections/singapore-workshops"
+      },
+      {
+        "label": "Klook",
+        "url": "https://www.klook.com/en-SG/activity/44784-perfume-aromatherapy-blending-workshop-singapore/"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Perfume Creation Atelier",
+    "host": "Maison 21G",
+    "kind": "Workshop",
+    "area": "Tanjong Pagar",
+    "address": "3 Duxton Hill",
+    "what": "Make a 30ml EDP. There's also a 60-minute advanced level.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Official",
+        "url": "https://www.maison21g.com/sg/perfume-workshop-detail/advanced-atelier"
+      },
+      {
+        "label": "Klook",
+        "url": "https://www.klook.com/en-SG/activity/68596-perfume-workshop-singapore/"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Perfume & Home Scent Workshops",
+    "host": "Scent by SIX",
+    "kind": "Workshop",
+    "area": "Various",
+    "address": "Scent by SIX stores",
+    "what": "Blend a perfume or a home scent, in 45 minutes to 1.5 hours.",
+    "notes": [],
+    "links": [
+      {
+        "label": "Official",
+        "url": "https://scentbysix.com/pages/workshops"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Kampong Gelam perfume streets",
+    "host": "Free walk",
+    "kind": "Place",
+    "area": "Kampong Gelam",
+    "address": "Bussorah St · Arab St · North Bridge Rd",
+    "what": "Attar and oud shops, plus an NHB heritage mini-gallery inside Jamal Kazura's shop.",
+    "notes": [
+      "agarwood-sandalwood"
+    ],
+    "links": [
+      {
+        "label": "NHB Roots",
+        "url": "https://www.roots.gov.sg/stories-landing/stories/street-corner-heritage-galleries-kampong-gelam"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Fort Canning Spice Garden",
+    "host": "Free",
+    "kind": "Place",
+    "area": "Fort Canning",
+    "address": "Fort Canning Park",
+    "what": "A replica of Raffles' 1822 garden, with nutmeg, clove, pepper, cinnamon and torch ginger.",
+    "notes": [
+      "nutmeg",
+      "clove",
+      "pepper",
+      "torch-ginger"
+    ],
+    "links": [
+      {
+        "label": "NParks",
+        "url": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/special-features"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "National Orchid Garden",
+    "host": "Paid entry",
+    "kind": "Place",
+    "area": "Botanic Gardens",
+    "address": "Singapore Botanic Gardens",
+    "what": "Vanda Miss Joaquim and 1,000+ orchid species, in Singapore's first UNESCO World Heritage Site. The Botanic Gardens also has a Frangipani Collection.",
+    "notes": [
+      "orchid",
+      "frangipani"
+    ],
+    "links": [
+      {
+        "label": "NParks",
+        "url": "https://nparks.gov.sg/activities/family-time-with-nature/recommended-activities/vanda-ms-joaquim"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Little India garland stalls",
+    "host": "Free",
+    "kind": "Place",
+    "area": "Little India",
+    "address": "Campbell Lane",
+    "what": "Jasmine, rose and tuberose garlands at Jothi Store & Flower Shop and nearby stalls.",
+    "notes": [
+      "jasmine"
+    ],
+    "links": [
+      {
+        "label": "NHB Roots",
+        "url": "https://www.roots.gov.sg/places/places-landing/places/landmarks/little-india-heritage-trail-shop-till-you-drop/jothi-store-flower-shop"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Orchard Heritage Trail",
+    "host": "Free",
+    "kind": "Place",
+    "area": "Orchard",
+    "address": "Self-guided",
+    "what": "Walk the nutmeg-orchard and gambier history of Orchard Road.",
+    "notes": [
+      "nutmeg",
+      "pepper"
+    ],
+    "links": [
+      {
+        "label": "NHB Roots",
+        "url": "https://www.roots.gov.sg/en/places/places-landing/trails/orchard-heritage-trail"
+      }
+    ],
+    "check": false
+  },
+  {
+    "name": "Chinatown temples",
+    "host": "Free",
+    "kind": "Place",
+    "area": "Chinatown",
+    "address": "e.g. Wak Hai Cheng Bio",
+    "what": "Incense and joss-stick ritual, with hanging spiral coils.",
+    "notes": [
+      "agarwood-sandalwood"
+    ],
+    "links": [
+      {
+        "label": "NHB Roots",
+        "url": "https://roots.gov.sg/ich-landing/ich/making-of-joss-sticks"
+      }
+    ],
+    "check": true
+  },
+  {
+    "name": "Kopitiam breakfast",
+    "host": "Anywhere",
+    "kind": "Place",
+    "area": "Islandwide",
+    "address": "Any traditional kopitiam",
+    "what": "Kopi, teh and green Nyonya kaya toast: the Nanyang breakfast.",
+    "notes": [
+      "kopi-teh",
+      "pandan"
+    ],
+    "links": [
+      {
+        "label": "NHB Roots",
+        "url": "https://roots.gov.sg/ich-landing/ich/traditional-breakfast-of-kaya-and-kopi"
+      }
+    ],
+    "check": false
+  }
+]

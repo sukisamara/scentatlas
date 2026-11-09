@@ -1,0 +1,355 @@
+[
+  {
+    "id": "pandan",
+    "name": "Pandan",
+    "local": "daun pandan · screwpine",
+    "color": "olive",
+    "aliases": [
+      "pandan",
+      "screwpine",
+      "pandan leaf"
+    ],
+    "tagline": "The green, sweet smell of Nyonya kaya and kueh.",
+    "communities": [
+      "Malay",
+      "Peranakan",
+      "Hainanese"
+    ],
+    "story": [
+      "Pandan is the defining aroma of Malay and Peranakan sweets: kueh, green Nyonya kaya, and the leaves wrapped around Nyonya rice dumplings.",
+      "When fruit for jam was hard to find, Hainanese and Peranakan cooks made kaya from coconut milk, eggs and pandan leaves instead. That's the kaya on your toast today."
+    ],
+    "sources": [
+      {
+        "title": "BiblioAsia: The Evolution of Chinese Food in Singapore",
+        "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-18-issue-1-apr-to-jun-2022-evolution-chinese-food-singapore/"
+      }
+    ]
+  },
+  {
+    "id": "jasmine",
+    "name": "Jasmine",
+    "local": "malli (Tamil)",
+    "color": "pink",
+    "aliases": [
+      "jasmine",
+      "jasmine sambac",
+      "malli"
+    ],
+    "tagline": "The flower of Little India's garland stalls.",
+    "communities": [
+      "Indian",
+      "Hindu"
+    ],
+    "story": [
+      "Jasmine is one of the main fragrant flowers in Hindu garland-making, alongside rose, tuberose and chrysanthemum.",
+      "Garland makers have worked Little India's five-foot-ways for decades. Jothi Store & Flower Shop began in the early 1960s as a small stall selling garlands, betel leaves and prayer items."
+    ],
+    "sources": [
+      {
+        "title": "NHB Roots: Making of Flower Garlands",
+        "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+      },
+      {
+        "title": "NHB Roots: Jothi Store & Flower Shop",
+        "url": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/little-india-heritage-trail-shop-till-you-drop/jothi-store-flower-shop"
+      }
+    ]
+  },
+  {
+    "id": "nutmeg",
+    "name": "Nutmeg & mace",
+    "local": "buah pala",
+    "color": "coral",
+    "aliases": [
+      "nutmeg",
+      "mace"
+    ],
+    "tagline": "The spice that named Orchard Road.",
+    "communities": [
+      "Spice trade",
+      "Colonial plantations"
+    ],
+    "story": [
+      "One tree gives two spices: nutmeg is the seed, and mace is the red, lacy covering around it.",
+      "Raffles sent nutmeg seeds and saplings from Bencoolen in Sumatra. In the 1830s and 1840s, European residents turned old gambier estates around Orchard Road into nutmeg orchards, which are believed to have given the road its name. A disease wiped out the trees in 1857."
+    ],
+    "sources": [
+      {
+        "title": "NHB Roots: Orchard Heritage Trail",
+        "url": "https://www.roots.gov.sg/en/places/places-landing/trails/orchard-heritage-trail"
+      },
+      {
+        "title": "BiblioAsia: From Gambier to Pepper",
+        "url": "https://biblioasia.nlb.gov.sg/vol-17/issue-1/apr-jun-2021/agriculture/"
+      }
+    ]
+  },
+  {
+    "id": "clove",
+    "name": "Clove",
+    "local": "bunga cengkih",
+    "color": "maroon",
+    "aliases": [
+      "clove",
+      "cloves",
+      "clove bud"
+    ],
+    "tagline": "Raffles' bet on the spice trade.",
+    "communities": [
+      "Spice trade"
+    ],
+    "story": [
+      "In 1822, Raffles set up Singapore's first botanical and experimental garden on Fort Canning Hill to grow cash crops, mainly nutmeg and clove.",
+      "At one point it held over 600 nutmeg trees and 300 clove plants. The garden closed in 1829, but a replica Spice Garden grows on the same slopes today."
+    ],
+    "sources": [
+      {
+        "title": "NParks: Fort Canning Park special features",
+        "url": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/special-features"
+      }
+    ]
+  },
+  {
+    "id": "pepper",
+    "name": "Black pepper (& gambier)",
+    "local": "lada hitam",
+    "color": "navy",
+    "aliases": [
+      "black pepper",
+      "pepper",
+      "gambier"
+    ],
+    "tagline": "Singapore's first plantation crop.",
+    "communities": [
+      "Teochew",
+      "Malay",
+      "Plantation history"
+    ],
+    "story": [
+      "Gambier and pepper were grown together, mostly by Teochew planters, and were already on the island when the British arrived in 1819.",
+      "By the late 1840s there were some 400 to 600 gambier and pepper plantations, and they drove large-scale clearing of Singapore's forests. Gambier itself was used for tanning, not perfume. Pepper is the note that carries the story."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Gambier",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_337_2005-01-03.html"
+      },
+      {
+        "title": "BiblioAsia: Deforestation in 19th-century Singapore",
+        "url": "https://biblioasia.nlb.gov.sg/vol-17/issue-1/apr-jun-2021/deforestation/"
+      }
+    ]
+  },
+  {
+    "id": "orchid",
+    "name": "Orchid",
+    "local": "Vanda Miss Joaquim",
+    "color": "pink",
+    "aliases": [
+      "orchid",
+      "vanda",
+      "vanda miss joaquim",
+      "jasmine orchid"
+    ],
+    "tagline": "A hybrid national flower for a hybrid nation.",
+    "communities": [
+      "National symbol",
+      "Armenian"
+    ],
+    "story": [
+      "Agnes Joaquim, an Armenian Singaporean, bred the Vanda Miss Joaquim in her Tanjong Pagar garden, and it was described in 1893. It became Singapore's national flower on 15 April 1981. Singapore is the only country with a hybrid as its national flower.",
+      "Most orchids are only faintly scented, so an orchid note in perfume is an accord: an impression the perfumer builds from other materials."
+    ],
+    "sources": [
+      {
+        "title": "NParks: Vanda Miss Joaquim",
+        "url": "https://nparks.gov.sg/activities/family-time-with-nature/recommended-activities/vanda-ms-joaquim"
+      },
+      {
+        "title": "BiblioAsia: Blooming Lies",
+        "url": "https://biblioasia.nlb.gov.sg/vol-14/issue-1/apr-jun-2018/blooming-lies-vandaj/"
+      }
+    ]
+  },
+  {
+    "id": "agarwood-sandalwood",
+    "name": "Agarwood (oud) & sandalwood",
+    "local": "gaharu · cendana · 沉香 · 檀香",
+    "color": "maroon",
+    "aliases": [
+      "oud",
+      "agarwood",
+      "sandalwood"
+    ],
+    "tagline": "The woods of mosque, temple and shophouse.",
+    "communities": [
+      "Malay",
+      "Muslim",
+      "Chinese"
+    ],
+    "story": [
+      "Malay and Muslim: minyak attar, an alcohol-free perfume oil, is listed as Singapore intangible cultural heritage, and agarwood is a key ingredient. Kampong Gelam became the trade's centre because of Sultan Mosque, where worshippers put on attar before prayers.",
+      "Chinese: joss-stick burning spread with 19th-century Chinese migration. Temple incense is often made with sandalwood or agarwood."
+    ],
+    "sources": [
+      {
+        "title": "NHB Roots: Minyak Attar",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/Minyak-Attar"
+      },
+      {
+        "title": "NHB Roots: Making of Joss Sticks",
+        "url": "https://roots.gov.sg/ich-landing/ich/making-of-joss-sticks"
+      }
+    ]
+  },
+  {
+    "id": "native-flowers",
+    "name": "Native flowers",
+    "local": "Batik Flora",
+    "color": "olive",
+    "aliases": [
+      "aquatic ginger",
+      "common dianella",
+      "seashore purslane",
+      "simpoh lak",
+      "utania nervosa",
+      "white kopsia"
+    ],
+    "tagline": "Six local flowers from Singapore Airlines' batik motif.",
+    "communities": [
+      "Garden City"
+    ],
+    "story": [
+      "Singapore Airlines' signature scent, Batik Flora, uses six flowers from its batik motif: aquatic ginger, common dianella, seashore purslane, simpoh lak, Utania nervosa and white kopsia.",
+      "It's a rare example of a fragrance built from native plants, created with local perfume label Scent by SIX."
+    ],
+    "sources": [
+      {
+        "title": "Singapore Airlines press release (Aug 2021)",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ]
+  },
+  {
+    "id": "kopi-teh",
+    "name": "Kopi & teh",
+    "local": "Nanyang coffee & tea",
+    "color": "maroon",
+    "aliases": [
+      "kopi",
+      "coffee",
+      "teh",
+      "black tea",
+      "ceylon tea"
+    ],
+    "tagline": "The smell of a Nanyang breakfast.",
+    "communities": [
+      "Hainanese",
+      "Kopitiam culture"
+    ],
+    "story": [
+      "Between the 1920s and 1950s, Hainanese coffeeshop owners popularised kopitiam culture and the Nanyang breakfast: kopi, teh, soft-boiled eggs and kaya toast. Teh is usually made with Ceylon tea.",
+      "Nanyang means 'South Sea' in Mandarin and refers to Southeast Asia. Nanyang-style kopi is traditionally made from Robusta beans roasted with sugar and margarine, then strained through a cloth 'sock'."
+    ],
+    "sources": [
+      {
+        "title": "NHB Roots: Traditional Breakfast of Kaya and Kopi",
+        "url": "https://roots.gov.sg/ich-landing/ich/traditional-breakfast-of-kaya-and-kopi"
+      },
+      {
+        "title": "MICHELIN Guide: The Singaporean breakfast",
+        "url": "https://guide.michelin.com/hk/en/article/features/singaporean-breakfast-kopitiam-kaya-toast-eggs"
+      }
+    ]
+  },
+  {
+    "id": "calamansi",
+    "name": "Calamansi",
+    "local": "limau kasturi",
+    "color": "olive",
+    "aliases": [
+      "calamansi",
+      "calamondin",
+      "limau kasturi"
+    ],
+    "tagline": "The small lime on every hawker plate.",
+    "communities": [
+      "Malay",
+      "Hawker culture"
+    ],
+    "story": [
+      "Calamansi, called limau kasturi in Malay, is the small lime squeezed over dishes at Singapore's hawker centres, from Hokkien mee to Malay noodles and sambal belacan.",
+      "The plant first came from the Philippines, where it is still mostly grown. NParks lists it under both names, along with 'musk lime' and 'golden lime'."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Calamansi",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3351"
+      },
+      {
+        "title": "Wikipedia: Calamansi",
+        "url": "https://en.wikipedia.org/wiki/Calamansi"
+      }
+    ]
+  },
+  {
+    "id": "frangipani",
+    "name": "Frangipani",
+    "local": "kemboja · bunga kubur",
+    "color": "cream",
+    "aliases": [
+      "frangipani",
+      "plumeria",
+      "kemboja"
+    ],
+    "tagline": "The graveyard flower, and a perfumer's name.",
+    "communities": [
+      "Malay",
+      "Indian",
+      "Buddhist",
+      "Hindu"
+    ],
+    "story": [
+      "NParks lists the white frangipani as the 'Singapore graveyard flower'. Its Malay names include kemboja and bunga kubur, 'grave flower'. Indian and Malay Muslims and Buddhists often plant it in cemeteries. Some Malay Muslims see its fallen morning flowers as an offering to the dead, and Hindus sometimes plant it near temples.",
+      "The name itself comes from perfume. A Marquis Frangipani created a scent that was later found to smell like the flower."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Plumeria obtusa",
+        "url": "https://nparks.gov.sg/florafaunaweb/flora/3/0/3072"
+      }
+    ]
+  },
+  {
+    "id": "torch-ginger",
+    "name": "Torch ginger",
+    "local": "bunga kantan",
+    "color": "coral",
+    "aliases": [
+      "torch ginger",
+      "bunga kantan",
+      "etlingera"
+    ],
+    "tagline": "The pink bud that perfumes rojak and laksa.",
+    "communities": [
+      "Peranakan",
+      "Malay",
+      "Chinese"
+    ],
+    "story": [
+      "Torch ginger, bunga kantan, is grown for its aromatic young flower buds, which taste floral and tangy. NParks calls them a key ingredient in Chinese rojak and Penang asam laksa.",
+      "It grows in the Fort Canning Spice Garden today, next to the nutmeg and clove."
+    ],
+    "sources": [
+      {
+        "title": "NParks: Three Essential Herbs and Spices in Local Dishes",
+        "url": "https://nparks.gov.sg/nparksbuzz/aug---dec-2022/gardening/three-essential-herbs-and-spices-in-local-dishes"
+      },
+      {
+        "title": "NParks: Ancient History Trail at Fort Canning",
+        "url": "https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/diy-walk/diy-walk-pdf-files/ancient-history-trail-at-fcp.ashx"
+      }
+    ]
+  }
+]
