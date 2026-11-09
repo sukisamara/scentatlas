@@ -280,8 +280,6 @@ a.perfume-card:hover .bottle { transform: rotate(-4deg) translateY(-3px); }
   display: flex; align-items: center; justify-content: center; }
 .trail li { grid-template-columns: 96px 28px 1fr; }
 
-/* discovery set */
-.set-art { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 6px; }
 
 /* ============ World map (atlas cover) ============ */
 body.is-world .site-nav a:not(.nav-world) { display: none; }
