@@ -316,24 +316,142 @@ function pageNote(key) {
   </section>` : ""}`;
 }
 
+/* ---------- Scent trail (interactive map) ----------
+   Leaflet draws a real street map. Each stop has lat/lon in data/trail.json.
+   "Play the walk" draws the route stop by stop and moves a walker along it. */
+const mapsSearch = s => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ", " + s.address)}`;
+function mapsRoute(stops) {
+  const q = s => encodeURIComponent(s.address);
+  const mid = stops.slice(1, -1).map(q).join("|");
+  return `https://www.google.com/maps/dir/?api=1&origin=${q(stops[0])}&destination=${q(stops[stops.length - 1])}&waypoints=${mid}&travelmode=walking`;
+}
+// Rough walking time: straight-line distance x 1.3 for streets, at 80 m a minute
+function walkMinutes(a, b) {
+  const R = 6371000, toRad = d => d * Math.PI / 180;
+  const dLat = toRad(b.lat - a.lat), dLon = toRad(b.lon - a.lon);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon / 2) ** 2;
+  const metres = 2 * R * Math.asin(Math.sqrt(h)) * 1.3;
+  return Math.max(2, Math.round(metres / 80 / 5) * 5 || 2);
+}
+
 function pageTrail() {
   const t = DATA.trail;
+  const stops = t.stops;
+  setTimeout(setUpTrailMap, 0);
   return `
   <h1>${esc(t.title)}</h1>
   <p class="lead">${esc(t.intro)}</p>
-  <ol class="trail">
-    ${t.stops.map(s => `
-      <li>
-        <div class="time">${esc(s.time)}</div>
-        <div class="dot ${s.notes.length ? "has-icon" : "quiet"}">${s.notes.length ? noteIcon(s.notes[0], 30) : ""}</div>
-        <div>
-          <div class="area">${esc(s.area)}</div>
+  <div class="trail-controls">
+    <button class="btn" id="play-walk">▶ Play the walk</button>
+    <a class="btn ghost" href="${mapsRoute(stops)}" target="_blank" rel="noopener">Open the route in Google Maps ↗</a>
+    <span class="legend"><span class="lg-pin hl">★</span> Must-go <span class="lg-pin">•</span> Pit stop</span>
+  </div>
+  <div class="trail-layout">
+    <div class="trail-map-wrap"><div id="trail-map" role="application" aria-label="Map of the scent trail"></div></div>
+    <ol class="trail-stops">
+      ${stops.map((s, i) => `
+      ${i ? `<li class="walk-leg" aria-hidden="true">🚶 about ${walkMinutes(stops[i - 1], s)} min walk</li>` : ""}
+      <li class="stop-card${s.highlight ? " is-highlight" : ""}" data-i="${i}">
+        <div class="stop-num">${s.highlight ? "★" : i + 1}</div>
+        <div class="stop-body">
+          <div class="stop-meta"><span class="time">${esc(s.time)}</span> · <span class="area">${esc(s.area)}</span>${s.highlight ? ` <span class="must-go">Must-go</span>` : ""}</div>
           <h3>${esc(s.name)}</h3>
-          <p style="margin:0 0 8px">${esc(s.blurb)}</p>
-          <div class="chips">${s.notes.map(id => storyChip(noteById(id))).join("")}</div>
+          ${s.why ? `<p class="why">${esc(s.why)}</p>` : ""}
+          <p>${esc(s.blurb)}</p>
+          ${s.notes.length ? `<div class="chips">${s.notes.map(id => storyChip(noteById(id))).join("")}</div>` : ""}
+          <div class="stop-links">
+            <button class="link-btn" data-show="${i}">Show on map</button>
+            <a href="${mapsSearch(s)}" target="_blank" rel="noopener">Google Maps ↗</a>
+            <span class="muted">${esc(s.address)}</span>
+          </div>
         </div>
       </li>`).join("")}
-  </ol>`;
+    </ol>
+  </div>
+  <p class="notice">${esc(t.tip)} Walking times are rough estimates. Map tiles © OpenStreetMap contributors © CARTO.</p>`;
+}
+
+function setUpTrailMap() {
+  const el = document.getElementById("trail-map");
+  if (!el || !window.L) return;
+  const stops = DATA.trail.stops;
+  const pts = stops.map(s => [s.lat, s.lon]);
+  const map = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+    subdomains: "abcd", maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  }).addTo(map);
+  map.fitBounds(pts, { padding: [48, 48] });
+
+  // Faint dotted line for the full route, solid line drawn during the animation
+  L.polyline(pts, { className: "route-ghost", weight: 3, dashArray: "2 8" }).addTo(map);
+  const drawn = L.polyline([], { className: "route-drawn", weight: 5 }).addTo(map);
+
+  const markers = stops.map((s, i) => {
+    const icon = L.divIcon({
+      className: "",
+      html: `<div class="tpin${s.highlight ? " hl" : ""}"><span>${s.highlight ? "★" : i + 1}</span></div>`,
+      iconSize: s.highlight ? [38, 38] : [28, 28], iconAnchor: s.highlight ? [19, 19] : [14, 14],
+    });
+    const m = L.marker([s.lat, s.lon], { icon, title: s.name, riseOnHover: true }).addTo(map);
+    m.bindPopup(`<div class="tpop"><div class="tpop-time">${esc(s.time)} · ${esc(s.area)}</div>
+      <strong>${esc(s.name)}</strong>${s.why ? `<p>${esc(s.why)}</p>` : ""}
+      <a href="${mapsSearch(s)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`, { offset: [0, -6] });
+    m.on("click", () => focusCard(i, false));
+    return m;
+  });
+
+  function focusCard(i, scroll = true) {
+    document.querySelectorAll(".stop-card").forEach(c => c.classList.toggle("active", +c.dataset.i === i));
+    const card = document.querySelector(`.stop-card[data-i="${i}"]`);
+    if (scroll && card) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  document.querySelectorAll("[data-show]").forEach(b => b.addEventListener("click", () => {
+    const i = +b.dataset.show;
+    map.flyTo(pts[i], 17, { duration: 0.8 });
+    markers[i].openPopup(); focusCard(i, false);
+    if (window.innerWidth < 900) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }));
+
+  // The animated walk
+  const walker = L.circleMarker(pts[0], { radius: 9, className: "walker" });
+  let playing = false;
+  const btn = document.getElementById("play-walk");
+  btn.addEventListener("click", async () => {
+    if (playing) { playing = false; return; }
+    playing = true; btn.textContent = "■ Stop";
+    drawn.setLatLngs([pts[0]]); walker.setLatLng(pts[0]).addTo(map);
+    map.fitBounds(pts, { padding: [48, 48] });
+    if (window.innerWidth < 900) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    markers[0].openPopup(); focusCard(0);
+    await wait(1400);
+    for (let i = 1; i < pts.length && playing; i++) {
+      map.closePopup();
+      await animateLeg(pts[i - 1], pts[i], 1600);
+      if (!playing) break;
+      markers[i].openPopup(); focusCard(i);
+      await wait(1500);
+    }
+    if (playing) { drawn.setLatLngs(pts); map.closePopup(); map.fitBounds(pts, { padding: [48, 48] }); }
+    playing = false; btn.textContent = "▶ Play the walk again";
+    walker.remove();
+  });
+
+  function animateLeg(a, b, ms) {
+    return new Promise(done => {
+      const start = performance.now();
+      const base = drawn.getLatLngs().slice();
+      (function frame(now) {
+        if (!playing) return done();
+        const k = Math.min(1, (now - start) / ms), e = k < .5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2;
+        const p = [a[0] + (b[0] - a[0]) * e, a[1] + (b[1] - a[1]) * e];
+        drawn.setLatLngs([...base, p]); walker.setLatLng(p);
+        if (k < 1) requestAnimationFrame(frame); else done();
+      })(start);
+    });
+  }
+  const wait = ms => new Promise(r => setTimeout(r, ms));
 }
 
 let brandFilter = "All";
@@ -342,7 +460,7 @@ function pageBrands() {
   const list = DATA.brands.filter(b => brandFilter === "All" || b.tier === brandFilter);
   return `
   <h1>Brands</h1>
-  <p class="lead">Homegrown perfume houses, from a 1933 attar shop to online-only labels launched in 2025.</p>
+  <p class="lead">${DATA.brands.length} homegrown perfume houses, from a 1933 attar shop to labels launched in 2024. Each card links the source its facts come from; founding years are left out where we couldn't confirm one.</p>
   <div class="filter" role="group" aria-label="Filter by tier">
     ${tiers.map(t => `<button data-tier="${t}" aria-pressed="${t === brandFilter}">${t}</button>`).join("")}
   </div>
@@ -355,9 +473,11 @@ function pageBrands() {
       <p class="muted">${esc(b.makes)}</p>
       <p><strong>Where:</strong> ${esc(b.address)}</p>
       ${perfumes.length ? `<p>${perfumes.map(p => `<a href="#/perfume/${p.id}">${esc(p.name)}</a>`).join(" · ")}</p>` : ""}
-      <div class="links">
-        <a href="${esc(b.url)}" target="_blank" rel="noopener">Source ↗</a>
-        ${b.check ? `<span class="badge check">To verify</span>` : ""}
+      <div class="brand-foot">
+        <div class="social-row">${["website", "instagram", "tiktok", "facebook"].filter(k => b.links[k]).map(k =>
+          `<a class="social s-${k}" href="${esc(b.links[k])}" target="_blank" rel="noopener" title="${SOCIAL_LABELS[k]}" aria-label="${esc(b.name)} on ${SOCIAL_LABELS[k]}">${socialIcon(k)}</a>`).join("")
+          || `<span class="muted small">No official website or social account found</span>`}</div>
+        <p class="sources small">Source: ${b.sources.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join(" · ")}</p>
       </div>
     </div>`;
   }).join("")}</div>`;

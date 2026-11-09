@@ -205,3 +205,16 @@ function familyIcon(familyId, size = 48) {
   if (!art) return "";
   return `<svg class="note-icon family-icon" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">${art}</svg>`;
 }
+
+/* ---------- Retro social icons (drawn, not brand logos) ---------- */
+const SOCIAL_ICONS = {
+  website: `<circle cx="12" cy="12" r="8.5" fill="none"/><path fill="none" d="M3.5 12h17M12 3.5c-3 3-3 14 0 17M12 3.5c3 3 3 14 0 17"/>`,
+  instagram: `<rect x="4" y="4" width="16" height="16" rx="5" fill="none"/><circle cx="12" cy="12" r="3.8" fill="none"/><circle cx="16.8" cy="7.2" r="1" fill="currentColor" stroke="none"/>`,
+  tiktok: `<path fill="none" d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path fill="none" d="M14 4c.5 2.6 2.4 4.3 5 4.5"/>`,
+  facebook: `<path fill="none" d="M15.5 4.5h-2a3.5 3.5 0 0 0-3.5 3.5v12M7.5 11.5h7"/>`,
+};
+const SOCIAL_LABELS = { website: "Website", instagram: "Instagram", tiktok: "TikTok", facebook: "Facebook" };
+
+function socialIcon(kind, size = 20) {
+  return `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${SOCIAL_ICONS[kind]}</svg>`;
+}
