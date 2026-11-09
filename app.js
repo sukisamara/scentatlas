@@ -418,85 +418,44 @@ function pageBusiness() {
 }
 
 
-/* ---------- World map (the atlas cover) ---------- */
+/* ---------- World map (the atlas cover) ----------
+   Drawn with d3 from Natural Earth data (data/world.json).
+   - Click any country (or its postage stamp) to zoom in and see its cities.
+   - Cities with an edition get a red pin; the rest are "coming soon".
+   - Editions and their cities are set in data/editions.json.
+*/
 
-function pinPercent(id) {
-  const [x, y] = WORLD_MAP.pins[id];
-  return { left: (x / WORLD_MAP.width) * 100, top: (y / WORLD_MAP.height) * 100 };
-}
+const MAP_W = 1000, MAP_H = 520;
+const BIG_COUNTRY_STAMPS = 32;   // how many of the largest countries get a postage stamp
 
 function pageWorld() {
   const eds = DATA.editions;
-  const live = eds.filter(e => e.status === "live");
-  const editionCountries = new Set(eds.map(e => e.name));
-
-  const countries = WORLD_MAP.countries.map(c =>
-    `<path d="${c.d}" class="land ${editionCountries.has(c.name) ? "land-edition" : ""}"><title>${esc(c.name)}</title></path>`).join("");
-
-  // Grey dots for editions still to come
-  const dots = eds.filter(e => e.status !== "live" && e.showDot !== false).map(e => {
-    const p = pinPercent(e.id);
-    return `<button class="map-dot ${e.status}" style="left:${p.left}%;top:${p.top}%" data-tip="${esc(e.name)}: ${esc(e.tagline)}" aria-label="${esc(e.name)}, ${esc(e.tagline)}"></button>`;
-  }).join("");
-
-  // Red pins + pop-up windows for live editions
-  const pins = live.map(e => {
-    const p = pinPercent(e.id);
-    return `
-    <button class="map-pin" style="left:${p.left}%;top:${p.top}%" data-edition="${e.id}" aria-label="Open ${esc(e.name)}" aria-expanded="false">
-      <span class="pin-pulse"></span>
-      <svg viewBox="0 0 40 56" width="34" height="48" aria-hidden="true">
-        <path d="M20 54 C20 54 4 32 4 20 A16 16 0 0 1 36 20 C36 32 20 54 20 54 Z" fill="#D63B2F" stroke="#0B0F2E" stroke-width="3"/>
-        <circle cx="20" cy="20" r="6.5" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="2.5"/>
-      </svg>
-    </button>`;
-  }).join("");
-
-  const popups = live.map(e => {
-    const p = pinPercent(e.id);
-    return `
-    <div class="map-popup" id="popup-${e.id}" style="left:${p.left}%;top:${p.top}%" role="dialog" aria-label="${esc(e.name)}" hidden>
-      <button class="popup-close" aria-label="Close">×</button>
-      <div class="popup-art">${(e.icons || []).map(id => noteIcon(id, 34)).join("")}</div>
-      <span class="kicker">${esc(e.edition)} · Live</span>
-      <h3>${esc(e.name)}</h3>
-      <p class="hand popup-tag">${esc(e.tagline)}</p>
-      <p class="popup-stats"><strong>${DATA.notes.length}</strong> notes · <strong>${DATA.perfumes.length}</strong> perfumes · <strong>${DATA.brands.length}</strong> brands · <strong>1</strong> scent trail</p>
-      <a class="btn" href="${esc(e.link)}">Enter ${esc(e.name)} →</a>
-    </div>`;
-  }).join("");
-
   const stamps = eds.map(e => `
-    <${e.status === "live" ? `a href="${esc(e.link)}"` : "div"} class="stamp stamp-${e.status}">
+    <${e.status === "live" ? `a href="${esc(e.link)}"` : `button type="button" data-zoom="${esc(e.country)}"`} class="stamp stamp-${e.status}">
       <span class="stamp-status">${e.status === "live" ? esc(e.edition) : e.status === "origin" ? "Origin story" : "Coming soon"}</span>
       <strong>${esc(e.name)}</strong>
       <small>${esc(e.status === "soon" ? e.tagline.replace(/^Coming soon:?\s*/, "") || "Notes to be mapped" : e.tagline)}</small>
-    </${e.status === "live" ? "a" : "div"}>`).join("");
+    </${e.status === "live" ? "a" : "button"}>`).join("");
 
   return `
   <section class="world-intro">
     <p class="hand">An atlas of scent</p>
     <h1>Smell the world,<br>one city at a time</h1>
-    <p class="lead">Each edition maps a place through the scents in its history: the spices it traded, the flowers it prays with, the breakfasts it wakes up to. Tap the red pin to begin.</p>
+    <p class="lead">Each edition maps a place through the scents in its history: the spices it traded, the flowers it prays with, the breakfasts it wakes up to. Tap the red pin to begin, or click any country to zoom in.</p>
   </section>
 
   <section class="map-frame">
     <div class="map-cartouche"><span class="hand">Scent Atlas</span><small>Edition 01 · 2026</small></div>
     <div class="map-wrap">
       <div class="map-canvas">
-        <svg class="world-svg" viewBox="0 0 ${WORLD_MAP.width} ${WORLD_MAP.height}" role="img" aria-label="World map with Scent Atlas editions">
-          <path d="${WORLD_MAP.sphere}" class="ocean"/>
-          <path d="${WORLD_MAP.graticule}" class="graticule"/>
-          ${countries}
-          <path d="${WORLD_MAP.sphere}" class="sphere-edge"/>
-        </svg>
-        ${dots}
-        ${pins}
+        <svg class="world-svg" viewBox="0 0 ${MAP_W} ${MAP_H}" role="img" aria-label="Interactive world map of Scent Atlas editions"></svg>
         <div class="map-tip" hidden></div>
+        <div class="zoom-panel" hidden></div>
       </div>
-      ${popups}
+      <div class="map-popup" role="dialog" hidden></div>
     </div>
     ${compassRose()}
+    <p class="map-credit">Map: Natural Earth. Cities: GeoNames (CC BY 4.0).</p>
   </section>
 
   <section class="section">
@@ -517,39 +476,255 @@ function compassRose() {
   </svg>`;
 }
 
-function setUpWorldMap() {
-  const wrap = app.querySelector(".map-wrap");
-  if (!wrap) return;
-  const tip = wrap.querySelector(".map-tip");
+// The biggest single piece of a country (so France zooms to France, not French Guiana)
+function mainlandOf(feature) {
+  if (feature.geometry.type !== "MultiPolygon") return feature;
+  let best = null, bestArea = -1;
+  for (const coords of feature.geometry.coordinates) {
+    const poly = { type: "Feature", geometry: { type: "Polygon", coordinates: coords } };
+    const a = d3.geoArea(poly);
+    if (a > bestArea) { bestArea = a; best = poly; }
+  }
+  return best;
+}
 
-  function closeAll() {
-    wrap.querySelectorAll(".map-popup").forEach(p => p.hidden = true);
-    wrap.querySelectorAll(".map-pin").forEach(b => b.setAttribute("aria-expanded", "false"));
+const PIN_PATH = "M0 0 C0 0 -12 -16 -12 -26 A12 12 0 0 1 12 -26 C12 -16 0 0 0 0 Z";
+
+function setUpWorldMap() {
+  const canvas = app.querySelector(".map-canvas");
+  if (!canvas || typeof d3 === "undefined") return;
+
+  const svg = d3.select(canvas).select("svg");
+  const tip = canvas.querySelector(".map-tip");
+  const panel = canvas.querySelector(".zoom-panel");
+  const popup = app.querySelector(".map-popup");
+
+  const countries = topojson.feature(DATA.world, DATA.world.objects.countries).features
+    .filter(f => f.properties.name !== "Antarctica");
+  const projection = d3.geoNaturalEarth1().fitExtent([[10, 10], [MAP_W - 10, MAP_H - 10]], { type: "Sphere" });
+  const path = d3.geoPath(projection);
+
+  const editionByCountry = new Map(DATA.editions.map(e => [e.country, e]));
+  let k = 1;            // current zoom level
+  let current = null;   // the country we're zoomed into
+
+  // Layers
+  const layer = svg.append("g").attr("class", "zoom-layer");
+  layer.append("path").datum({ type: "Sphere" }).attr("class", "ocean").attr("d", path);
+  layer.append("path").datum(d3.geoGraticule10()).attr("class", "graticule").attr("d", path);
+
+  const land = layer.append("g").selectAll("path").data(countries).join("path")
+    .attr("class", d => "land" + (editionByCountry.has(d.properties.name) ? " land-edition" : ""))
+    .attr("d", path)
+    .attr("tabindex", 0)
+    .attr("aria-label", d => d.properties.name)
+    .on("click", (ev, d) => { ev.stopPropagation(); zoomTo(d); })
+    .on("keydown", (ev, d) => { if (ev.key === "Enter") zoomTo(d); })
+    .on("mousemove", (ev, d) => showTip(ev, d.properties.name + (current ? "" : " · click to explore")))
+    .on("mouseleave", hideTip);
+
+  layer.append("path").datum({ type: "Sphere" }).attr("class", "sphere-edge").attr("d", path);
+
+  // Postage stamps on the biggest countries
+  // Largest countries first; skip any stamp that would overlap one already placed, and skip edition countries (they have pins)
+  const big = [], placed = [];
+  for (const f of [...countries].sort((a, b) => d3.geoArea(b) - d3.geoArea(a))) {
+    if (big.length >= BIG_COUNTRY_STAMPS) break;
+    if (editionByCountry.has(f.properties.name)) continue;
+    const [x, y] = path.centroid(mainlandOf(f));
+    const w = Math.max(30, shortName(f.properties.name).length * 4.1 + 10);
+    const box = [x - w / 2 - 3, y - 12, x + w / 2 + 3, y + 12];
+    if (placed.some(b => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))) continue;
+    placed.push(box); big.push(f);
+  }
+  const stampLayer = layer.append("g").attr("class", "stamp-layer");
+  const stampG = stampLayer.selectAll("g").data(big).join("g")
+    .attr("class", "map-stamp")
+    .attr("transform", d => { const [x, y] = path.centroid(mainlandOf(d)); return `translate(${x},${y})`; })
+    .on("click", (ev, d) => { ev.stopPropagation(); zoomTo(d); });
+  stampG.each(function (d) {
+    const name = shortName(d.properties.name);
+    const w = Math.max(30, name.length * 4.1 + 10);
+    const g = d3.select(this).append("g").attr("class", "stamp-body")
+      .attr("transform", `rotate(${(hashOf(name) % 9) - 4})`);
+    g.append("rect").attr("x", -w / 2).attr("y", -9).attr("width", w).attr("height", 18).attr("class", "stamp-paper");
+    g.append("rect").attr("x", -w / 2 + 2.5).attr("y", -6.5).attr("width", w - 5).attr("height", 13).attr("class", "stamp-inner");
+    g.append("text").attr("y", 2.6).attr("text-anchor", "middle").text(name.toUpperCase());
+  });
+
+  // City pins (one group per country, drawn only when zoomed in)
+  const cityLayer = layer.append("g").attr("class", "city-layer");
+
+  // World-level pins for live editions and origin story
+  const worldPins = layer.append("g").attr("class", "world-pins");
+  DATA.editions.filter(e => e.city).forEach(e => {
+    const city = (DATA.cities[e.country] || []).find(c => c.n === e.city);
+    if (!city) return;
+    const [x, y] = projection([city.lon, city.lat]);
+    const g = worldPins.append("g").attr("class", "pin pin-" + e.status).attr("transform", `translate(${x},${y})`)
+      .attr("tabindex", 0).attr("role", "button").attr("aria-label", `${e.city}, ${e.name}`)
+      .on("click", (ev) => { ev.stopPropagation(); openPopup(e, city, ev); })
+      .on("keydown", (ev) => { if (ev.key === "Enter") openPopup(e, city, ev); });
+    const s = g.append("g").attr("class", "pin-scale");
+    if (e.status === "live") s.append("circle").attr("class", "pin-pulse").attr("r", 6);
+    s.append("path").attr("d", PIN_PATH).attr("class", "pin-shape");
+    s.append("circle").attr("cy", -26).attr("r", 5).attr("class", "pin-eye");
+  });
+  // Grey dots for countries coming soon (at their capital)
+  DATA.editions.filter(e => e.status === "soon").forEach(e => {
+    const list = DATA.cities[e.country] || [];
+    const cap = list.find(c => c.cap) || list[0];
+    if (!cap) return;
+    const [x, y] = projection([cap.lon, cap.lat]);
+    worldPins.append("circle").attr("class", "soon-dot").attr("cx", x).attr("cy", y).attr("r", 4)
+      .on("mousemove", ev => showTip(ev, `${e.name}: ${e.tagline}`)).on("mouseleave", hideTip)
+      .on("click", (ev) => { ev.stopPropagation(); zoomTo(countries.find(c => c.properties.name === e.country)); });
+  });
+  sizePins();
+
+  // ----- behaviour -----
+
+  function shortName(n) {
+    return ({ "United States of America": "USA", "Russia": "Russia", "Dem. Rep. Congo": "DR Congo",
+      "Central African Rep.": "C. Africa", "Saudi Arabia": "Saudi", "South Africa": "S. Africa" })[n] || n;
   }
 
-  wrap.querySelectorAll(".map-pin").forEach(pin => {
-    pin.addEventListener("click", ev => {
-      ev.stopPropagation();
-      const popup = document.getElementById("popup-" + pin.dataset.edition);
-      const willOpen = popup.hidden;
-      closeAll();
-      popup.hidden = !willOpen;
-      pin.setAttribute("aria-expanded", String(willOpen));
-    });
-  });
-  wrap.querySelectorAll(".popup-close").forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); closeAll(); }));
-  wrap.querySelectorAll(".map-popup").forEach(p => p.addEventListener("click", ev => ev.stopPropagation()));
-  wrap.addEventListener("click", closeAll);
+  function sizePins() {
+    // Keep pins and labels the same size on screen whatever the zoom
+    layer.selectAll(".pin-scale, .city-scale").attr("transform", `scale(${1 / k})`);
+    layer.selectAll(".soon-dot").attr("r", 4 / k).attr("stroke-width", 1.5 / k);
+  }
 
-  // Little tooltips on the "coming soon" dots
-  wrap.querySelectorAll(".map-dot").forEach(dot => {
-    const show = () => { tip.textContent = dot.dataset.tip; tip.style.left = dot.style.left; tip.style.top = dot.style.top; tip.hidden = false; };
-    dot.addEventListener("mouseenter", show);
-    dot.addEventListener("focus", show);
-    dot.addEventListener("click", ev => { ev.stopPropagation(); show(); });
-    dot.addEventListener("mouseleave", () => tip.hidden = true);
-    dot.addEventListener("blur", () => tip.hidden = true);
+  function zoomTo(feature) {
+    if (!feature) return;
+    closePopup(); hideTip();
+    current = feature;
+    const name = feature.properties.name;
+    const [[x0, y0], [x1, y1]] = path.bounds(mainlandOf(feature));
+    const dx = Math.max(x1 - x0, 1), dy = Math.max(y1 - y0, 1);
+    k = Math.min(60, 0.8 / Math.max(dx / MAP_W, dy / MAP_H));
+    const tx = MAP_W / 2 - k * (x0 + x1) / 2, ty = MAP_H / 2 - k * (y0 + y1) / 2;
+
+    land.classed("land-active", d => d === feature).classed("land-dim", d => d !== feature);
+    canvas.classList.add("zoomed");
+    drawCities(feature);
+    layer.transition().duration(900).ease(d3.easeCubicInOut)
+      .attr("transform", `translate(${tx},${ty}) scale(${k})`)
+      .on("start", sizePins);
+    showPanel(name);
+  }
+
+  function zoomOut() {
+    closePopup(); hideTip();
+    current = null; k = 1;
+    land.classed("land-active", false).classed("land-dim", false);
+    canvas.classList.remove("zoomed");
+    cityLayer.selectAll("*").remove();
+    layer.transition().duration(800).ease(d3.easeCubicInOut).attr("transform", "translate(0,0) scale(1)").on("start", sizePins);
+    panel.hidden = true;
+  }
+
+  function drawCities(feature) {
+    cityLayer.selectAll("*").remove();
+    const name = feature.properties.name;
+    const ed = editionByCountry.get(name);
+    const list = DATA.cities[name] || [];
+    list.forEach(city => {
+      const status = ed && ed.city === city.n ? ed.status : "soon";
+      const [x, y] = projection([city.lon, city.lat]);
+      const g = cityLayer.append("g").attr("class", "city city-" + status).attr("transform", `translate(${x},${y})`)
+        .attr("tabindex", 0).attr("role", "button").attr("aria-label", city.n)
+        .on("click", ev => { ev.stopPropagation(); openPopup(ed && ed.city === city.n ? ed : null, city, ev, name); })
+        .on("keydown", ev => { if (ev.key === "Enter") openPopup(ed && ed.city === city.n ? ed : null, city, ev, name); });
+      const s = g.append("g").attr("class", "city-scale");
+      if (status === "soon") {
+        s.append("circle").attr("r", 5).attr("class", "city-dot");
+      } else {
+        if (status === "live") s.append("circle").attr("class", "pin-pulse").attr("r", 6);
+        s.append("path").attr("d", PIN_PATH).attr("class", "pin-shape");
+        s.append("circle").attr("cy", -26).attr("r", 5).attr("class", "pin-eye");
+      }
+      s.append("text").attr("x", 9).attr("y", status === "soon" ? 4 : -20).attr("class", "city-label").text(city.n);
+    });
+    sizePins();
+  }
+
+  function showPanel(name) {
+    const ed = editionByCountry.get(name);
+    const count = (DATA.cities[name] || []).length;
+    const status = ed ? (ed.status === "live" ? `${ed.edition} · Live` : ed.status === "origin" ? "Origin story" : "Coming soon") : "Not mapped yet";
+    panel.innerHTML = `
+      <button class="zoom-back" type="button">← World map</button>
+      <div class="zoom-stamp stamp-${ed ? ed.status : "none"}">
+        <span class="stamp-status">${esc(status)}</span>
+        <strong>${esc(name)}</strong>
+        <small>${count ? `${count} cities on the map${ed && ed.status === "live" ? "" : " · tap one"}` : "No cities in the data"}</small>
+        ${ed && ed.status === "live" ? `<a class="btn" href="${esc(ed.link)}">Enter ${esc(ed.name)} →</a>` : ""}
+      </div>`;
+    panel.hidden = false;
+    panel.querySelector(".zoom-back").addEventListener("click", ev => { ev.stopPropagation(); zoomOut(); });
+    panel.addEventListener("click", ev => ev.stopPropagation());
+  }
+
+  function openPopup(ed, city, ev, countryName) {
+    hideTip();
+    let html;
+    if (ed && ed.status === "live") {
+      html = `
+        <div class="popup-art">${(ed.icons || []).map(id => noteIcon(id, 34)).join("")}</div>
+        <span class="kicker">${esc(ed.edition)} · Live</span>
+        <h3>${esc(city.n)}</h3>
+        <p class="hand popup-tag">${esc(ed.tagline)}</p>
+        <p class="popup-stats"><strong>${DATA.notes.length}</strong> notes · <strong>${DATA.perfumes.length}</strong> perfumes · <strong>${DATA.brands.length}</strong> brands · <strong>1</strong> scent trail</p>
+        <a class="btn" href="${esc(ed.link)}">Enter ${esc(ed.name)} →</a>`;
+    } else if (ed && ed.status === "origin") {
+      html = `
+        <div class="popup-art">${noteIcon("jasmine", 34)}${noteIcon("agarwood-sandalwood", 34)}</div>
+        <span class="kicker">Origin story</span>
+        <h3>${esc(city.n)}</h3>
+        <p class="hand popup-tag">${esc(ed.tagline)}</p>
+        <p class="popup-stats">Scent Atlas began here, at a make-your-own-scent experience in Amping. A ${esc(ed.name)} edition is on the wishlist.</p>`;
+    } else {
+      html = `
+        <span class="kicker">Coming soon</span>
+        <h3>${esc(city.n)}</h3>
+        <p class="popup-stats">${esc(countryName || "")}${city.cap ? " · capital" : ""}. This city hasn't been mapped yet. Its notes, perfumes and scent trail are still to come.</p>`;
+    }
+    popup.innerHTML = `<button class="popup-close" aria-label="Close">×</button>` + html;
+    popup.querySelector(".popup-close").addEventListener("click", e2 => { e2.stopPropagation(); closePopup(); });
+
+    // Place the window beside the pin (on phones, CSS puts it under the map instead)
+    const box = canvas.getBoundingClientRect();
+    const px = ev.clientX - box.left, py = ev.clientY - box.top;
+    popup.style.left = (px / box.width * 100) + "%";
+    popup.style.top = (py / box.height * 100) + "%";
+    popup.classList.toggle("popup-right", px < box.width * 0.45);
+    popup.hidden = false;
+  }
+
+  function closePopup() { popup.hidden = true; }
+  function showTip(ev, text) {
+    const box = canvas.getBoundingClientRect();
+    tip.textContent = text;
+    tip.style.left = (ev.clientX - box.left) + "px";
+    tip.style.top = (ev.clientY - box.top) + "px";
+    tip.hidden = false;
+  }
+  function hideTip() { tip.hidden = true; }
+
+  canvas.addEventListener("click", () => { if (!popup.hidden) closePopup(); else if (current) zoomOut(); });
+  popup.addEventListener("click", ev => ev.stopPropagation());
+  document.addEventListener("keydown", function onKey(ev) {
+    if (!document.body.contains(canvas)) return document.removeEventListener("keydown", onKey);
+    if (ev.key === "Escape") { if (!popup.hidden) closePopup(); else if (current) zoomOut(); }
   });
+
+  // Edition stamps under the map zoom the map too
+  app.querySelectorAll(".stamps [data-zoom]").forEach(b => b.addEventListener("click", () => {
+    const f = countries.find(c => c.properties.name === b.dataset.zoom);
+    canvas.scrollIntoView({ behavior: "smooth", block: "center" });
+    zoomTo(f);
+  }));
 }
 
 function pageNotFound() {
@@ -600,7 +775,7 @@ function render() {
 /* ---------- Start ---------- */
 
 async function loadData() {
-  const files = ["notes", "perfumes", "brands", "experiences", "trail", "offers", "editions"];
+  const files = ["notes", "perfumes", "brands", "experiences", "trail", "offers", "editions", "cities", "world"];
   const results = await Promise.all(files.map(f => fetch(`data/${f}.json`).then(r => r.json())));
   files.forEach((f, i) => DATA[f] = results[i]);
 }

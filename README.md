@@ -20,7 +20,9 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 | File | What it holds |
 | --- | --- |
 | `data/editions.json` | The pins on the world map: which countries are live, coming soon, or the origin story |
-| `worldmap.js` | The world map shapes (Natural Earth, public domain). No need to edit |
+| `lib/` | d3 and topojson-client, the libraries that draw and zoom the map. No need to edit |
+| `data/world.json` | Country shapes from Natural Earth (public domain). No need to edit |
+| `data/cities.json` | Up to 8 main cities for every country, from GeoNames (CC BY 4.0) |
 | `data/notes.json` | The Singapore notes: story, sources, and `aliases` (the words that link a perfume note to this story) |
 | `data/perfumes.json` | One entry per perfume: `top` / `heart` / `base` lists, or a flat `notes` list if the pyramid isn't published |
 | `data/brands.json` | All brands. `"check": true` shows a "To verify" badge |
@@ -33,7 +35,15 @@ Note: opening `index.html` straight from your computer shows "Couldn't load the 
 
 ## Add a new edition to the world map
 
-In `data/editions.json`, change a country's `"status"` from `"soon"` to `"live"` and give it an `"edition"`, `"tagline"`, `"link"` and `"icons"` (copy Singapore's entry). It then gets a red pin and its own pop-up window. To add a country that isn't on the list yet, ask for its pin position to be added to `worldmap.js`.
+In `data/editions.json`, change a country's `"status"` from `"soon"` to `"live"` and give it an `"edition"`, `"tagline"`, `"link"` and `"icons"` (copy Singapore's entry). It then gets a red pin and its own pop-up window. Add `"country"` (its name as on the map) and `"city"` (a city name from `data/cities.json`) so the pin lands on that city.
+
+### How the map works
+
+- The 32 largest countries get a postage stamp label.
+- Click any country (or its stamp) to zoom in and see its main cities. Click a city for its pop-up. Press Esc or "← World map" to zoom back out.
+- Live editions get a red pin; Taiwan, where the idea started, gets an olive pin.
+
+Credits: map data from Natural Earth; city data from GeoNames (CC BY 4.0), which asks for the credit line shown under the map.
 
 ## Add a perfume
 
