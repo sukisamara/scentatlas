@@ -584,14 +584,17 @@ function pageWorld() {
 }
 
 function compassRose() {
-  return `<svg class="compass" viewBox="0 0 100 100" width="92" height="92" aria-hidden="true">
-    <circle cx="50" cy="50" r="30" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="2"/>
-    <circle cx="50" cy="50" r="24" fill="none" stroke="#0B0F2E" stroke-width="1" stroke-dasharray="2 3"/>
-    <path d="M50 8 L57 50 L50 92 L43 50 Z" fill="#E57B62" stroke="#0B0F2E" stroke-width="2"/>
-    <path d="M8 50 L50 43 L92 50 L50 57 Z" fill="#B8B455" stroke="#0B0F2E" stroke-width="2"/>
-    <path d="M50 8 L57 50 L43 50 Z" fill="#6B1C1E"/>
-    <circle cx="50" cy="50" r="4" fill="#0B0F2E"/>
-    <text x="50" y="6" text-anchor="middle" font-family="Rozha One, Georgia, serif" font-size="11" fill="#0B0F2E">N</text>
+  // Classic 8-point rose: long cardinal points split light/dark, short olive diagonals, ticked ring
+  const point = (rot, len, w, light, dark) =>
+    `<g transform="rotate(${rot} 50 50)"><path d="M50 ${50 - len} L${50 + w} 50 L50 50 Z" fill="${light}"/><path d="M50 ${50 - len} L${50 - w} 50 L50 50 Z" fill="${dark}"/><path d="M50 ${50 - len} L${50 + w} 50 L50 50 L${50 - w} 50 Z" fill="none" stroke="#0B0F2E" stroke-width="1.2" stroke-linejoin="round"/></g>`;
+  return `<svg class="compass" viewBox="0 0 100 100" width="96" height="96" aria-hidden="true">
+    <circle cx="50" cy="50" r="36" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="31" fill="none" stroke="#0B0F2E" stroke-width=".8"/>
+    <g stroke="#0B0F2E" stroke-width=".8"><line x1="50" y1="13" x2="50" y2="18" transform="rotate(0 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(15 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(30 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(45 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(60 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(75 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(90 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(105 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(120 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(135 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(150 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(165 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(180 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(195 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(210 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(225 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(240 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(255 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(270 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(285 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(300 50 50)"/><line x1="50" y1="13" x2="50" y2="18" transform="rotate(315 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(330 50 50)"/><line x1="50" y1="15" x2="50" y2="18" transform="rotate(345 50 50)"/></g>
+    ${[45, 135, 225, 315].map(r => point(r, 24, 5, "#B8B455", "#8E8A3A")).join("")}
+    ${[0, 90, 180, 270].map(r => point(r, 40, 6.5, "#FAF5CF", r === 0 ? "#E57B62" : "#0B0F2E")).join("")}
+    <circle cx="50" cy="50" r="3.2" fill="#FAF5CF" stroke="#0B0F2E" stroke-width="1.2"/>
+    <text x="50" y="7.5" text-anchor="middle" font-family="Rozha One, Georgia, serif" font-size="10" fill="#0B0F2E">N</text>
   </svg>`;
 }
 

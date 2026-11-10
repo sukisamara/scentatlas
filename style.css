@@ -553,17 +553,19 @@ h1 + .lead { margin-top: 0; }
 @media (max-width: 520px) { .known-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* Footer: clearer hierarchy, bigger body text, small print separated */
-body { min-height: 100vh; display: flex; flex-direction: column; }
-body > main, #app { flex: 1 0 auto; }
+main { min-height: 50vh; }
 .site-footer { padding: 44px clamp(16px, 5vw, 56px) 24px; border-top: 4px solid var(--navy); }
-.footer-inner { max-width: 66ch; }
+.footer-inner { max-width: none; }
 .footer-title { font-family: "Rozha One", serif; color: var(--cream); font-size: clamp(1.5rem, 2.6vw, 2rem);
   text-transform: none; letter-spacing: 0; margin: 0 0 12px; background: none; padding: 0; }
 .footer-title::after { display: none; }
-.site-footer .about { font-size: 1.05rem; line-height: 1.65; margin: 0 0 12px; max-width: 66ch; color: #FAF5CF; }
+.site-footer .about { font-size: 1.05rem; line-height: 1.65; margin: 0 0 12px; max-width: none; color: #FAF5CF; }
 .site-footer .sign { font-family: "Nanum Pen Script", cursive; font-size: 1.9rem; color: var(--pink); margin: 4px 0 0; }
 .site-footer .footer-small { margin-top: 28px; padding-top: 14px; border-top: 1px solid rgba(250,245,207,.25);
   font-size: .82rem; opacity: .8; max-width: none; }
 /* Landing tiles: 4 across so the eight sit in two even rows */
 .known-grid { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 760px) { .known-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.site-footer .sign .heart { vertical-align: -4px; margin-left: 2px; }
+.site-footer p { max-width: none; }
