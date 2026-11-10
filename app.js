@@ -880,8 +880,10 @@ function render() {
   // The world map is the atlas cover; every other page belongs to the Singapore edition
   const onWorld = page === "";
   document.body.classList.toggle("is-world", onWorld);
-  document.querySelector(".wordmark-sub").textContent = onWorld ? "Smell the world" : "Singapore edition";
-  document.querySelector(".footer-edition").textContent = onWorld ? "Scent Atlas" : "Singapore Edition";
+  const ws = document.querySelector(".wordmark-sub");
+  if (ws) ws.textContent = onWorld ? "Smell the world" : "Singapore edition";
+  const fe = document.querySelector(".footer-edition"); // missing if the browser cached an older page
+  if (fe) fe.textContent = onWorld ? "Scent Atlas" : "Singapore Edition";
   document.querySelector(".wordmark").setAttribute("href", onWorld ? "#/" : "#/singapore");
   if (onWorld) {
     setUpWorldMap();
