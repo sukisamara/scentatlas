@@ -207,6 +207,11 @@ function pagePerfume(id) {
     </div>
   </div>
 
+  ${p.story ? `<section class="section backstory">
+    <h2>The story behind it</h2>
+    ${p.story.map(s => `<p>${esc(s)}</p>`).join("")}
+    ${p.whyNotes ? `<h3 class="note-h">Why these notes</h3><p>${esc(p.whyNotes)}</p>` : ""}
+  </section>` : ""}
   <section class="section">
     <h2>The stories in this bottle</h2>
     ${stories.length ? `<div class="grid">${stories.map(n => `
@@ -218,7 +223,7 @@ function pagePerfume(id) {
       </a>`).join("")}</div>`
       : `<p>None of this perfume's notes are linked to a Singapore story yet.</p>`}
   </section>
-  <section class="section">${sourcesList(p.sources)}</section>`;
+`;
 }
 
 let storiesOnly = false;
@@ -235,7 +240,7 @@ function pageNotes(id) {
 
   return `
   <h1>The notes</h1>
-  <p class="lead">Every note found in Singapore's local perfumes, grouped into families the way perfumers group them. ${storyCount} of them have a Singapore story, marked with a star.</p>
+  <p class="lead">${index.size} notes from ${DATA.perfumes.length} Singapore perfumes, sorted into ${families.length} families. Tap a family to jump to it, or a note to see which perfumes use it. ★ = has a Singapore story (${storyCount}).</p>
 
   <div class="family-bar">
     ${families.map(f => `<a class="family-pill" href="#/notes/family-${f.id}">${familyIcon(f.id, 26)}<span>${esc(f.name)}</span><small>${familyNotes(f).length}</small></a>`).join("")}
@@ -255,12 +260,11 @@ function pageNotes(id) {
   </section>`).join("")}`;
 }
 
-// A list of facts, each with its own source link
+// A list of facts (sources stay in notes.json)
 function factList(title, mark, facts) {
   if (!facts || !facts.length) return "";
   return `<h3 class="note-h">${title}</h3>
-    <ul class="facts-list">${facts.map(f => `<li><span class="fact-mark" aria-hidden="true">${mark}</span><span>${esc(f.text)}
-      <a class="fact-src" href="${esc(f.src.url)}" target="_blank" rel="noopener" title="${esc(f.src.title)}">${esc(f.src.title)} ↗</a></span></li>`).join("")}</ul>`;
+    <ul class="facts-list">${facts.map(f => `<li><span class="fact-mark" aria-hidden="true">${mark}</span><span>${esc(f.text)}</span></li>`).join("")}</ul>`;
 }
 
 function noteTile(n) {
@@ -302,7 +306,6 @@ function pageNote(key) {
           <div class="chips" style="margin:0 0 14px">${st.communities.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
           <h3 class="note-h">History &amp; heritage</h3>
           ${st.story.map(s => `<p>${esc(s)}</p>`).join("")}
-          ${sourcesList(st.sources)}
           ${factList("In everyday life", "✦", st.everyday)}
           ${factList("Folklore &amp; ritual", "☾", st.lore)}`
         : `<p>${esc(fam.blurb)}</p>
@@ -471,7 +474,7 @@ function pageBrands() {
   const list = DATA.brands.filter(b => brandFilter === "All" || b.tier === brandFilter);
   return `
   <h1>Brands</h1>
-  <p class="lead">${DATA.brands.length} homegrown perfume houses, from a 1933 attar shop to labels launched in 2024. Each card links the source its facts come from; founding years are left out where we couldn't confirm one.</p>
+  <p class="lead">${DATA.brands.length} homegrown perfume houses, from a 1933 attar shop to labels launched in 2024. Tap an icon to visit their site or socials.</p>
   <div class="filter" role="group" aria-label="Filter by tier">
     ${tiers.map(t => `<button data-tier="${t}" aria-pressed="${t === brandFilter}">${t}</button>`).join("")}
   </div>
@@ -488,7 +491,6 @@ function pageBrands() {
         <div class="social-row">${["website", "instagram", "tiktok", "facebook"].filter(k => b.links[k]).map(k =>
           `<a class="social s-${k}" href="${esc(b.links[k])}" target="_blank" rel="noopener" title="${SOCIAL_LABELS[k]}" aria-label="${esc(b.name)} on ${SOCIAL_LABELS[k]}">${socialIcon(k)}</a>`).join("")
           || `<span class="muted small">No official website or social account found</span>`}</div>
-        <p class="sources small">Source: ${b.sources.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join(" · ")}</p>
       </div>
     </div>`;
   }).join("")}</div>`;

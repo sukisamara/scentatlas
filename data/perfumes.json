@@ -25,7 +25,11 @@
         "title": "Les Senteurs: Nanyang",
         "url": "https://www.lessenteurs.com/collections/fragrance/products/nanyang"
       }
-    ]
+    ],
+    "story": [
+      "Nanyang is the old Chinese name for the South Seas, and for the Chinese who sailed south and settled here. Elizabeth Liau made it about her own homecoming to Singapore after years abroad."
+    ],
+    "whyNotes": "Liau picked bergamot, green tea, leather, saffron and jasmine to capture the nostalgia of old Singapore: a tea scent that mixes old and new, East and West."
   },
   {
     "id": "clouds-in-heaven",
@@ -54,7 +58,11 @@
         "title": "DORS (Design Orchard) listing",
         "url": "https://dors.com.sg/collections/scent-journer"
       }
-    ]
+    ],
+    "story": [
+      "Founder Joyce Lian based it on the lightness of pandan chiffon cake, the green Nonya sponge most Singaporeans grow up with. She says it lands hardest with Singaporeans living abroad, and with visitors who've tasted it."
+    ],
+    "whyNotes": "Pandan is the cake. Everything around it is white flowers (honeysuckle, jasmine, ylang-ylang, tuberose) to keep it soft and airy. Made with perfumer Florent Di Marino and released in 2021."
   },
   {
     "id": "batik-flora",
@@ -76,7 +84,11 @@
       "Simpoh lak",
       "Utania nervosa",
       "White kopsia"
-    ]
+    ],
+    "story": [
+      "Scent by SIX made it for Singapore Airlines in 2021, as part of the airline's Singapore Showcase. It's meant to recall the airline's welcome on board; founder Jason Lee called it a scent of home."
+    ],
+    "whyNotes": "SIA's batik motif is drawn from 10 flowers native to Singapore. The scent uses six of them: aquatic ginger, common dianella, seashore purslane, simpoh lak, Utania nervosa and white kopsia. You'll also smell it on SIA's hot towels."
   },
   {
     "id": "senator-im-singaporean",
@@ -99,7 +111,11 @@
       "Orchid",
       "Hibiscus"
     ],
-    "base": []
+    "base": [],
+    "story": [
+      "The name comes from the January 2024 US Senate hearing where Senator Tom Cotton kept asking TikTok's CEO Shou Zi Chew if he was Chinese, and Chew kept answering that he was Singaporean. Co-founder Joshua Foong saw the clip as a symbol of how little the world knows about Singapore."
+    ],
+    "whyNotes": "Calamansi opens it, like biting into a whole lime: the hawker calamansi juice and the squeeze on Hokkien mee. Rambutan adds tropical sweetness. The base is meant to smell like wet soil after a sudden storm, void deck concrete and the metal of the CBD. It's an extrait so it lasts in the heat."
   },
   {
     "id": "peranakan-oud",
@@ -119,7 +135,11 @@
       "Tonka bean",
       "Praline",
       "Green tobacco leaf"
-    ]
+    ],
+    "story": [
+      "Singapore Memories says it's inspired by Peranakan culture, and made for Peranakans, Malays and visitors from Europe and the Gulf."
+    ],
+    "whyNotes": "Oud is a staple of Malay and Gulf perfumery. Tonka, praline and green tobacco leaf soften it."
   },
   {
     "id": "a-new-page",
@@ -167,6 +187,9 @@
         "title": "Wikipedia: Perfumes of Singapore",
         "url": "https://en.wikipedia.org/wiki/Perfumes_of_Singapore"
       }
+    ],
+    "story": [
+      "The original came from Perfumes of Singapore, run by Christina and Dadi Balsara, in a 1970s 'Girl' series with Hong Kong Girl, Hawaii Girl and California Girl. The company closed in 2008. In 2014 Singapore Memories got the formulas from Dadi Balsara and brought it back. Old bottles sit in the National Heritage Board's collection."
     ]
   },
   {
@@ -206,7 +229,11 @@
         "title": "Home & Decor",
         "url": "https://www.homeanddecor.com.sg/shopping/6-scents-that-evoke-memories-of-singapore"
       }
-    ]
+    ],
+    "story": [
+      "Named for Singapore's latitude, about one degree north of the equator. The brand says the daily equatorial rain and breeze inspired it: 'a box full of sunshine and rain'."
+    ],
+    "whyNotes": "Orchid for the national flower, sea salt and aqua for the rain and sea air, citrus on top."
   },
   {
     "id": "mother-x-love",
@@ -235,7 +262,11 @@
         "title": "Les Senteurs: Mother x Love",
         "url": "https://www.lessenteurs.com/products/mother-x-love"
       }
-    ]
+    ],
+    "story": [
+      "Liau's first scent, made after her mother died in 2018. She has described it as born out of grief."
+    ],
+    "whyNotes": "It's built on white musk, chosen to feel like a mother's love. Litchi, ginger and vanilla sit on top, soft white flowers in the heart."
   },
   {
     "id": "lost-lovers",
@@ -264,6 +295,9 @@
         "title": "Parfumo: Lost Lovers",
         "url": "https://www.parfumo.com/Perfumes/maison-de-l-asie/lost-lovers"
       }
+    ],
+    "story": [
+      "In Liau's words, it's about love for the people we meet, and those we never do."
     ]
   },
   {
