@@ -137,9 +137,35 @@ const NOTE_ICONS = {
     <circle fill="${PALETTE.coral}" cx="32" cy="29" r="3"/>
     <path ${S} fill="none" d="M32 24 C24 18 40 14 32 8 M38 22 C44 16 36 12 42 6"/>`,
 
-  "native-flowers": `
-    ${[0, 60, 120, 180, 240, 300].map(r => `<ellipse ${S} fill="${PALETTE.coral}" cx="32" cy="16" rx="6" ry="11" transform="rotate(${r} 32 32)"/>`).join("")}
-    <circle ${S} fill="${PALETTE.olive}" cx="32" cy="32" r="7"/>`,
+  // The six Batik Flora flowers
+  "aquatic-ginger": `
+    <path ${S} fill="${PALETTE.olive}" d="M30 60 Q26 36 14 20 Q28 26 32 44 Z"/>
+    <path ${S} fill="${PALETTE.olive}" d="M34 60 Q40 34 52 22 Q40 30 34 46 Z"/>
+    ${[[32, 14], [26, 22], [38, 22], [32, 30]].map(([x, y]) => `<ellipse ${S} fill="#fffdf0" cx="${x}" cy="${y}" rx="5" ry="6"/><circle fill="${PALETTE.pink}" cx="${x}" cy="${y + 1}" r="2"/>`).join("")}`,
+
+  "common-dianella": `
+    <path ${S} fill="none" d="M32 60 V30 M32 40 L20 24 M32 36 L44 20"/>
+    ${[[20, 22], [44, 18], [32, 26], [26, 14], [38, 30]].map(([x, y]) => `<circle ${S} fill="#3557b7" cx="${x}" cy="${y}" r="5"/><circle fill="#fffdf0" cx="${x - 1.5}" cy="${y - 1.5}" r="1.3"/>`).join("")}`,
+
+  "seashore-purslane": `
+    <path ${S} fill="none" d="M4 52 Q16 46 30 52 T60 50"/>
+    ${[[12, 46], [22, 44], [44, 44], [54, 46]].map(([x, y]) => `<ellipse ${S} fill="${PALETTE.olive}" cx="${x}" cy="${y}" rx="3" ry="6"/>`).join("")}
+    ${[0, 72, 144, 216, 288].map(r => `<path ${S} fill="${PALETTE.pink}" d="M32 26 L28 12 L32 8 L36 12 Z" transform="rotate(${r} 32 26)"/>`).join("")}
+    <circle fill="${PALETTE.coral}" cx="32" cy="26" r="3"/>`,
+
+  "simpoh-lak": `
+    ${[0, 72, 144, 216, 288].map(r => `<ellipse ${S} fill="#f2cf3c" cx="32" cy="15" rx="10" ry="12" transform="rotate(${r} 32 32)"/>`).join("")}
+    <circle ${S} fill="${PALETTE.maroon}" cx="32" cy="32" r="8"/>
+    <circle fill="${PALETTE.pink}" cx="32" cy="32" r="3"/>`,
+
+  "utania-nervosa": `
+    <path ${S} fill="none" d="M8 10 Q32 4 56 10 M32 7 V20"/>
+    <path ${S} fill="${PALETTE.olive}" d="M10 12 Q4 24 12 30 Q18 22 10 12 Z M54 12 Q60 24 52 30 Q46 22 54 12 Z"/>
+    ${[[32, 24], [26, 32], [38, 32], [30, 41], [36, 41], [32, 50]].map(([x, y]) => `<circle ${S} fill="#fbf0c4" cx="${x}" cy="${y}" r="5"/>`).join("")}`,
+
+  "white-kopsia": `
+    ${[0, 72, 144, 216, 288].map(r => `<path ${S} fill="#fffdf0" d="M32 30 Q24 10 34 6 Q44 12 34 30 Z" transform="rotate(${r} 32 32)"/>`).join("")}
+    <circle ${S} fill="#c8283a" cx="32" cy="32" r="6"/>`,
 
   "kopi-teh": `
     <path ${S} fill="#fffdf0" d="M12 30 H46 V44 Q46 56 29 56 Q12 56 12 44 Z"/>

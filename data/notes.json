@@ -374,27 +374,31 @@
     ]
   },
   {
-    "id": "native-flowers",
-    "name": "Native flowers",
-    "local": "Batik Flora",
-    "color": "olive",
+    "id": "aquatic-ginger",
+    "name": "Aquatic ginger",
+    "local": "Alpinia aquatica",
+    "color": "coral",
     "aliases": [
-      "aquatic ginger",
-      "common dianella",
-      "seashore purslane",
-      "simpoh lak",
-      "utania nervosa",
-      "white kopsia"
+      "aquatic ginger"
     ],
-    "tagline": "Six local flowers from Singapore Airlines' batik motif.",
+    "tagline": "A beach-and-swamp ginger brought back from the brink.",
     "communities": [
-      "Garden City"
+      "Native plant",
+      "Batik Flora"
     ],
     "story": [
-      "Singapore Airlines' signature scent, Batik Flora, uses six flowers from its batik motif: aquatic ginger, common dianella, seashore purslane, simpoh lak, Utania nervosa and white kopsia.",
-      "It's a rare example of a fragrance built from native plants, created with local perfume label Scent by SIX."
+      "A native ginger of sandy beaches and swamp forests, with small white to pale pink flowers. It's Critically Endangered in Singapore; in the wild it's recorded on Pulau Semakau.",
+      "NParks has salvaged it and replanted it along some Nature Ways, the planted streets that link up green spaces. You can see it at HortPark, Kent Ridge Park and the Botanic Gardens' Ginger Garden. One of the six batik-motif flowers in Singapore Airlines' Batik Flora."
     ],
     "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Alpinia aquatica",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/0/5048"
+      },
+      {
+        "title": "NParks Buzz: Aquatic Ginger",
+        "url": "https://nparks.gov.sg/nparksbuzz/jan-issue-2022/facts/aquatic-ginger"
+      },
       {
         "title": "Singapore Airlines press release (Aug 2021)",
         "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
@@ -403,6 +407,157 @@
     "family": "flowers",
     "everyday": [
       {
+        "text": "Crush a leaf and it smells: the whole plant holds aromatic oils.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Alpinia aquatica",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/0/5048"
+        }
+      },
+      {
+        "text": "Its leaves feed the caterpillars of the Chocolate Demon butterfly, and birds eat its small black berries.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Alpinia aquatica",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/0/5048"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "common-dianella",
+    "name": "Common dianella",
+    "local": "Siak-siak",
+    "color": "navy",
+    "aliases": [
+      "common dianella"
+    ],
+    "tagline": "Looks like wild grass, until the blue berries show up.",
+    "communities": [
+      "Native plant",
+      "Batik Flora"
+    ],
+    "story": [
+      "A tough native herb with sword-shaped leaves (that's what ensifolia means). It grows from Labrador Park's rocky shore to Chek Jawa, Kent Ridge and St John's Island.",
+      "Its flowers are tiny, white to bluish, and open in the afternoon. Then come shiny deep-blue berries, which birds eat; they're thought to be toxic to people. One of the six batik-motif flowers in Singapore Airlines' Batik Flora."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Dianella ensifolia",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/1/5194"
+      },
+      {
+        "title": "NParks Buzz: 10 Native Plants of Singapore",
+        "url": "https://www.nparks.gov.sg/nparksbuzz/issue-29-vol-2-2016/conservation/natural-heritage-10-native-plants-of-singapore"
+      },
+      {
+        "title": "Singapore Airlines press release (Aug 2021)",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ],
+    "family": "flowers",
+    "everyday": [
+      {
+        "text": "NParks' own gardeners say it may be why people think native plants are just 'wild grass'.",
+        "src": {
+          "title": "NParks Buzz: 10 Native Plants of Singapore",
+          "url": "https://www.nparks.gov.sg/nparksbuzz/issue-29-vol-2-2016/conservation/natural-heritage-10-native-plants-of-singapore"
+        }
+      },
+      {
+        "text": "In the region its roots have gone into cosmetics and perfume, and its boiled leaves into incense.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Dianella ensifolia",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/1/5194"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "The genus is named after Diana, the Roman goddess of the wild.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Dianella ensifolia",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/5/1/5194"
+        }
+      }
+    ]
+  },
+  {
+    "id": "seashore-purslane",
+    "name": "Seashore purslane",
+    "local": "Gelang laut",
+    "color": "pink",
+    "aliases": [
+      "seashore purslane",
+      "sea purslane"
+    ],
+    "tagline": "A salty succulent that creeps along the shore.",
+    "communities": [
+      "Native plant",
+      "Coast",
+      "Batik Flora"
+    ],
+    "story": [
+      "A creeping succulent with fleshy leaves that grows on salty, sandy and muddy ground by the sea. In Malay it's gelang laut or gelang pasir.",
+      "In Singapore you'll find it on Pulau Ubin, Pulau Tekong, Pulau Semakau and at the end of Lim Chu Kang Road. Its small star-shaped flowers are green outside and pink inside. One of the six batik-motif flowers in Singapore Airlines' Batik Flora."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Sesuvium portulacastrum",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/4/2456"
+      },
+      {
+        "title": "Singapore Airlines press release (Aug 2021)",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ],
+    "family": "flowers",
+    "everyday": [
+      {
+        "text": "Around the world it's eaten as a sea vegetable, raw, pickled or cooked.",
+        "src": {
+          "title": "Frontiers in Plant Science (2024)",
+          "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1387102/pdf"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "simpoh-lak",
+    "name": "Simpoh lak",
+    "local": "Dillenia excelsa",
+    "color": "olive",
+    "aliases": [
+      "simpoh lak"
+    ],
+    "tagline": "Big yellow flowers that last a single day.",
+    "communities": [
+      "Batik Flora"
+    ],
+    "story": [
+      "A riverside tree up to about 25 m tall, with bright yellow flowers 8 to 10 cm across around a dark red centre. Each flower opens early in the morning and drops its petals by evening.",
+      "One honest note: Singapore Airlines calls all six batik flowers native, but NParks lists simpoh lak as non-native to Singapore. Its home range is Thailand, Malaysia, Indonesia and the Philippines."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Dillenia excelsa",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3383"
+      },
+      {
+        "title": "SilverKris: SIA's five senses",
+        "url": "https://silverkris.singaporeair.com/exclusives/airline/cabin-seat-products/sia-5-senses/"
+      }
+    ],
+    "family": "flowers",
+    "everyday": [
+      {
+        "text": "The flowers are full of nectar and mostly worked by giant honey bees.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Dillenia excelsa",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3383"
+        }
+      },
+      {
         "text": "Another native, the simpoh air, has leaves so big that hawkers once wrapped tempeh and rojak in them, before plastic bags took over.",
         "src": {
           "title": "NParks: Simpoh Air",
@@ -410,7 +565,98 @@
         }
       }
     ],
+    "lore": [
+      {
+        "text": "Its cut branches root so easily that fences built from them have sprouted back into trees.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Dillenia excelsa",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3383"
+        }
+      }
+    ]
+  },
+  {
+    "id": "utania-nervosa",
+    "name": "Utania nervosa",
+    "local": "Native tree",
+    "color": "cream",
+    "aliases": [
+      "utania nervosa"
+    ],
+    "tagline": "A rare tree botanists mislabelled for half a century.",
+    "communities": [
+      "Native plant",
+      "Batik Flora"
+    ],
+    "story": [
+      "A small native tree, usually 1 to 5 m tall, with hanging clusters of cream-yellow to white flowers. It's listed as Vulnerable in Singapore and has no common English name.",
+      "In 1962 it was misidentified as Fagraea racemosa. It wasn't sorted out until a 2014 revision of the genus. One of the six batik-motif flowers in Singapore Airlines' Batik Flora."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Utania nervosa",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/7/2/7288"
+      },
+      {
+        "title": "Singapore Airlines press release (Aug 2021)",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ],
+    "family": "white-flowers",
+    "everyday": [
+      {
+        "text": "It belongs to the same plant family as the tembusu, the tree on the back of the $5 note.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Cyrtophyllum fragrans (Tembusu)",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2895"
+        }
+      }
+    ],
     "lore": []
+  },
+  {
+    "id": "white-kopsia",
+    "name": "White kopsia",
+    "local": "Kopsia singapurensis",
+    "color": "maroon",
+    "aliases": [
+      "white kopsia",
+      "singapore kopsia"
+    ],
+    "tagline": "Red and white, like the flag.",
+    "communities": [
+      "Native plant",
+      "Batik Flora"
+    ],
+    "story": [
+      "White petals around a red throat: the colours of Singapore's flag. It was named Kopsia singapurensis in 1923, decades before the flag existed. Its five petals are fused at the base, which NParks jokes makes them 'united'.",
+      "It's fragrant, each flower lasts a day, and in the wild here it grows only in Nee Soon Swamp Forest. It's Critically Endangered in Singapore and found nowhere else but Peninsular Malaysia. One of the six batik-motif flowers in Singapore Airlines' Batik Flora."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Kopsia singapurensis",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/9/2987"
+      },
+      {
+        "title": "NParks: Six native plants named after Singapore",
+        "url": "https://www.nparks.gov.sg/publications-resources/articles/flora-singapura---six-native-plants-named-after-singapore"
+      },
+      {
+        "title": "Singapore Airlines press release (Aug 2021)",
+        "url": "https://www.singaporeair.com/en_UK/hk/corporate/newsroom/press-release/2021/July-September/ne1521-210816/"
+      }
+    ],
+    "family": "white-flowers",
+    "everyday": [],
+    "lore": [
+      {
+        "text": "In 1964 a kopsia was used in place of a ribbon to open the rebuilt herbarium at the Singapore Botanic Gardens.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Kopsia singapurensis",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/9/2987"
+        }
+      }
+    ]
   },
   {
     "id": "kopi-teh",
