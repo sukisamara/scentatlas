@@ -7,8 +7,7 @@
     "notes": [
       "bergamot",
       "citrus",
-      "lemon",
-      "mandarin orange"
+      "lemon"
     ]
   },
   {
@@ -28,10 +27,7 @@
     "color": "pink",
     "blurb": "Petals of every kind: roses, orchids and wild native blooms.",
     "notes": [
-      "hibiscus",
-      "lotus",
       "magnolia",
-      "rose",
       "violet",
       "water lily"
     ]
@@ -42,11 +38,6 @@
     "color": "cream",
     "blurb": "Heady, creamy blossoms that bloom at night and fill a room.",
     "notes": [
-      "honeysuckle",
-      "orange blossom",
-      "orange flower",
-      "tuberose",
-      "ylang-ylang",
       "white ginger lily"
     ]
   },
@@ -65,10 +56,7 @@
     "name": "Spices",
     "color": "maroon",
     "blurb": "Warm or sharp, and the reason Singapore became a port.",
-    "notes": [
-      "ginger",
-      "saffron"
-    ]
+    "notes": []
   },
   {
     "id": "gourmand",
@@ -89,7 +77,6 @@
     "notes": [
       "cedar",
       "teakwood",
-      "vetiver",
       "woods"
     ]
   },
@@ -118,8 +105,7 @@
     "color": "navy",
     "blurb": "Drinks in a bottle: coffee, tea and the kopitiam counter.",
     "notes": [
-      "tea",
-      "green tea"
+      "tea"
     ]
   },
   {

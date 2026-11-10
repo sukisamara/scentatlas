@@ -1198,7 +1198,6 @@
     "family": "greens",
     "aliases": [
       "tiger balm",
-      "camphor",
       "menthol"
     ],
     "tagline": "Camphor and menthol in a little hexagonal jar.",
@@ -1229,6 +1228,2223 @@
         }
       }
     ],
+    "lore": []
+  },
+  {
+    "id": "ylang-ylang",
+    "name": "Ylang-ylang",
+    "local": "Kenanga",
+    "color": "olive",
+    "family": "white-flowers",
+    "aliases": [
+      "ylang-ylang",
+      "kenanga"
+    ],
+    "tagline": "The perfume tree with curly yellow petals.",
+    "communities": [
+      "Malay",
+      "Garden City"
+    ],
+    "story": [
+      "In Malay it's kenanga, a tree with drooping, curly yellow-green flowers. NParks lists it as the 'perfume tree': the genus name comes from a Tagalog word and refers to the perfume made from its flowers.",
+      "Malaysians and Indonesians are very fond of the scent, and women traditionally tuck a flower in their hair."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Cananga odorata",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/7/2779"
+      },
+      {
+        "title": "PROSEA: Cananga odorata",
+        "url": "https://prosea.prota4u.org/view.aspx?id=654"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Its flowers are also used to decorate festivities and celebrations across the region.",
+        "src": {
+          "title": "PROSEA: Cananga odorata",
+          "url": "https://prosea.prota4u.org/view.aspx?id=654"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "tuberose",
+    "name": "Tuberose",
+    "local": "Sundal malam",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "tuberose",
+      "sundal malam",
+      "sedap malam"
+    ],
+    "tagline": "The night flower with a ghostly Malay name.",
+    "communities": [
+      "Malay",
+      "Indonesian"
+    ],
+    "story": [
+      "Tuberose blooms white and strongest at night. In Malay it's sundal malam; in Indonesian it's sedap malam, 'pleasant at night'. NParks lists it as a popular cut flower.",
+      "Its name carries a ghost story: the 2004 Malaysian horror film Pontianak Harum Sundal Malam tied it to the pontianak. Folklore enthusiasts point out the 'sundal' tree of the old tales may be a different plant."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Agave amica 'The Pearl'",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/3/2349"
+      },
+      {
+        "title": "Tutu Dutta: In search of the sundal tree",
+        "url": "https://tutudutta.blogspot.com/2013/07"
+      }
+    ],
+    "lore": [
+      {
+        "text": "In Malay folklore, the night-scented 'sundal' is said to attract spirits, which is how a perfume flower ended up in a horror title.",
+        "src": {
+          "title": "Tutu Dutta: In search of the sundal tree",
+          "url": "https://tutudutta.blogspot.com/2013/07"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "mandarin-orange",
+    "name": "Mandarin orange",
+    "local": "Kam",
+    "color": "coral",
+    "family": "citrus",
+    "aliases": [
+      "mandarin orange",
+      "mandarin",
+      "tangerine"
+    ],
+    "tagline": "Two in each hand: gold for the New Year.",
+    "communities": [
+      "Chinese",
+      "Cantonese",
+      "Teochew"
+    ],
+    "story": [
+      "At Chinese New Year you visit with a pair of mandarin oranges and hand them to the host, who gives a pair back. In Cantonese the fruit, gam, sounds like the word for gold.",
+      "In Malay it's limau langkat or limau kupas. Oil from the peel goes into perfume and cologne."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Chinese New Year",
+        "url": "https://roots.gov.sg/ich-landing/ich/chinese-new-year"
+      },
+      {
+        "title": "NLB Infopedia: Mandarin orange",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_205_2005-01-28.html"
+      },
+      {
+        "title": "NLB Infopedia: Chinese New Year",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_948__2009-01-02.html"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Pairs are given because even numbers are lucky; the oranges are passed with both hands.",
+        "src": {
+          "title": "NLB Infopedia: Chinese New Year",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_948__2009-01-02.html"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "On chap goh mei, the 15th night, single women in Singapore throw oranges into the Singapore River, wishing for a husband.",
+        "src": {
+          "title": "NLB Infopedia: Chinese New Year",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_948__2009-01-02.html"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vetiver",
+    "name": "Vetiver",
+    "local": "Akar wangi",
+    "color": "olive",
+    "family": "woods",
+    "aliases": [
+      "vetiver",
+      "akar wangi",
+      "khus"
+    ],
+    "tagline": "The 'fragrant root' woven into mats.",
+    "communities": [
+      "Malay",
+      "Indian"
+    ],
+    "story": [
+      "Vetiver is a tall grass whose long white roots smell earthy and woody when crushed. In Malay it's akar wangi, 'fragrant root'; in India it's khus.",
+      "NParks notes its root oil is in a huge share of Western perfumes, including Chanel No. 5."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Chrysopogon zizanioides",
+        "url": "https://nparks.gov.sg/florafaunaweb/flora/3/6/3668"
+      },
+      {
+        "title": "PROSEA: Vetiveria zizanioides",
+        "url": "https://prosea.prota4u.org/view.aspx?id=675"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Its roots are woven into mats, fans and screens that smell stronger when they're damp. In India, wet vetiver screens cool rooms in the heat.",
+        "src": {
+          "title": "PROSEA: Vetiveria zizanioides",
+          "url": "https://prosea.prota4u.org/view.aspx?id=675"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "ginger",
+    "name": "Ginger",
+    "local": "Halia",
+    "color": "olive",
+    "family": "spices",
+    "aliases": [
+      "ginger",
+      "halia"
+    ],
+    "tagline": "The bite in a cup of teh halia.",
+    "communities": [
+      "Indian Muslim",
+      "Malay",
+      "Hawker culture"
+    ],
+    "story": [
+      "In Malay ginger is halia, and teh halia is milk tea made with fresh ginger juice and condensed milk, pulled like teh tarik. It's a standard order at Indian Muslim drink stalls.",
+      "Teh tarik itself traces back to Indian Muslim sarabat stalls that served rubber plantation workers after the Second World War."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Teh tarik",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-07-19_103055.html"
+      },
+      {
+        "title": "Roots: Making and sharing of tea",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-sharing-of-tea"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Bhai Sarbat in Kampong Gelam took its name from teh sarabat, its ginger milk tea.",
+        "src": {
+          "title": "Roots: Bhai Sarbat",
+          "url": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Bhai-Sarbat"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "local": "Sacred lotus",
+    "color": "pink",
+    "family": "flowers",
+    "aliases": [
+      "lotus",
+      "sacred lotus"
+    ],
+    "tagline": "Rises clean out of the mud.",
+    "communities": [
+      "Buddhist",
+      "Hindu",
+      "Chinese"
+    ],
+    "story": [
+      "The lotus symbolises purity in Buddhism and divinity in Hinduism, because it blooms above the water without touching the mud. It's offered at temples, especially around Vesak Day.",
+      "Its seeds become lotus seed paste, the classic filling in mooncakes for the Mid-Autumn Festival."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Nelumbo nucifera",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/2/2257"
+      },
+      {
+        "title": "Gardens by the Bay: Nelumbo nucifera",
+        "url": "https://gardensbythebay.com.sg/en/learn-with-us/explore-resources/whats-blooming/nelumbo-nucifera.html"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Its big leaves wrap glutinous rice for steaming, which gives the rice a soft, grassy smell.",
+        "src": {
+          "title": "Gardens by the Bay: Nelumbo nucifera",
+          "url": "https://gardensbythebay.com.sg/en/learn-with-us/explore-resources/whats-blooming/nelumbo-nucifera.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "lemongrass",
+    "name": "Lemongrass",
+    "local": "Serai",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "lemongrass",
+      "serai"
+    ],
+    "tagline": "The grass that named Geylang Serai.",
+    "communities": [
+      "Malay",
+      "Peranakan"
+    ],
+    "story": [
+      "Serai is Malay for lemongrass, a clumping grass with a sharp lemony smell. It used to be farmed in the area now called Geylang Serai.",
+      "Bruised stalks go into rendang, curries, asam pedas and laksa paste; a whole stalk is often dropped into the pot as it cooks."
+    ],
+    "sources": [
+      {
+        "title": "NParks Biome: Lemongrass sighting",
+        "url": "https://biome.nparks.gov.sg/Sightings/SightingDetails/AllSightings/31377/"
+      },
+      {
+        "title": "NParks Flora & Fauna Web: Cymbopogon citratus",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/1/9/1918"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Its cousin serai wangi, citronella grass, smells far stronger and is the one used to keep mosquitoes away.",
+        "src": {
+          "title": "BIDARA: Cymbopogon nardus",
+          "url": "https://bidara.uthm.edu.my/items/show/971"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "limau-purut",
+    "name": "Limau purut",
+    "local": "Makrut lime",
+    "color": "olive",
+    "family": "citrus",
+    "aliases": [
+      "limau purut",
+      "kaffir lime",
+      "makrut lime"
+    ],
+    "tagline": "The bumpy lime with double leaves.",
+    "communities": [
+      "Malay",
+      "Peranakan",
+      "Thai"
+    ],
+    "story": [
+      "Limau purut means 'rough-skinned lime' in Malay, after its knobbly fruit. The leaves are what most kitchens use, added to curries and tom yum for a sharp lemon smell.",
+      "Many cooks now avoid its old English name, which carries a slur; makrut lime is the more neutral one."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Citrus hystrix",
+        "url": "https://nparks.gov.sg/florafaunaweb/flora/3/6/3670"
+      },
+      {
+        "title": "Wikipedia: Kaffir lime",
+        "url": "https://en.wikipedia.org/wiki/Kaffir_lime"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The fruit has very little juice, sour and a bit bitter; it's the rind and leaves that carry the smell.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Citrus hystrix",
+          "url": "https://nparks.gov.sg/florafaunaweb/flora/3/6/3670"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "Across the region the fruit's juice has long been used as a hair wash.",
+        "src": {
+          "title": "UC Riverside Citrus Variety Collection: Kaffir lime",
+          "url": "https://citrusvariety.ucr.edu/crc2454"
+        }
+      }
+    ]
+  },
+  {
+    "id": "attar",
+    "name": "Attar",
+    "local": "Minyak attar",
+    "color": "maroon",
+    "family": "resins",
+    "aliases": [
+      "attar",
+      "minyak attar",
+      "perfume oil"
+    ],
+    "tagline": "Alcohol-free perfume oil, sold by the mosque.",
+    "communities": [
+      "Malay",
+      "Arab",
+      "Tamil Muslim"
+    ],
+    "story": [
+      "Attar, or minyak attar, is perfume oil with no alcohol, drawn from flowers, herbs and spices. In Kampong Gelam it's been sold since 1933, when Tamil Muslim trader Hanifa Kazura opened a shop that his son Jamal turned into Jamal Kazura Aromatics in the mid-1970s.",
+      "It's now known as Singapore's oldest homegrown perfume business, with branches on North Bridge Road and Bussorah Street. Grandson Johari runs Sifr Aromatics on Arab Street."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Jamal Kazura Aromatics",
+        "url": "https://www.roots.gov.sg/en/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Jamal-Kazura-Aromatics"
+      },
+      {
+        "title": "Roots: Sifr Aromatics",
+        "url": "https://roots.gov.sg/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Sifr-Aromatics"
+      },
+      {
+        "title": "New Straits Times: The streets of Kampung Glam",
+        "url": "https://nst.com.my/amp/lifestyle/sunday-vibes/2017/04/233185/streets-kampung-glam"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Johari Kazura says that if you went to a mosque, there was a good chance you'd find free perfume inside or perfume shops around it, because God likes good smells at prayer.",
+        "src": {
+          "title": "Roots: Sifr Aromatics",
+          "url": "https://roots.gov.sg/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Sifr-Aromatics"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "haze",
+    "name": "Haze",
+    "local": "Jerebu",
+    "color": "navy",
+    "family": "natural",
+    "aliases": [
+      "haze",
+      "smoke"
+    ],
+    "tagline": "The burning smell that blows in from Sumatra.",
+    "communities": [
+      "Everyday Singapore"
+    ],
+    "story": [
+      "In the dry months, smoke from land and forest fires in Sumatra and Kalimantan drifts across the Straits. On 24 September 2015 the PSI crossed 300 into the hazardous range, and schools closed the next day.",
+      "People often notice a burnt smell before the numbers rise. NEA has explained that the smell can come from compounds the PSI doesn't measure."
+    ],
+    "sources": [
+      {
+        "title": "NASA: Hazardous air quality in Singapore (2015)",
+        "url": "https://svs.gsfc.nasa.gov/30699"
+      },
+      {
+        "title": "Asia News Network: Southeast Asia's worst haze episodes",
+        "url": "https://asianews.network/?p=309983"
+      },
+      {
+        "title": "Wild Singapore News: PSI hits highest in 2 years",
+        "url": "https://wildsingaporenews.blogspot.com/2015_09_17_archive.html?m=1"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Haze season usually runs from about May to October, when winds carry the smoke over from Sumatra.",
+        "src": {
+          "title": "The Jakarta Post: Expect haze in Singapore",
+          "url": "https://www.thejakartapost.com/news/2015/01/27/expect-haze-singapore-year-and-earlier-too-experts"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "marigold",
+    "name": "Marigold",
+    "local": "Saamanthi",
+    "color": "coral",
+    "family": "flowers",
+    "aliases": [
+      "marigold"
+    ],
+    "tagline": "Orange garlands strung along Campbell Lane.",
+    "communities": [
+      "Hindu",
+      "Tamil"
+    ],
+    "story": [
+      "Garland makers in Little India string marigold, jasmine and rose into offerings for the temples on Serangoon Road. For Hindus, saffron orange is a sacred colour and yellow signifies sanctity.",
+      "Garland-making came with the Indian diaspora and is listed in Singapore's intangible cultural heritage inventory."
+    ],
+    "sources": [
+      {
+        "title": "Gardens by the Bay: Mexican marigold",
+        "url": "https://www.gardensbythebay.com.sg/en/learn-with-us/explore-resources/whats-blooming/mexican-marigold-tagetes-erecta.html"
+      },
+      {
+        "title": "Roots: Making of flower garlands",
+        "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Kavadi bearers sometimes wear garlands in the Thaipusam procession, and at a Tamil Hindu wedding the couple exchange garlands.",
+        "src": {
+          "title": "Roots: Making of flower garlands",
+          "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "pomelo-leaves",
+    "name": "Pomelo leaves",
+    "local": "Limau bali",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "pomelo leaves",
+      "pomelo"
+    ],
+    "tagline": "A citrus bath to wash off the old year.",
+    "communities": [
+      "Chinese",
+      "Cantonese"
+    ],
+    "story": [
+      "On the eve of Chinese New Year, some families boil pomelo leaves and bathe in the green water to wash away the past year's bad luck. The same leaves are used after funerals and before moving into a new home.",
+      "The fruit itself sits on New Year tables for luck."
+    ],
+    "sources": [
+      {
+        "title": "USC Folklore Archives: Bath of pomelo leaves",
+        "url": "https://folklore.usc.edu/tag/pomelo-leaves/"
+      },
+      {
+        "title": "USC Folklore Archives: Moving ceremony",
+        "url": "https://folklore.usc.edu/moving-ceremony-china/"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Pomelo leaves are believed to clean away 'dirty, evil stuff', so they're also tied to brooms for the pre-New Year spring clean.",
+        "src": {
+          "title": "USC Folklore Archives: Bath of pomelo leaves",
+          "url": "https://folklore.usc.edu/tag/pomelo-leaves/"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "rose",
+    "name": "Rose",
+    "local": "Mawar",
+    "color": "pink",
+    "family": "flowers",
+    "aliases": [
+      "rose",
+      "mawar",
+      "rosewater"
+    ],
+    "tagline": "In the garland, the syrup and the wedding potpourri.",
+    "communities": [
+      "Hindu",
+      "Malay",
+      "Indian Muslim"
+    ],
+    "story": [
+      "Rose turns up all over Singapore. It's one of the three classic garland flowers in Little India, with marigold and jasmine. Rose syrup makes bandung pink.",
+      "Rosewater scents the flowers in bunga rampai, the potpourri guests take home from Malay weddings."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Making of flower garlands",
+        "url": "https://roots.gov.sg/ich-landing/ich/making-of-flower-garlands"
+      },
+      {
+        "title": "Roots: Malay weddings",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/malay-weddings"
+      },
+      {
+        "title": "Wikipedia: Bandung (drink)",
+        "url": "https://en.wikipedia.org/wiki/Bandung_(drink)"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "sireh",
+    "name": "Betel leaf",
+    "local": "Sireh",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "betel leaf",
+      "sireh",
+      "sirih",
+      "betel"
+    ],
+    "tagline": "The leaf offered to say yes.",
+    "communities": [
+      "Malay",
+      "Peranakan",
+      "Indian"
+    ],
+    "story": [
+      "Chewing sireh, betel leaf wrapped around lime paste and shaved areca nut, was once a social necessity in Malay, Indian and Peranakan homes. Offering someone a leaf was an invitation, a friendly gesture or a sign of agreement.",
+      "Peranakan nonyas kept it in a tempat sireh, a box of small containers for the leaf, gambier, lime and sliced nut. The habit has since fallen out of fashion."
+    ],
+    "sources": [
+      {
+        "title": "BiblioAsia: Betel chewing",
+        "url": "https://biblioasia.nlb.gov.sg/files/pdf/vol-16/issue-3/v16-issue3_BetelChewing.pdf"
+      },
+      {
+        "title": "Roots: Sireh metal container",
+        "url": "https://roots.gov.sg/Collection-Landing/listing/1044072"
+      },
+      {
+        "title": "Roots: Sireh box set",
+        "url": "https://www.roots.gov.sg/Collection-Landing/listing/1040284"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "At Malay weddings the tepak sireh, a betel set covered in gold-embroidered velvet, leads the procession of gifts at the proposal and engagement.",
+        "src": {
+          "title": "Jurnal Pengajian Melayu: Tepak sirih in Malay wedding customs",
+          "url": "https://adab.um.edu.my/index.php/JPM/article/download/25654/12036/56737"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "star-anise",
+    "name": "Star anise",
+    "local": "Bak kut teh spice",
+    "color": "maroon",
+    "family": "spices",
+    "aliases": [
+      "star anise"
+    ],
+    "tagline": "The licorice note in a pot of bak kut teh.",
+    "communities": [
+      "Hokkien",
+      "Teochew",
+      "Cantonese"
+    ],
+    "story": [
+      "Bak kut teh, Hokkien for 'meat bone tea', is pork ribs stewed with garlic, cloves, cinnamon, star anise, fennel seeds and coriander. Singapore has three traditional styles: Hokkien, Teochew and Cantonese.",
+      "The Teochew style, now the most common here, is clear and peppery and skips most of the spices. The dark, herbal Hokkien style is where the star anise comes through."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Bak kut teh",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1800_2011-03-18.html"
+      },
+      {
+        "title": "Johor Kaki: History of Singapore bak kut teh",
+        "url": "https://johorkaki.blogspot.com/2020/05/history-of-singapore-bak-kut-teh-from.html"
+      }
+    ],
+    "lore": [
+      {
+        "text": "A popular legend says coolies on the Singapore River made the first pot with peppercorns that fell from sacks. Nobody has proven it.",
+        "src": {
+          "title": "NLB Infopedia: Bak kut teh",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1800_2011-03-18.html"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "belacan",
+    "name": "Belacan",
+    "local": "Shrimp paste",
+    "color": "maroon",
+    "family": "musk",
+    "aliases": [
+      "belacan",
+      "shrimp paste"
+    ],
+    "tagline": "The stink that makes the sambal.",
+    "communities": [
+      "Malay",
+      "Peranakan",
+      "Eurasian",
+      "Chinese"
+    ],
+    "story": [
+      "Belacan is fermented shrimp paste, the base of sambal belacan. Toasted, it gives off a smell that newcomers often find too much, which is why cooks wrap it in foil first.",
+      "Colonial-era newspapers wrote about it mostly because of the smell. One British writer compared it to fine caviar but warned the smell was 'decidedly objectionable'."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Belacan",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-06-26_105819.html"
+      },
+      {
+        "title": "BiblioAsia: Of belacan and curry puffs",
+        "url": "https://biblioasia.nlb.gov.sg/vol-10/issue-2/jul-sep-2014/belachan-curry-puff-singapore-food-heritage"
+      },
+      {
+        "title": "BiblioAsia: Belacan, caviar or vile?",
+        "url": "https://biblioasia.nlb.gov.sg/vol-19/issue-1/apr-jun-2023/shrimp-paste-belacan"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Sambal, of chilli, shrimp paste, lime, sugar and salt, is listed in Singapore's intangible cultural heritage inventory.",
+        "src": {
+          "title": "Roots: Making and use of sambal",
+          "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-use-of-sambal"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "coconut-milk",
+    "name": "Coconut milk",
+    "local": "Santan",
+    "color": "cream",
+    "family": "gourmand",
+    "aliases": [
+      "coconut milk",
+      "santan",
+      "coconut"
+    ],
+    "tagline": "What makes nasi lemak 'lemak'.",
+    "communities": [
+      "Malay",
+      "Peranakan"
+    ],
+    "story": [
+      "Lemak means rich or creamy in Malay, and nasi lemak gets its name from rice cooked in santan, coconut milk, with pandan leaves for fragrance. Lemongrass, ginger or fenugreek can go in too.",
+      "Santan is squeezed from freshly grated coconut. It's traditionally steamed into the rice, because over a hot fire coconut milk burns easily."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Nasi lemak",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1739_2010-12-13.html"
+      },
+      {
+        "title": "SG101: Nasi lemak in Singapore",
+        "url": "https://www.sg101.gov.sg/resources/archives/heritage-nasi-lemak-in-singapore/"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Nasi lemak is traditionally wrapped in banana leaf.",
+        "src": {
+          "title": "Wikipedia: Nasi lemak",
+          "url": "https://en.wikipedia.org/wiki/Nasi_lemak"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "axe-oil",
+    "name": "Axe Brand oil",
+    "local": "Minyak angin cap kapak",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "axe brand oil",
+      "axe oil",
+      "medicated oil",
+      "eucalyptus"
+    ],
+    "tagline": "The green bottle in every Singapore bag.",
+    "communities": [
+      "Chinese",
+      "Malay",
+      "Everyday Singapore"
+    ],
+    "story": [
+      "In 1928 Leung Yun Chee, newly arrived from Shunde in China, met a German physician in Singapore, Dr Schmeidler, who gave him a formula for a medicated oil of menthol, camphor and eucalyptus. He founded Leung Kai Fook Medical Company to sell it and chose the axe as his logo.",
+      "In Malay it's minyak angin cap kapak. It's still made in Singapore by the same family and sold in more than 50 countries."
+    ],
+    "sources": [
+      {
+        "title": "Wiki.sg: Axe Brand Universal Oil",
+        "url": "https://wiki.sg/p/Axe_Brand_Universal_Oil"
+      },
+      {
+        "title": "Roots: Axe brand medicated oil advertisement tray",
+        "url": "https://roots.gov.sg/Collection-Landing/listing/1401802"
+      },
+      {
+        "title": "Mothership: Axe Brand founder's eldest son",
+        "url": "https://mothership.sg/2018/09/axe-brand-oil-leong-heng-keng-passed-away"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The National Heritage Board holds a 1960s–70s Axe Brand advertising tray in its collection.",
+        "src": {
+          "title": "Roots: Axe brand medicated oil advertisement tray",
+          "url": "https://roots.gov.sg/Collection-Landing/listing/1401802"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "fogging",
+    "name": "Fogging",
+    "local": "Mosquito fog",
+    "color": "navy",
+    "family": "natural",
+    "aliases": [
+      "fogging",
+      "insecticide fog"
+    ],
+    "tagline": "The white cloud that rolls through the estate.",
+    "communities": [
+      "Everyday Singapore"
+    ],
+    "story": [
+      "In dengue clusters, workers carry machines that heat insecticide into a thick white fog and walk it through drains and void decks. The fog has long used diesel as its carrier, which gives it its heavy, oily smell; newer water-based fogs are almost odourless.",
+      "NEA says fogging only kills the adult mosquitoes it reaches and should be used sparingly, alongside clearing the stagnant water where they breed."
+    ],
+    "sources": [
+      {
+        "title": "NEA: Fogging should be used judiciously",
+        "url": "https://www.nea.gov.sg/media/readers-letters/index/fogging-should-be-used-judiciously-and-not-as-a-routine-mosquito-control-measure"
+      },
+      {
+        "title": "Wild Singapore News: Routine fogging harmful to health",
+        "url": "https://wildsingaporenews.blogspot.com/2013/07/routine-fogging-harmful-to-health.html"
+      },
+      {
+        "title": "ANZA: Mosquito management in Singapore",
+        "url": "https://anza.org.sg/2021/10/12/mosquito-management-in-singapore"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "In 2013, Singapore's worst dengue epidemic, more than 22,000 people were infected.",
+        "src": {
+          "title": "Wild Singapore News: Fight against dengue needs newer methods",
+          "url": "https://wildsingaporenews.blogspot.com/2018/06/fogging-not-very-effective-says-dengue.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "bak-kwa",
+    "name": "Bak kwa",
+    "local": "Rougan",
+    "color": "maroon",
+    "family": "gourmand",
+    "aliases": [
+      "bak kwa",
+      "bakkwa"
+    ],
+    "tagline": "Charcoal smoke and caramelised pork, every New Year.",
+    "communities": [
+      "Chinese",
+      "Hokkien"
+    ],
+    "story": [
+      "Bak kwa, 'dried meat' in Hokkien, is thin sheets of sweet, savoury pork. Here it took on a local twist: after air-drying, it's grilled over charcoal, which gives it its smoky smell.",
+      "Demand peaks before Chinese New Year, when the queues outside famous shops in Chinatown can run for hours."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Bak kwa",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1746_2010-12-30.html"
+      },
+      {
+        "title": "SG101: Bak kwa",
+        "url": "https://www.sg101.gov.sg/resources/archives/heritage-bak-kwa/"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "In 2007, Bloomberg's Singapore office launched a tongue-in-cheek 'Bak Kwa Index' tracking New Year prices at four shops.",
+        "src": {
+          "title": "NLB Infopedia: Bak kwa",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1746_2010-12-30.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "rubber",
+    "name": "Rubber latex",
+    "local": "Getah",
+    "color": "cream",
+    "family": "natural",
+    "aliases": [
+      "rubber",
+      "latex",
+      "getah"
+    ],
+    "tagline": "The sap that built Malaya's fortunes.",
+    "communities": [
+      "Botanic Gardens",
+      "Colonial history"
+    ],
+    "story": [
+      "In 1877, 22 rubber seedlings arrived from Sri Lanka; 12 were planted at the Singapore Botanic Gardens. Henry Ridley, the Gardens' first director from 1888, refined a herring-bone tapping method that collects latex for decades without killing the tree.",
+      "He pushed planters so hard they called him 'Mad Ridley'. Rubber went on to become Malaya's great plantation crop."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Henry Nicholas Ridley",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_518_2004-12-28.html"
+      },
+      {
+        "title": "Singapore Botanic Gardens: Ridley and the rubber industry",
+        "url": "https://www.nparks.gov.sg/sbg/about/our-history/1888-ridley-and-the-malayan-rubber-industry-from-1896"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "satay-smoke",
+    "name": "Satay smoke",
+    "local": "Charcoal grill",
+    "color": "coral",
+    "family": "woods",
+    "aliases": [
+      "satay",
+      "charcoal",
+      "satay smoke"
+    ],
+    "tagline": "The smell of Boon Tat Street at 7pm.",
+    "communities": [
+      "Malay",
+      "Hawker culture"
+    ],
+    "story": [
+      "Up to the late 1970s, the travelling satay man walked Singapore's streets with a portable charcoal grill. Many later settled into permanent stalls, most famously the Satay Club by the Esplanade.",
+      "Today the smoke rolls out every evening on Boon Tat Street beside Lau Pa Sat, which closes to traffic so the satay stalls can set up."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Satay",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_888_2005-01-10.html"
+      },
+      {
+        "title": "NLB Infopedia: Satay Club",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1027_2006-08-12.html"
+      },
+      {
+        "title": "Wikipedia: Boon Tat Street",
+        "url": "https://en.wikipedia.org/wiki/Boon_Tat_Street"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "In 2007, Lau Pa Sat made the world's longest satay for the Guinness record: 140 m, with 150 kg of chicken.",
+        "src": {
+          "title": "NLB Infopedia: Satay",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_888_2005-01-10.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "milo",
+    "name": "Milo",
+    "local": "Malt",
+    "color": "olive",
+    "family": "beverages",
+    "aliases": [
+      "milo",
+      "malt"
+    ],
+    "tagline": "The smell of sports day and the green van.",
+    "communities": [
+      "Everyday Singapore",
+      "Indian Muslim"
+    ],
+    "story": [
+      "Milo is chocolate and malt powder, and for generations of Singaporeans it smells of school sports days, when the green Milo van handed out cups of cold Milo.",
+      "Milo Dinosaur, iced Milo with a heap of extra powder on top, is thought to have been named in Singapore's Indian Muslim eateries in the mid-1990s."
+    ],
+    "sources": [
+      {
+        "title": "IIAS: Milo Dinosaur, a Southeast Asian national beverage",
+        "url": "https://www.iias.asia/the-newsletter/article/milo-dinosaur-life-and-times-southeast-asian-national-beverage"
+      },
+      {
+        "title": "Honeycombers: Milo at 75",
+        "url": "https://thehoneycombers.com/singapore/milo-singapore-75-years/"
+      },
+      {
+        "title": "National Museum: A history of the Milo Dinosaur",
+        "url": "https://www.nhb.gov.sg/nationalmuseum/-/media/nms2017/documents/historiasg-transcripts/historiasg-lecture-6-14-sep-2019--geoffrey-pakiam-final.pdf"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "A&A Restaurant on Sembawang Road, now Teh Tarik Muslim Restaurant, claims to have invented Milo Dinosaur.",
+        "src": {
+          "title": "NLB Infopedia: Teh tarik",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-07-19_103055.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "local": "Ong lai",
+    "color": "olive",
+    "family": "fruits",
+    "aliases": [
+      "pineapple",
+      "pineapple tart"
+    ],
+    "tagline": "Prosperity, baked into a tart.",
+    "communities": [
+      "Hokkien",
+      "Peranakan",
+      "Chinese"
+    ],
+    "story": [
+      "In Hokkien, pineapple is ong lai, which sounds like 'fortune comes'. So pineapple turns up in Chinese New Year snacks and decorations.",
+      "The pineapple tart, buttery pastry with pineapple jam, was mainly made in Peranakan Chinese homes before it became the New Year staple it is now."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Chinese New Year food",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_27_2_2009-01-07.html"
+      },
+      {
+        "title": "Singapore Chinese Cultural Centre: CNY snacks",
+        "url": "https://festivefever.singaporeccc.org.sg/chinese-new-year/archival/2022/?p=78"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "chinese-herbs",
+    "name": "Chinese herbs",
+    "local": "Medical hall",
+    "color": "maroon",
+    "family": "woods",
+    "aliases": [
+      "chinese herbs",
+      "herbal",
+      "dang gui",
+      "angelica"
+    ],
+    "tagline": "Six hundred drawers of roots and bark.",
+    "communities": [
+      "Chinese",
+      "Cantonese"
+    ],
+    "story": [
+      "Step into a traditional medical hall and the smell of dried roots, bark and herbs hits first. A hall can hold over 600 herbs in its drawers, combined into thousands of brews.",
+      "Eu Yan Sang opened its first Singapore hall in 1910 at South Bridge Road. Its staff also helped migrants who couldn't read to write letters and send money home."
+    ],
+    "sources": [
+      {
+        "title": "Singapore Heritage Festival: Life in a traditional medical hall",
+        "url": "https://www.sgheritagefest.gov.sg/archive/2021/life-and-home-in-a-traditional-medical-hall"
+      },
+      {
+        "title": "Roots: Street Corner Heritage Galleries, Chinatown",
+        "url": "https://www.roots.gov.sg/stories-landing/stories/Street-Corner-Heritage-Galleries-Chinatown"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Dang gui and other herbs give the dark Hokkien-style bak kut teh its medicinal smell.",
+        "src": {
+          "title": "Johor Kaki: Herbal bak kut teh",
+          "url": "https://johorkaki.blogspot.com/2023/03/origin-of-herbal-bak-kut-teh-in.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "laksa-leaf",
+    "name": "Laksa leaf",
+    "local": "Daun kesum",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "laksa leaf",
+      "daun kesum",
+      "daun laksa",
+      "vietnamese coriander"
+    ],
+    "tagline": "The sharp green herb on top of the bowl.",
+    "communities": [
+      "Peranakan",
+      "Malay"
+    ],
+    "story": [
+      "Daun kesum, or simply 'laksa leaf', is Vietnamese coriander: a peppery, citrusy herb scattered over laksa. Laksa itself is credited to the Peranakan Chinese.",
+      "Katong laksa, from the Peranakan neighbourhood of Katong, is Singapore's own version: coconut gravy, short-cut noodles you eat with just a spoon, and a heap of chopped laksa leaf."
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Laksa",
+        "url": "https://en.wikipedia.org/wiki/Laksa"
+      },
+      {
+        "title": "Wikipedia: Katong laksa",
+        "url": "https://en.wikipedia.org/wiki/Katong_laksa"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Katong became known for laksa through two hugely popular 1960s stalls, Marine Parade Laksa and Roxy Laksa.",
+        "src": {
+          "title": "Carry It Like Harry: Singapore Katong laksa",
+          "url": "https://carryitlikeharry.com/singapore-katong-laksa/"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "saffron",
+    "name": "Saffron",
+    "local": "Kesar",
+    "color": "coral",
+    "family": "spices",
+    "aliases": [
+      "saffron",
+      "kesar"
+    ],
+    "tagline": "The gold threads in a pot of nasi briyani.",
+    "communities": [
+      "Indian Muslim",
+      "Malay"
+    ],
+    "story": [
+      "Saffron, steeped in warm milk, is what tints and scents the rice in nasi briyani. Islamic Restaurant on North Bridge Road has served briyani since 1921, when M. Abdul Rahiman, chef to the wealthy Arab Alsagoff family, opened it.",
+      "Its rice and meat are layered in a giant pot, and its diners have included Singapore's first president, Yusof Ishak."
+    ],
+    "sources": [
+      {
+        "title": "Islamic Restaurant: About",
+        "url": "https://islamic.sg/index/about.html"
+      },
+      {
+        "title": "The Straits Times: Violet Oon's quest for the best briyani",
+        "url": "https://straitstimes.com.sg/life/food/life-in-food-with-violet-oon-quest-for-the-best-briyani"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Briyani in Singapore usually comes with achar, a pickle of cucumber, onion, chilli and pineapple.",
+        "src": {
+          "title": "SG101: Nasi briyani in Singapore",
+          "url": "https://www.sg101.gov.sg/resources/archives/heritage-nasi-briyani-in-singapore/"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "curry-powder",
+    "name": "Turmeric & curry powder",
+    "local": "Kunyit",
+    "color": "coral",
+    "family": "spices",
+    "aliases": [
+      "turmeric",
+      "curry powder",
+      "kunyit",
+      "cumin",
+      "coriander seed"
+    ],
+    "tagline": "Freshly ground in Little India.",
+    "communities": [
+      "Indian",
+      "Tamil"
+    ],
+    "story": [
+      "Little India's spice shops sell turmeric, cumin, coriander seed and nutmeg by the scoop, and a few still grind their own blends. Thandapani Co, started by Sanmugam in the 1960s, bought over Valli Flour Mills in the 1970s so it could grind spices to its own recipes."
+    ],
+    "sources": [
+      {
+        "title": "NHB: Little India heritage businesses (2022)",
+        "url": "https://www.nhb.gov.sg/-/media/nhb/files/media/releases/2022/media-release--experience-the-character-and-charms-of-little-india-through-nhbs-showcase-of-heritage-businessesfinal-version.ashx"
+      },
+      {
+        "title": "Roots: Street Corner Heritage Galleries, Little India",
+        "url": "https://www.roots.gov.sg/stories-landing/stories/street-corner-heritage-galleries-little-india"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "At Tekka Centre, the spice-grinding machinery was originally brought in from India.",
+        "src": {
+          "title": "Wikipedia: Little India, Singapore",
+          "url": "https://en.wikipedia.org/wiki/Little_India,_Singapore"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "bunga-tanjung",
+    "name": "Bunga tanjung",
+    "local": "Tanjong tree",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "bunga tanjung",
+      "tanjong",
+      "mimusops"
+    ],
+    "tagline": "Tiny star flowers that perfume the night.",
+    "communities": [
+      "Malay",
+      "Garden City"
+    ],
+    "story": [
+      "The tanjong tree's small cream flowers open at twilight, grow more fragrant through the night, and drop by morning. It's commonly planted along roads in Singapore's housing estates.",
+      "A few are Heritage Trees, including one on Lorong Ah Soo in Hougang and one on Sentosa."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Mimusops elengi",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3030"
+      },
+      {
+        "title": "NParks Heritage Tree HT 2019-304",
+        "url": "https://heritagetrees.nparks.gov.sg/heritagetrees/ht-2019-304/"
+      }
+    ],
+    "lore": [
+      {
+        "text": "In Malay folklore the bunga tanjung often stands for a lost lover, and its flowers are said to chase away evil spirits.",
+        "src": {
+          "title": "Tutu Dutta: In search of the sundal tree",
+          "url": "https://tutudutta.blogspot.com/2013/07"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "gelam",
+    "name": "Gelam",
+    "local": "Cajuput",
+    "color": "olive",
+    "family": "woods",
+    "aliases": [
+      "gelam",
+      "cajuput",
+      "melaleuca"
+    ],
+    "tagline": "The tree that gave Kampong Gelam its name.",
+    "communities": [
+      "Malay",
+      "Bugis"
+    ],
+    "story": [
+      "Kampong Gelam is named after the gelam tree, Melaleuca cajuputi, a native tree with papery bark and tiny cream flowers that once grew in the area.",
+      "Oil from its leaves, cajuput oil, has a fresh, medicinal smell. It went into traditional Malay remedies made and sold in Kampong Gelam, and it's one of the oils in Tiger Balm."
+    ],
+    "sources": [
+      {
+        "title": "NParks: HortPark Streets of Singapore walk",
+        "url": "https://nparks.gov.sg/docs/default-source/activities-doc/hortpark-streets-singapore-walk082024.pdf"
+      },
+      {
+        "title": "Wonderwall: Rediscover Kampong Glam",
+        "url": "https://wonderwall.sg/Places/adventures-at-home-lets-rediscover-kampong-glam"
+      },
+      {
+        "title": "Wiki.sg: Tiger Balm",
+        "url": "https://wiki.sg/p/Tiger_Balm"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "benzoin",
+    "name": "Benzoin",
+    "local": "Kemenyan",
+    "color": "maroon",
+    "family": "resins",
+    "aliases": [
+      "benzoin",
+      "kemenyan",
+      "styrax"
+    ],
+    "tagline": "Sweet resin smoke, traded through Singapore.",
+    "communities": [
+      "Malay",
+      "Javanese",
+      "Arab"
+    ],
+    "story": [
+      "Kemenyan is benzoin, a resin tapped from Styrax trees in Sumatra. Burned, it gives a sweet, vanilla-like smoke used in incense across the Middle East, India and Asia.",
+      "For decades most of Sumatra's raw benzoin was shipped to Singapore, pressed into blocks here and re-exported to the Middle East, Africa, India and the rest of Asia."
+    ],
+    "sources": [
+      {
+        "title": "PROSEA: Styrax (benzoin)",
+        "url": "https://prosea.prota4u.org/view.aspx?id=786"
+      },
+      {
+        "title": "CIFOR: Harum madu dan dupa kemenyan",
+        "url": "https://cifor-icraf.org/knowledge/publication/1119/ris"
+      }
+    ],
+    "lore": [
+      {
+        "text": "In Java, kemenyan is still burned in rituals connected with death and spirits.",
+        "src": {
+          "title": "PROSEA: Styrax (benzoin)",
+          "url": "https://prosea.prota4u.org/view.aspx?id=786"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "chrysanthemum",
+    "name": "Chrysanthemum",
+    "local": "Ju hua",
+    "color": "olive",
+    "family": "flowers",
+    "aliases": [
+      "chrysanthemum",
+      "ju hua"
+    ],
+    "tagline": "The cooling tea for a 'heaty' day.",
+    "communities": [
+      "Chinese",
+      "Cantonese"
+    ],
+    "story": [
+      "Dried chrysanthemum flowers brewed into a pale golden tea are a classic liang cha, or cooling drink, for when the body feels 'heaty'. You'll find them in medical halls and supermarkets, and as boxed drinks.",
+      "Eu Yan Sang's Five Flower Tea blends chrysanthemum with honeysuckle, cotton tree flower, pagoda tree flower and frangipani."
+    ],
+    "sources": [
+      {
+        "title": "Eu Yan Sang: Five Flower Tea",
+        "url": "https://www.euyansang.com.sg/en/vegetarian/?q=tea"
+      },
+      {
+        "title": "NoobCook: Chrysanthemum tea",
+        "url": "https://noobcook.com/chrysanthemum-tea/"
+      },
+      {
+        "title": "My Wok Life: Chrysanthemum ginger tea",
+        "url": "https://www.mywoklife.com/2015/09/quick-homemade-chrysanthemum-ginger-tea-with.html"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "hibiscus",
+    "name": "Hibiscus",
+    "local": "Bunga raya",
+    "color": "coral",
+    "family": "flowers",
+    "aliases": [
+      "hibiscus",
+      "bunga raya",
+      "bunga sepatu"
+    ],
+    "tagline": "The 'shoe flower' that became a national symbol next door.",
+    "communities": [
+      "Malay",
+      "Chinese",
+      "Indian"
+    ],
+    "story": [
+      "Bunga raya, the 'grand' or 'celebratory' flower, was named Malaysia's national flower in 1960. In Malay and Indonesian it's also bunga sepatu, the shoe flower, because its petals were used to make black shoe polish.",
+      "The juice of its petals was used by Chinese and Indian communities to darken hair and eyebrows."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Hibiscus",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_211_2005-01-09.html"
+      },
+      {
+        "title": "NParks Flora & Fauna Web: Hibiscus",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/0/2097"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Malays once used the flowers in exorcism rituals during epidemics.",
+        "src": {
+          "title": "NLB Infopedia: Hibiscus",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_211_2005-01-09.html"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "cardamom",
+    "name": "Cardamom",
+    "local": "Elaichi",
+    "color": "olive",
+    "family": "spices",
+    "aliases": [
+      "cardamom",
+      "elaichi",
+      "masala"
+    ],
+    "tagline": "The green pod in a glass of teh masala.",
+    "communities": [
+      "Indian",
+      "Indian Muslim"
+    ],
+    "story": [
+      "Masala tea, or masala chai, comes from the Indian subcontinent: milk tea simmered with spices such as cardamom, cinnamon, cloves and ginger. In Singapore you'll find it at Indian restaurants and drink stalls as teh masala.",
+      "Every household has its own blend of spices for it."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Making and sharing of tea",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-sharing-of-tea"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Teh masala sits on the menu next to teh tarik and teh halia at Indian Muslim drink stalls like Bhai Sarbat.",
+        "src": {
+          "title": "Roots: Bhai Sarbat",
+          "url": "https://www.roots.gov.sg/places/places-landing/places/landmarks/kampong-gelam-citizen-engagement/bhai-sarbat"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "green-tea",
+    "name": "Chinese tea",
+    "local": "Cha",
+    "color": "olive",
+    "family": "beverages",
+    "aliases": [
+      "green tea",
+      "chinese tea",
+      "cha"
+    ],
+    "tagline": "Poured for the elders at a Chinese wedding.",
+    "communities": [
+      "Chinese"
+    ],
+    "story": [
+      "Tea is teh in Malay, cha in Chinese and theneer in Tamil, and making and sharing it is listed in Singapore's intangible cultural heritage inventory.",
+      "At a traditional Chinese wedding, the couple serve tea to their elders as a sign of respect, starting at the groom's home."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Making and sharing of tea",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-sharing-of-tea"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Bak kut teh is traditionally paired with a pot of Chinese tea.",
+        "src": {
+          "title": "Roots: Making and sharing of tea",
+          "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-sharing-of-tea"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "kapur",
+    "name": "Camphor",
+    "local": "Kapur",
+    "color": "cream",
+    "family": "woods",
+    "aliases": [
+      "camphor",
+      "kapur",
+      "camphor tree"
+    ],
+    "tagline": "A forest giant that once supplied the world's camphor.",
+    "communities": [
+      "Botanic Gardens",
+      "Malay"
+    ],
+    "story": [
+      "Kapur, Dryobalanops aromatica, is a towering rainforest tree with fragrant resin; it was an important source of natural camphor, the cooling, medicinal smell also found in Tiger Balm and Axe oil.",
+      "Three kapur trees are Heritage Trees in Singapore. Those at the Botanic Gardens grew from seeds the botanist E.J.H. Corner collected on Malaya's east coast; one was planted on 15 January 1940."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Dryobalanops aromatica",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2862"
+      },
+      {
+        "title": "NParks Heritage Tree HT 2012-193",
+        "url": "https://nparks.gov.sg/gardens-parks-and-nature/heritage-trees/ht-2012-193"
+      },
+      {
+        "title": "Wikipedia: Dryobalanops",
+        "url": "https://en.wikipedia.org/wiki/Dryobalanops"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Kapur shows 'crown shyness': the tops of neighbouring trees stop just short of touching, leaving channels of sky between them.",
+        "src": {
+          "title": "Wikipedia: Dryobalanops aromatica",
+          "url": "https://en.wikipedia.org/wiki/Dryobalanops_aromatica"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "ketupat",
+    "name": "Ketupat leaf",
+    "local": "Janur",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "ketupat",
+      "coconut leaf",
+      "janur"
+    ],
+    "tagline": "Rice boiled in a woven coconut-leaf diamond.",
+    "communities": [
+      "Malay"
+    ],
+    "story": [
+      "Ketupat is rice packed into a pouch woven from young coconut leaves and boiled until it sets. About a week before Hari Raya, young coconut leaves appear at markets so families can weave their own.",
+      "In Singapore it's served at Hari Raya Puasa, Hari Raya Haji and Malay weddings, and woven ketupat hang as festive decorations too. Weaving ketupat is listed in Singapore's intangible cultural heritage inventory."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Weaving ketupat",
+        "url": "https://roots.gov.sg/ich-landing/ich/weaving-ketupat"
+      },
+      {
+        "title": "NLB Infopedia: Ketupat",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2015-10-26_111827.html"
+      }
+    ],
+    "lore": [
+      {
+        "text": "The Malay Muslim community traditionally eats ketupat by cutting it in half, not by peeling away the leaves.",
+        "src": {
+          "title": "Roots: Weaving ketupat",
+          "url": "https://www.roots.gov.sg/en/ich-landing/ich/weaving-ketupat"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "ghee",
+    "name": "Ghee & sesame oil",
+    "local": "Nei",
+    "color": "olive",
+    "family": "gourmand",
+    "aliases": [
+      "ghee",
+      "gingelly oil",
+      "sesame oil"
+    ],
+    "tagline": "The smell of a Deepavali morning.",
+    "communities": [
+      "Hindu",
+      "Tamil"
+    ],
+    "story": [
+      "Deepavali means 'a row of lights'. Homes are lit with small clay oil lamps, and on the morning itself many Hindus wake early for an oil bath, often with gingelly (sesame) oil.",
+      "The festival sweets are rich in ghee: mithai, adhirasam made with jaggery, and nei urundai, literally 'ghee balls'."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Deepavali",
+        "url": "https://roots.gov.sg/ich-landing/ich/deepavali"
+      },
+      {
+        "title": "The Smart Local: Deepavali traditions",
+        "url": "https://thesmartlocal.com/read/deepavali-celebrations/amp"
+      },
+      {
+        "title": "Honeycombers: Deepavali sweets",
+        "url": "https://thehoneycombers.com/singapore/?p=261224"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "petrichor",
+    "name": "Rain on hot ground",
+    "local": "Petrichor",
+    "color": "navy",
+    "family": "natural",
+    "aliases": [
+      "petrichor",
+      "rain",
+      "wet soil"
+    ],
+    "tagline": "The smell right before the afternoon thunderstorm.",
+    "communities": [
+      "Everyday Singapore"
+    ],
+    "story": [
+      "Petrichor is the earthy smell when rain hits dry ground: oils from plants and geosmin from soil bacteria, thrown into the air by the first drops. Before a storm, lightning adds a sharp, clean smell of ozone.",
+      "In Singapore, the monsoon months bring regular late-morning and afternoon thundery showers. Epilogue's Senator, I'm Singaporean builds its base around this smell of wet soil after sudden rain."
+    ],
+    "sources": [
+      {
+        "title": "Science Notes: Petrichor and geosmin",
+        "url": "https://sciencenotes.org/petrichor-and-geosmin-the-smell-of-rain/"
+      },
+      {
+        "title": "Time Out Singapore: NEA weather advisory",
+        "url": "https://www.timeout.com/singapore/news/the-first-half-of-september-is-set-to-be-a-rainy-one-with-thundery-showers-throughout-090525"
+      },
+      {
+        "title": "Grazia Singapore",
+        "url": "https://grazia.sg/beauty/senator-im-singaporean-the-story-behind-the-fragrance-the-home-grown-house-that-made-it/"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "mangrove",
+    "name": "Mangrove mud",
+    "local": "Bakau",
+    "color": "olive",
+    "family": "natural",
+    "aliases": [
+      "mangrove",
+      "mangrove mud",
+      "bakau"
+    ],
+    "tagline": "Salt, mud and leaf litter at low tide.",
+    "communities": [
+      "Coast",
+      "Native plant"
+    ],
+    "story": [
+      "Mangroves grow in the tidal mud between land and sea, and give off the sulphurous, salty smell of low tide. Singapore has more than 30 mangrove species; the largest mainland mangrove, 130 hectares, is at Sungei Buloh.",
+      "Sungei Buloh was nearly cleared for an agrotech park until birdwatchers proposed saving it in 1986. It opened as a nature park in 1993 and became a nature reserve in 2002."
+    ],
+    "sources": [
+      {
+        "title": "NParks: Mangrove forests in Singapore",
+        "url": "https://biodiversitysg.nparks.gov.sg/our-ecosystems/coastal-and-marine-habitats/mangrove-forests-in-singapore/"
+      },
+      {
+        "title": "NLB Infopedia: Sungei Buloh Wetland Reserve",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_566_2005-02-01.html"
+      },
+      {
+        "title": "Mothership: Sungei Buloh almost became an agrotech park",
+        "url": "https://mothership.sg/2020/09/sungei-buloh-history"
+      },
+      {
+        "title": "NParks Buzz: Trees of the mangroves",
+        "url": "https://nparks.gov.sg/nparksbuzz/nov-issue-2021/conservation/trees-of-the-mangroves"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The sulphur smell comes from bacteria breaking things down in the airless mud.",
+        "src": {
+          "title": "Wild Shores of Singapore: White mud at Pasir Ris",
+          "url": "https://wildshores.blogspot.com/2011/03/white-mud-at-pasir-ris-and-check-on.html?m=1"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "Places once named after mangroves, like Kampong Sungei Attap and Sungei Bakau Rungkup in Jurong, no longer exist.",
+        "src": {
+          "title": "BiblioAsia: Mangroves, a tale of survival",
+          "url": "https://biblioasia.nlb.gov.sg/vol-13/issue-1/apr-jun-2017/mangroves/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "galangal",
+    "name": "Galangal",
+    "local": "Lengkuas",
+    "color": "coral",
+    "family": "spices",
+    "aliases": [
+      "galangal",
+      "lengkuas",
+      "blue ginger"
+    ],
+    "tagline": "The piney root in a pot of Hari Raya rendang.",
+    "communities": [
+      "Malay",
+      "Minangkabau"
+    ],
+    "story": [
+      "Lengkuas, or blue ginger, is a sharper, piney cousin of ginger. It's pounded with chilli, lemongrass, garlic, shallot, kaffir lime leaves and turmeric into the paste for rendang, meat stewed slowly in coconut milk.",
+      "Rendang comes from the Minangkabau of West Sumatra. In Singapore it's a celebratory dish for Hari Raya and Malay weddings."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Rendang",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1767_2011-02-11.html"
+      },
+      {
+        "title": "Wikipedia: Rendang",
+        "url": "https://en.wikipedia.org/wiki/Rendang"
+      }
+    ],
+    "lore": [
+      {
+        "text": "In the old days, rendang was wrapped in plantain or banana leaves to carry on long journeys.",
+        "src": {
+          "title": "NLB Infopedia: Rendang",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1767_2011-02-11.html"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "curry-leaf",
+    "name": "Curry leaf",
+    "local": "Karuveppilai",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "curry leaf",
+      "curry leaves",
+      "karuveppilai"
+    ],
+    "tagline": "Sizzling in the oil before the fish head goes in.",
+    "communities": [
+      "Indian",
+      "Malayali",
+      "Tamil"
+    ],
+    "story": [
+      "Curry leaves are a backbone of South Indian cooking, fried in oil at the start of a curry. They're a key smell in fish head curry, a dish born in Singapore.",
+      "In 1949, Marian Jacob Gomez, a Malayali from Kerala, opened a restaurant on Sophia Road and started cooking whole fish heads in his curry for his Chinese customers, who prized the head. It's listed in Singapore's intangible cultural heritage inventory."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Fish head curry",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/fish-head-curry"
+      },
+      {
+        "title": "NLB Infopedia: Fish head curry",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_624_2005-01-04.html"
+      },
+      {
+        "title": "Roots: Indian cuisine in Singapore",
+        "url": "https://roots.gov.sg/ich-landing/ich/indian-cuisine-in-singapore"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "You can see a curry tree growing in the Spice Garden at Fort Canning Park.",
+        "src": {
+          "title": "NParks: Fort Canning Spice Garden trail",
+          "url": "https://www.nparks.gov.sg/docs/default-source/parks-docs/fort-canning-park/fort-canning-park-spice-garden-trail.pdf"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "tamarind",
+    "name": "Tamarind",
+    "local": "Asam jawa",
+    "color": "maroon",
+    "family": "fruits",
+    "aliases": [
+      "tamarind",
+      "asam",
+      "asam jawa"
+    ],
+    "tagline": "The sour in asam pedas.",
+    "communities": [
+      "Malay",
+      "Peranakan",
+      "Indian"
+    ],
+    "story": [
+      "Tamarind pulp is asam, the sour backbone of asam pedas, Peranakan gerang asam and Indian fish curries. In Malay the tree is asam jawa.",
+      "Tamarind trees line several Singapore streets, and three are Heritage Trees, including one in the grounds of the Istana."
+    ],
+    "sources": [
+      {
+        "title": "NParks Buzz: Tamarind",
+        "url": "https://www.nparks.gov.sg/nparksbuzz/sept-issue-2020/facts/tamarind"
+      },
+      {
+        "title": "NParks Heritage Tree HT 2018-295",
+        "url": "https://nparks.gov.sg/gardens-parks-and-nature/heritage-trees/ht-2018-295"
+      },
+      {
+        "title": "Wikipedia: Asam pedas",
+        "url": "https://en.wikipedia.org/wiki/Asam_pedas"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The pulp is also eaten on its own as a sweet-sour preserved snack, and it goes into Worcestershire sauce.",
+        "src": {
+          "title": "NParks Heritage Tree HT 2001-28",
+          "url": "https://Www.nparks.gov.sg/gardens-parks-and-nature/heritage-trees/ht-2001-28"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "There's a huge asam tree at the Pulau Ubin jetty, beside the shops.",
+        "src": {
+          "title": "Wild Shores of Singapore: Asam tree at Changi Creek",
+          "url": "https://wildshores.blogspot.com/2009/04/asam-tree-at-changi-creek.html"
+        }
+      }
+    ]
+  },
+  {
+    "id": "honeysuckle",
+    "name": "Honeysuckle",
+    "local": "Jin yin hua",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "honeysuckle",
+      "jin yin hua"
+    ],
+    "tagline": "The 'gold and silver flower' of cooling tea.",
+    "communities": [
+      "Chinese"
+    ],
+    "story": [
+      "In Chinese medicine, Japanese honeysuckle is jin yin hua, 'gold and silver flower', because its blooms open white and turn yellow. Dried, it's brewed into cooling teas for a heaty sore throat.",
+      "It's one of the five flowers in the Five Flower Tea sold at Eu Yan Sang, alongside chrysanthemum and frangipani."
+    ],
+    "sources": [
+      {
+        "title": "PULSE TCM: Honeysuckle and chrysanthemum tea",
+        "url": "https://pulsetcm.sg/bites/japanese-honey-suckle-wild-chrysanthemum-tea/"
+      },
+      {
+        "title": "Eu Yan Sang: Five Flower Tea",
+        "url": "https://www.euyansang.com.sg/en/vegetarian/?q=tea"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "orange-blossom",
+    "name": "Orange blossom water",
+    "local": "Air bunga",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "orange blossom",
+      "orange flower",
+      "orange blossom water"
+    ],
+    "tagline": "Sprinkled on the flowers of a Malay wedding.",
+    "communities": [
+      "Malay",
+      "Arab"
+    ],
+    "story": [
+      "At a Malay wedding, guests are given bunga rampai: shredded pandan with bunga setaman, flowers scented with rosewater or orange blossom water.",
+      "Elders bless the couple on the dais by sprinkling rosewater and flower potpourri over them."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Malay weddings",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/malay-weddings"
+      },
+      {
+        "title": "UiTM: Malay wedding customs",
+        "url": "https://ir.uitm.edu.my/id/eprint/78388/1/78388.pdf"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "cinnamon",
+    "name": "Cinnamon",
+    "local": "Kayu manis",
+    "color": "maroon",
+    "family": "spices",
+    "aliases": [
+      "cinnamon",
+      "cassia",
+      "kayu manis"
+    ],
+    "tagline": "'Sweet wood', in bak kut teh and teh masala.",
+    "communities": [
+      "Chinese",
+      "Indian",
+      "Malay"
+    ],
+    "story": [
+      "In Malay cinnamon is kayu manis, 'sweet wood'. It's simmered in Hokkien-style bak kut teh with star anise and cloves, and in masala tea with cardamom and ginger.",
+      "A cinnamon tree grows in the Spice Garden at Fort Canning, on the site of Raffles' first botanic garden."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Bak kut teh",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1800_2011-03-18.html"
+      },
+      {
+        "title": "Roots: Making and sharing of tea",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/making-and-sharing-of-tea"
+      },
+      {
+        "title": "NParks: Fort Canning Spice Garden trail",
+        "url": "https://www.nparks.gov.sg/docs/default-source/parks-docs/fort-canning-park/fort-canning-park-spice-garden-trail.pdf"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "mangosteen",
+    "name": "Mangosteen",
+    "local": "Manggis",
+    "color": "maroon",
+    "family": "fruits",
+    "aliases": [
+      "mangosteen",
+      "manggis"
+    ],
+    "tagline": "The 'cooling' queen eaten after the king.",
+    "communities": [
+      "Chinese",
+      "Everyday Singapore"
+    ],
+    "story": [
+      "Mangosteen, manggis in Malay, is the queen to durian's king: a purple rind around soft, white, sweet-sour segments.",
+      "NParks notes that some Chinese eat the two together, believing durian is 'heaty' and mangosteen 'cooling'. Doctors say there's no evidence for it; the two simply ripen in the same season, around June to August."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Garcinia mangostana",
+        "url": "https://nparks.gov.sg/florafaunaweb/flora/2/9/2927"
+      },
+      {
+        "title": "HealthXchange: Durian myths and facts",
+        "url": "https://www.healthxchange.sg/food-nutrition/food-tips/durian-myths-facts"
+      },
+      {
+        "title": "SAYS: Mangosteens after durians",
+        "url": "https://says.com/my/lifestyle/eating-cooling-fruits-like-mangosteen-will-cool-you-after-eating-heaty-durians"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Some people pour water into an empty durian husk and drink it to 'cool down' after a durian feast.",
+        "src": {
+          "title": "Singapore for Less: Durians and mangosteens",
+          "url": "https://singaporeforless.blogspot.com/2014/08/durians-and-mangosteens.html"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "chempedak",
+    "name": "Chempedak",
+    "local": "Cempedak",
+    "color": "olive",
+    "family": "fruits",
+    "aliases": [
+      "chempedak",
+      "cempedak"
+    ],
+    "tagline": "Jackfruit's pungent cousin, best fried.",
+    "communities": [
+      "Malay",
+      "Peranakan"
+    ],
+    "story": [
+      "Chempedak is a cousin of jackfruit with a pungent smell often compared to durian. Inside are sweet, sticky golden pods around large seeds.",
+      "The pods are dipped in batter and deep-fried into fritters, sold at roadside stalls across the region."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Artocarpus integer",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3309"
+      },
+      {
+        "title": "Wikipedia: Artocarpus integer",
+        "url": "https://en.wikipedia.org/wiki/Artocarpus_integer"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "There's a chempedak Heritage Tree on Sentosa.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Artocarpus integer",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3309"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "tulsi",
+    "name": "Holy basil",
+    "local": "Tulsi",
+    "color": "olive",
+    "family": "greens",
+    "aliases": [
+      "holy basil",
+      "tulsi",
+      "thulasi"
+    ],
+    "tagline": "The sacred basil grown in temple courtyards.",
+    "communities": [
+      "Hindu"
+    ],
+    "story": [
+      "Tulsi, holy basil, is sacred to Hindus and a symbol of loyalty and devotion. It's often planted in courtyards and temple gardens, and its fragrant leaves are used in prayers.",
+      "Lord Krishna is said to wear a garland of tulsi leaves and flowers, and its woody stems are carved into prayer beads."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Ocimum tenuiflorum",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/2/2275"
+      },
+      {
+        "title": "Britannica: Holy basil",
+        "url": "https://www.britannica.com/plant/holy-basil"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Some believe water should not be offered to the plant during a lunar eclipse.",
+        "src": {
+          "title": "NParks Buzz: Basil, the king of herbs",
+          "url": "https://nparks.gov.sg/nparksbuzz/jan-issue-2021/gardening/basil---the-king-of-herbs"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "chenpi",
+    "name": "Dried mandarin peel",
+    "local": "Chenpi",
+    "color": "coral",
+    "family": "citrus",
+    "aliases": [
+      "chenpi",
+      "dried mandarin peel",
+      "tangerine peel"
+    ],
+    "tagline": "Peel that gets more precious every year.",
+    "communities": [
+      "Cantonese",
+      "Chinese"
+    ],
+    "story": [
+      "Chenpi, 'aged peel', is sun-dried mandarin peel kept for years. It turns darker and sweeter with age; the finest grade is 10 years old or more, and old peel sells for luxury prices.",
+      "A few pieces scent Cantonese red bean soup. It's also steeped into teas at medical halls."
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Chenpi",
+        "url": "https://en.wikipedia.org/wiki/Chenpi"
+      },
+      {
+        "title": "Mayway: Making chen pi",
+        "url": "https://mayway.com/articles/making-organic-chen-pi-for-your-clinic"
+      },
+      {
+        "title": "The Mala Market: Xinhui chenpi",
+        "url": "https://themalamarket.com/products/mandarin-peel-tangerine-peel-xinhua-chenpi"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Families keep red chenpi as heirlooms and gift it to brides.",
+        "src": {
+          "title": "Johor Kaki: Chenpi worth more than gold",
+          "url": "https://johorkaki.blogspot.com/2021/02/chenpi-cantonese-dried-tangerine-peel.html"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "joss-paper",
+    "name": "Joss paper",
+    "local": "Kim zua",
+    "color": "coral",
+    "family": "woods",
+    "aliases": [
+      "joss paper",
+      "hell money",
+      "paper offerings"
+    ],
+    "tagline": "Burning gold paper in the metal bins.",
+    "communities": [
+      "Chinese",
+      "Taoist"
+    ],
+    "story": [
+      "Joss paper, spirit money and paper replicas of houses, cars and clothes are burned for ancestors and wandering spirits, above all during the seventh lunar month and Qingming.",
+      "Town councils put out metal burning bins in housing estates, and temples have large furnaces for mass prayer."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Zhong Yuan Jie (Hungry Ghost Festival)",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/zhong-yuan-jie-hungry-ghost-festival"
+      },
+      {
+        "title": "Ang Mo Kio Town Council: Burning joss paper",
+        "url": "https://www.amktc.org.sg/burning-joss-paper-keep-it-safe-and-clean"
+      },
+      {
+        "title": "The HomeGround Asia: Hungry Ghost Festival explained",
+        "url": "https://thehomeground.asia/?p=3714"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Some companies burn paper offerings worth over S$1,000 in Chinatown's back lanes during the festival.",
+        "src": {
+          "title": "Religion News Service: Hungry Ghost Month in Singapore",
+          "url": "https://religionnews.com/2017/09/09/hungry-ghost-month-animates-the-streets-of-singapore/"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "penaga",
+    "name": "Ironwood flower",
+    "local": "Penaga lilin",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "ironwood",
+      "penaga",
+      "mesua",
+      "nagkesar"
+    ],
+    "tagline": "The tree the next Buddha will sit under.",
+    "communities": [
+      "Buddhist",
+      "Malay"
+    ],
+    "story": [
+      "Mesua ferrea, penaga lilin in Malay, bears large, very fragrant flowers of four white waxy petals around a golden ball of stamens. Its wood is so dense that it sinks in water even when dry.",
+      "Buddhists believe the next Buddha, Maitreya, will reach enlightenment under this tree. Its flowers are given as temple offerings, and its seed oil once lit Buddhist temple lamps."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Mesua ferrea",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3023"
+      }
+    ],
+    "lore": [
+      {
+        "text": "Maitreya is traditionally shown holding a Mesua ferrea flower.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Mesua ferrea",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3023"
+        }
+      }
+    ],
+    "everyday": []
+  },
+  {
+    "id": "banana-shrub",
+    "name": "Banana shrub",
+    "local": "Chempaka ambon",
+    "color": "olive",
+    "family": "white-flowers",
+    "aliases": [
+      "banana shrub",
+      "chempaka ambon",
+      "magnolia figo"
+    ],
+    "tagline": "A magnolia that smells like fruity chewing gum.",
+    "communities": [
+      "Garden City",
+      "Chinese"
+    ],
+    "story": [
+      "Magnolia figo, called chempaka ambon or banana shrub, has small creamy flowers wrapped in furry brown buds. NParks describes the scent as ripe honeydew, bananas or fruity chewing gum, strongest towards evening.",
+      "In Chinese it's 含笑花, han xiao hua: the 'holding a smile' flower."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Magnolia figo",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/2/2224"
+      }
+    ],
+    "everyday": [],
+    "lore": []
+  },
+  {
+    "id": "gardenia",
+    "name": "Water gardenia",
+    "local": "Chempaka utan",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "gardenia",
+      "water gardenia",
+      "chempaka utan"
+    ],
+    "tagline": "A native gardenia lost from the wild.",
+    "communities": [
+      "Native plant"
+    ],
+    "story": [
+      "Gardenia tubifera is a native tree of swamp forests and estuaries, with fragrant flowers that open cream and turn orange-yellow the next day. In Singapore it's listed as presumed nationally extinct in the wild.",
+      "It survives here in cultivation; NParks lists it as suitable for roadsides, parks and fragrant gardens."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Gardenia tubifera",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/9/2933"
+      }
+    ],
+    "everyday": [],
     "lore": []
   }
 ]

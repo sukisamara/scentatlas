@@ -235,7 +235,11 @@ const NOTE_ICONS = {
 
 function noteIcon(noteId, size = 48) {
   const art = NOTE_ICONS[noteId];
-  if (!art) return "";
+  if (!art) {
+    // No drawing of its own yet: use its family's drawing
+    const note = (typeof DATA !== "undefined" && DATA.notes) ? DATA.notes.find(n => n.id === noteId) : null;
+    return note ? familyIcon(note.family, size) : "";
+  }
   return `<svg class="note-icon" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">${art}</svg>`;
 }
 
