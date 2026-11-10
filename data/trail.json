@@ -1,126 +1,167 @@
 {
-  "title": "One-day scent trail",
-  "intro": "Indian garlands, Malay-Muslim attar, colonial spices and Teochew incense, in one walkable day through Little India, Kampong Gelam, Fort Canning and Chinatown. Press play to walk it on the map, or open the whole route in Google Maps.",
-  "tip": "Shop and workshop hours change, so check before you go. Sifr Aromatics workshops need booking.",
-  "stops": [
+ "title": "One-day scent trail",
+ "intro": "Indian garlands, Malay-Muslim attar, colonial spices and Teochew incense, in one walkable day through Little India, Kampong Gelam, Fort Canning and Chinatown. Press play to walk it on the map, or open the whole route in Google Maps.",
+ "tip": "Shop and workshop hours change, so check before you go. Sifr Aromatics workshops need booking.",
+ "stops": [
+  {
+   "time": "8:30 AM",
+   "name": "Kopi at Tekka Centre",
+   "area": "Little India",
+   "address": "665 Buffalo Rd, Singapore 210665",
+   "lat": 1.30626,
+   "lon": 103.85048,
+   "highlight": false,
+   "blurb": "Start like a local: kopi or teh at the hawker drinks stalls, with Indian breakfasts all around you.",
+   "notes": [
+    "kopi-teh",
+    "curry-powder"
+   ],
+   "eats": [
     {
-      "time": "8:30 AM",
-      "name": "Kopi at Tekka Centre",
-      "area": "Little India",
-      "address": "665 Buffalo Rd, Singapore 210665",
-      "lat": 1.30626,
-      "lon": 103.85048,
-      "highlight": false,
-      "blurb": "Start like a local: kopi or teh at the hawker drinks stalls, with Indian breakfasts all around you.",
-      "notes": [
-        "kopi-teh",
-        "curry-powder"
-      ]
+     "name": "Generation Coffee",
+     "where": "Tekka Centre",
+     "hours": "Mon–Sat, 7:30am–2:45pm (from 7am Sat); closed Sun"
     },
     {
-      "time": "9:30 AM",
-      "name": "Jothi Store & Flower Shop",
-      "area": "Little India",
-      "address": "1 Campbell Ln, Singapore 209882",
-      "lat": 1.30566,
-      "lon": 103.85203,
-      "highlight": true,
-      "why": "Garlands strung fresh for the Serangoon Road temples, since the early 1960s.",
-      "blurb": "Jasmine, rose and marigold garlands hang across the shopfront. NHB lists it as a Little India heritage business.",
-      "notes": [
-        "jasmine",
-        "marigold",
-        "rose"
-      ]
+     "name": "545 Whampoa Prawn Noodles",
+     "where": "Tekka Centre",
+     "hours": "Mon–Fri, 7am–1:30pm"
     },
     {
-      "time": "11:00 AM",
-      "name": "Jamal Kazura Aromatics",
-      "area": "Kampong Gelam",
-      "address": "21 Bussorah St, Singapore 199439",
-      "lat": 1.30183,
-      "lon": 103.85968,
-      "highlight": true,
-      "why": "Singapore's oldest homegrown perfume business, selling attar since 1933.",
-      "blurb": "Alcohol-free minyak attar in rows of glass bottles, a few steps from Sultan Mosque. The shop is one of NHB's Street Corner Heritage Galleries.",
-      "notes": [
-        "agarwood-sandalwood",
-        "attar"
-      ]
-    },
-    {
-      "time": "12:30 PM",
-      "name": "Lunch by Sultan Mosque",
-      "area": "Kampong Gelam",
-      "address": "3 Muscat St, Singapore 198833",
-      "lat": 1.30236,
-      "lon": 103.85898,
-      "highlight": false,
-      "blurb": "Nasi padang, murtabak or Turkish grills around Bussorah St and North Bridge Rd.",
-      "notes": []
-    },
-    {
-      "time": "1:30 PM",
-      "name": "Sifr Aromatics",
-      "area": "Kampong Gelam",
-      "address": "42 Arab St, Singapore 199741",
-      "lat": 1.30098,
-      "lon": 103.85665,
-      "highlight": true,
-      "why": "Blend your own perfume with a third-generation Kazura perfumer.",
-      "blurb": "Johari Kazura, grandson of Jamal Kazura's founder, opened Sifr in 2010. Book the workshop ahead.",
-      "notes": [
-        "agarwood-sandalwood",
-        "attar"
-      ]
-    },
-    {
-      "time": "3:45 PM",
-      "name": "Fort Canning Spice Garden",
-      "area": "Fort Canning",
-      "address": "Canning Rise, Fort Canning Park, Singapore",
-      "lat": 1.2956,
-      "lon": 103.84762,
-      "highlight": true,
-      "why": "Crush a clove leaf where Raffles planted Singapore's first spice garden. Free.",
-      "blurb": "Nutmeg, clove, pepper and torch ginger on the site of the 1822 First Botanic Garden, with a free Spice Gallery in the underpass.",
-      "notes": [
-        "nutmeg",
-        "clove",
-        "pepper",
-        "torch-ginger",
-        "cinnamon",
-        "curry-leaf",
-        "tamarind"
-      ]
-    },
-    {
-      "time": "5:15 PM",
-      "name": "Wak Hai Cheng Bio",
-      "area": "Chinatown",
-      "address": "30B Philip St, Singapore 048696",
-      "lat": 1.2845,
-      "lon": 103.84933,
-      "highlight": true,
-      "why": "Giant spiral incense coils smoking over the courtyard of a national monument.",
-      "blurb": "Teochew settlers built a shrine to Mazu here in 1826, when the sea still came up to Philip Street.",
-      "notes": [
-        "agarwood-sandalwood",
-        "joss-sticks"
-      ]
-    },
-    {
-      "time": "6:30 PM",
-      "name": "Dinner at Maxwell Food Centre",
-      "area": "Chinatown",
-      "address": "1 Kadayanallur St, Singapore 069184",
-      "lat": 1.28033,
-      "lon": 103.84474,
-      "highlight": false,
-      "blurb": "End at a hawker centre, with a squeeze of calamansi on your plate.",
-      "notes": [
-        "calamansi"
-      ]
+     "name": "Allauddin's Briyani",
+     "where": "Tekka Centre",
+     "hours": "Daily, 8am–8pm"
     }
-  ]
+   ]
+  },
+  {
+   "time": "9:30 AM",
+   "name": "Jothi Store & Flower Shop",
+   "area": "Little India",
+   "address": "1 Campbell Ln, Singapore 209882",
+   "lat": 1.30566,
+   "lon": 103.85203,
+   "highlight": true,
+   "why": "Garlands strung fresh for the Serangoon Road temples, since the early 1960s.",
+   "blurb": "Jasmine, rose and marigold garlands hang across the shopfront. NHB lists it as a Little India heritage business.",
+   "notes": [
+    "jasmine",
+    "marigold",
+    "rose"
+   ]
+  },
+  {
+   "time": "11:00 AM",
+   "name": "Jamal Kazura Aromatics",
+   "area": "Kampong Gelam",
+   "address": "21 Bussorah St, Singapore 199439",
+   "lat": 1.30183,
+   "lon": 103.85968,
+   "highlight": true,
+   "why": "Singapore's oldest homegrown perfume business, selling attar since 1933.",
+   "blurb": "Alcohol-free minyak attar in rows of glass bottles, a few steps from Sultan Mosque. The shop is one of NHB's Street Corner Heritage Galleries.",
+   "notes": [
+    "agarwood-sandalwood",
+    "attar"
+   ]
+  },
+  {
+   "time": "12:30 PM",
+   "name": "Lunch by Sultan Mosque",
+   "area": "Kampong Gelam",
+   "address": "3 Muscat St, Singapore 198833",
+   "lat": 1.30236,
+   "lon": 103.85898,
+   "highlight": false,
+   "blurb": "Nasi padang, murtabak or Turkish grills around Bussorah St and North Bridge Rd.",
+   "notes": [],
+   "eats": [
+    {
+     "name": "Singapore Zam Zam",
+     "where": "699 North Bridge Rd",
+     "hours": "Daily, 7am–11pm"
+    },
+    {
+     "name": "Warong Nasi Pariaman",
+     "where": "738 North Bridge Rd",
+     "hours": "Tue–Sun, 7:30am–3pm; closed Mon"
+    }
+   ]
+  },
+  {
+   "time": "1:30 PM",
+   "name": "Sifr Aromatics",
+   "area": "Kampong Gelam",
+   "address": "42 Arab St, Singapore 199741",
+   "lat": 1.30098,
+   "lon": 103.85665,
+   "highlight": true,
+   "why": "Blend your own perfume with a third-generation Kazura perfumer.",
+   "blurb": "Johari Kazura, grandson of Jamal Kazura's founder, opened Sifr in 2010. Book the workshop ahead.",
+   "notes": [
+    "agarwood-sandalwood",
+    "attar"
+   ]
+  },
+  {
+   "time": "3:45 PM",
+   "name": "Fort Canning Spice Garden",
+   "area": "Fort Canning",
+   "address": "Canning Rise, Fort Canning Park, Singapore",
+   "lat": 1.2956,
+   "lon": 103.84762,
+   "highlight": true,
+   "why": "Crush a clove leaf where Raffles planted Singapore's first spice garden. Free.",
+   "blurb": "Nutmeg, clove, pepper and torch ginger on the site of the 1822 First Botanic Garden, with a free Spice Gallery in the underpass.",
+   "notes": [
+    "nutmeg",
+    "clove",
+    "pepper",
+    "torch-ginger",
+    "cinnamon",
+    "curry-leaf",
+    "tamarind"
+   ]
+  },
+  {
+   "time": "5:15 PM",
+   "name": "Wak Hai Cheng Bio",
+   "area": "Chinatown",
+   "address": "30B Philip St, Singapore 048696",
+   "lat": 1.2845,
+   "lon": 103.84933,
+   "highlight": true,
+   "why": "Giant spiral incense coils smoking over the courtyard of a national monument.",
+   "blurb": "Teochew settlers built a shrine to Mazu here in 1826, when the sea still came up to Philip Street.",
+   "notes": [
+    "agarwood-sandalwood",
+    "joss-sticks"
+   ]
+  },
+  {
+   "time": "6:30 PM",
+   "name": "Dinner at Maxwell Food Centre",
+   "area": "Chinatown",
+   "address": "1 Kadayanallur St, Singapore 069184",
+   "lat": 1.28033,
+   "lon": 103.84474,
+   "highlight": false,
+   "blurb": "End at a hawker centre, with a squeeze of calamansi on your plate.",
+   "notes": [
+    "calamansi"
+   ],
+   "eats": [
+    {
+     "name": "Tian Tian Hainanese Chicken Rice",
+     "where": "Maxwell Food Centre",
+     "hours": "Tue–Sun, 10am–7:30pm; closed Mon"
+    },
+    {
+     "name": "Ah Tai Hainanese Chicken Rice",
+     "where": "Maxwell Food Centre",
+     "hours": "Wed–Mon, 11am–7:30pm; closed Tue"
+    }
+   ]
+  }
+ ]
 }

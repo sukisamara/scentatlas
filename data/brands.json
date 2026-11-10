@@ -1,468 +1,479 @@
 [
-  {
-    "id": "jamal-kazura",
-    "name": "Jamal Kazura Aromatics",
-    "tier": "Heritage",
-    "founded": "1933",
-    "area": "Kampong Gelam",
-    "address": "728 North Bridge Rd; 21 & 39 Bussorah St",
-    "makes": "Minyak attar (alcohol-free perfume oils), in-house blends, oud",
-    "story": "NHB describes it as Singapore's oldest homegrown perfume business. Hanifa Kazura set up shop near Sultan Mosque, whose worshippers came to buy perfume oils; his son Jamal turned it into a perfumery in the mid-1970s. Third-generation Samir Kazura runs it today.",
-    "links": {
-      "instagram": "https://www.instagram.com/jamalkazuraaromatics/",
-      "facebook": "https://www.facebook.com/JKASingapore"
-    },
-    "sources": [
-      {
-        "title": "NHB Roots: Jamal Kazura Aromatics",
-        "url": "https://www.roots.gov.sg/places/places-landing/places/landmarks/kampong-gelam-citizen-engagement/jamal-kazura-aromatics"
-      }
-    ]
+ {
+  "id": "jamal-kazura",
+  "name": "Jamal Kazura Aromatics",
+  "tier": "Heritage",
+  "founded": "1933",
+  "area": "Kampong Gelam",
+  "address": "728 North Bridge Rd; 21 & 39 Bussorah St",
+  "makes": "Minyak attar (alcohol-free perfume oils), in-house blends, oud",
+  "story": "NHB describes it as Singapore's oldest homegrown perfume business. Hanifa Kazura set up shop near Sultan Mosque, whose worshippers came to buy perfume oils; his son Jamal turned it into a perfumery in the mid-1970s. Third-generation Samir Kazura runs it today.",
+  "links": {
+   "instagram": "https://www.instagram.com/jamalkazuraaromatics/",
+   "facebook": "https://www.facebook.com/JKASingapore"
   },
-  {
-    "id": "sifr",
-    "name": "Sifr Aromatics",
-    "tier": "Heritage",
-    "founded": "2010",
-    "area": "Kampong Gelam",
-    "address": "42 Arab St",
-    "makes": "Small-batch perfume oils, candles, bespoke scents, workshops",
-    "story": "Third-generation perfumer Johari Kazura, grandson of Jamal Kazura's founder, opened Sifr with partner Lizzie You. Sifr means zero in Arabic: a clean slate from the family business.",
-    "links": {
-      "website": "https://www.sifr.sg/",
-      "instagram": "https://www.instagram.com/sifr_aromatics/"
-    },
-    "sources": [
-      {
-        "title": "NHB Roots: Sifr Aromatics",
-        "url": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Sifr-Aromatics"
-      }
-    ]
+  "sources": [
+   {
+    "title": "NHB Roots: Jamal Kazura Aromatics",
+    "url": "https://www.roots.gov.sg/places/places-landing/places/landmarks/kampong-gelam-citizen-engagement/jamal-kazura-aromatics"
+   }
+  ],
+  "mapq": "Jamal Kazura Aromatics, 728 North Bridge Rd"
+ },
+ {
+  "id": "sifr",
+  "name": "Sifr Aromatics",
+  "tier": "Heritage",
+  "founded": "2010",
+  "area": "Kampong Gelam",
+  "address": "42 Arab St",
+  "makes": "Small-batch perfume oils, candles, bespoke scents, workshops",
+  "story": "Third-generation perfumer Johari Kazura, grandson of Jamal Kazura's founder, opened Sifr with partner Lizzie You. Sifr means zero in Arabic: a clean slate from the family business.",
+  "links": {
+   "website": "https://www.sifr.sg/",
+   "instagram": "https://www.instagram.com/sifr_aromatics/"
   },
-  {
-    "id": "thahirah-kazura",
-    "name": "Thahirah Kazura",
-    "tier": "Heritage",
-    "founded": "1979 (family roots 1933)",
-    "area": "Kampong Gelam",
-    "address": "705 North Bridge Rd",
-    "makes": "Non-alcoholic attar, oud, bakhoor, medicated oil",
-    "story": "Another branch of the Kazura family. Thahirah Kazura, a former early childhood educator, took over from her father in 2020 and renamed the shop after herself.",
-    "links": {
-      "instagram": "https://www.instagram.com/thahirah_kazura/",
-      "facebook": "https://www.facebook.com/kazuraperfume/"
-    },
-    "sources": [
-      {
-        "title": "NHB Roots: Thahirah Kazura",
-        "url": "https://www.roots.gov.sg/en/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Thahirah-Kazura-Pte-Ltd"
-      }
-    ]
+  "sources": [
+   {
+    "title": "NHB Roots: Sifr Aromatics",
+    "url": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Sifr-Aromatics"
+   }
+  ],
+  "mapq": "Sifr Aromatics, 42 Arab St"
+ },
+ {
+  "id": "thahirah-kazura",
+  "name": "Thahirah Kazura",
+  "tier": "Heritage",
+  "founded": "1979 (family roots 1933)",
+  "area": "Kampong Gelam",
+  "address": "705 North Bridge Rd",
+  "makes": "Non-alcoholic attar, oud, bakhoor, medicated oil",
+  "story": "Another branch of the Kazura family. Thahirah Kazura, a former early childhood educator, took over from her father in 2020 and renamed the shop after herself.",
+  "links": {
+   "instagram": "https://www.instagram.com/thahirah_kazura/",
+   "facebook": "https://www.facebook.com/kazuraperfume/"
   },
-  {
-    "id": "royal-fragrances",
-    "name": "Royal Fragrances",
-    "tier": "Heritage",
-    "founded": "2007",
-    "area": "Kampong Gelam",
-    "address": "26 Bussorah St; Golden Landmark #01-46",
-    "makes": "Arabic perfume oils, oud, homemade bakhoor and incense",
-    "story": "A family-run perfume shop on Bussorah Street, by Sultan Mosque, specialising in agarwood and Arabic blends.",
-    "links": {
-      "instagram": "https://www.instagram.com/royalfragrances_sg/"
-    },
-    "sources": [
-      {
-        "title": "HalalTrip: wudhu-friendly perfumes in Singapore",
-        "url": "https://www.halaltrip.com/trip-planning/travel-guides/blog/muslim-friendly-wudhu-friendly-perfumes-in-singapore"
-      }
-    ]
+  "sources": [
+   {
+    "title": "NHB Roots: Thahirah Kazura",
+    "url": "https://www.roots.gov.sg/en/places/places-landing/Places/landmarks/Kampong-Gelam-Citizen-Engagement/Thahirah-Kazura-Pte-Ltd"
+   }
+  ],
+  "mapq": "Thahirah Kazura, 705 North Bridge Rd"
+ },
+ {
+  "id": "royal-fragrances",
+  "name": "Royal Fragrances",
+  "tier": "Heritage",
+  "founded": "2007",
+  "area": "Kampong Gelam",
+  "address": "26 Bussorah St; Golden Landmark #01-46",
+  "makes": "Arabic perfume oils, oud, homemade bakhoor and incense",
+  "story": "A family-run perfume shop on Bussorah Street, by Sultan Mosque, specialising in agarwood and Arabic blends.",
+  "links": {
+   "instagram": "https://www.instagram.com/royalfragrances_sg/"
   },
-  {
-    "id": "singapore-memories",
-    "name": "Singapore Memories",
-    "tier": "Heritage",
-    "founded": "2013",
-    "area": "Sentosa + online",
-    "address": "Scentopia, 36 Siloso Beach Walk; stockists",
-    "makes": "Orchid-based perfumes, room scents, heritage line",
-    "story": "Started by perfumer Prachi Saini Garg, who later opened Scentopia. In 2014 it obtained the formula and rights to revive Singapore Girl, the 1970s scent by Perfumes of Singapore.",
-    "links": {
-      "website": "https://singapore-memories.com/",
-      "instagram": "https://www.instagram.com/singaporememories/",
-      "facebook": "https://www.facebook.com/Singaporememories/"
-    },
-    "sources": [
-      {
-        "title": "Portfolio: Prachi Saini Garg",
-        "url": "https://portfoliomagsg.com/article/whats-in-my-portfolio-prachi-saini-garg.html"
-      }
-    ]
+  "sources": [
+   {
+    "title": "HalalTrip: wudhu-friendly perfumes in Singapore",
+    "url": "https://www.halaltrip.com/trip-planning/travel-guides/blog/muslim-friendly-wudhu-friendly-perfumes-in-singapore"
+   }
+  ],
+  "mapq": "Royal Fragrances, 26 Bussorah St"
+ },
+ {
+  "id": "singapore-memories",
+  "name": "Singapore Memories",
+  "tier": "Heritage",
+  "founded": "2013",
+  "area": "Sentosa + online",
+  "address": "Scentopia, 36 Siloso Beach Walk; stockists",
+  "makes": "Orchid-based perfumes, room scents, heritage line",
+  "story": "Started by perfumer Prachi Saini Garg, who later opened Scentopia. In 2014 it obtained the formula and rights to revive Singapore Girl, the 1970s scent by Perfumes of Singapore.",
+  "links": {
+   "website": "https://singapore-memories.com/",
+   "instagram": "https://www.instagram.com/singaporememories/",
+   "facebook": "https://www.facebook.com/Singaporememories/"
   },
-  {
-    "id": "scent-by-six",
-    "name": "Scent by SIX",
-    "tier": "Indie",
-    "founded": "2016",
-    "area": "Various",
-    "address": "Stores incl. Bugis Junction",
-    "makes": "Perfumes, home scents, workshops",
-    "story": "Founded in July 2016 by NTU alumnus Jason Lee after four years at Givaudan. Created Singapore Airlines' signature scent, Batik Flora, in 2021.",
-    "links": {
-      "website": "https://scentbysix.com/",
-      "facebook": "https://www.facebook.com/scentbysix/",
-      "tiktok": "https://www.tiktok.com/@scentbysix"
-    },
-    "sources": [
-      {
-        "title": "NTU: Making scents of the world",
-        "url": "https://ntu.edu.sg/alumni/alumni-stories-news/detail/making-scents-of-the-world"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Portfolio: Prachi Saini Garg",
+    "url": "https://portfoliomagsg.com/article/whats-in-my-portfolio-prachi-saini-garg.html"
+   }
+  ],
+  "mapq": "Scentopia, 36 Siloso Beach Walk, Sentosa"
+ },
+ {
+  "id": "scent-by-six",
+  "name": "Scent by SIX",
+  "tier": "Indie",
+  "founded": "2016",
+  "area": "Various",
+  "address": "Stores incl. Bugis Junction",
+  "makes": "Perfumes, home scents, workshops",
+  "story": "Founded in July 2016 by NTU alumnus Jason Lee after four years at Givaudan. Created Singapore Airlines' signature scent, Batik Flora, in 2021.",
+  "links": {
+   "website": "https://scentbysix.com/",
+   "facebook": "https://www.facebook.com/scentbysix/",
+   "tiktok": "https://www.tiktok.com/@scentbysix"
   },
-  {
-    "id": "maison-de-lasie",
-    "name": "Maison de L'Asie",
-    "tier": "Indie",
-    "founded": "2020",
-    "area": "Online + Escentials",
-    "address": "Online; Escentials stores",
-    "makes": "Extraits de parfum told in country chapters",
-    "story": "Elizabeth Liau, formerly in finance and the art business, launched the house in December 2020. Chapter 01 is Singapore: Nanyang, Lost Lovers and Mother x Love.",
-    "links": {
-      "website": "https://maisondelasie.sg/",
-      "facebook": "https://www.facebook.com/maisondelasie/"
-    },
-    "sources": [
-      {
-        "title": "L'Officiel Singapore interview",
-        "url": "https://www.lofficielsingapore.com/beauty/maison-de-l-asie-uses-storytelling-to-evoke-feelings-through-perfume"
-      }
-    ]
+  "sources": [
+   {
+    "title": "NTU: Making scents of the world",
+    "url": "https://ntu.edu.sg/alumni/alumni-stories-news/detail/making-scents-of-the-world"
+   }
+  ],
+  "mapq": "Scent by SIX, Bugis Junction"
+ },
+ {
+  "id": "maison-de-lasie",
+  "name": "Maison de L'Asie",
+  "tier": "Indie",
+  "founded": "2020",
+  "area": "Online + Escentials",
+  "address": "Online; Escentials stores",
+  "makes": "Extraits de parfum told in country chapters",
+  "story": "Elizabeth Liau, formerly in finance and the art business, launched the house in December 2020. Chapter 01 is Singapore: Nanyang, Lost Lovers and Mother x Love.",
+  "links": {
+   "website": "https://maisondelasie.sg/",
+   "facebook": "https://www.facebook.com/maisondelasie/"
   },
-  {
-    "id": "scent-journer",
-    "name": "Scent Journer",
-    "tier": "Indie",
-    "founded": "2021",
-    "area": "Online + stockists",
-    "address": "Online; DORS @ Design Orchard",
-    "makes": "Perfumes made for humidity; candles",
-    "story": "Founded by Joyce Lian, a Singapore Polytechnic perfumery graduate with an NUS chemistry degree, through the NUS Venture Building Programme. Uses regional botanicals like pandan.",
-    "links": {
-      "website": "https://scentjourner.com/",
-      "instagram": "https://www.instagram.com/scentjourner/",
-      "tiktok": "https://www.tiktok.com/@scentjourner"
-    },
-    "sources": [
-      {
-        "title": "Vulcan Post: Scent Journer",
-        "url": "https://vulcanpost.com/908679/scent-journer-singapore/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "L'Officiel Singapore interview",
+    "url": "https://www.lofficielsingapore.com/beauty/maison-de-l-asie-uses-storytelling-to-evoke-feelings-through-perfume"
+   }
+  ]
+ },
+ {
+  "id": "scent-journer",
+  "name": "Scent Journer",
+  "tier": "Indie",
+  "founded": "2021",
+  "area": "Online + stockists",
+  "address": "Online; DORS @ Design Orchard",
+  "makes": "Perfumes made for humidity; candles",
+  "story": "Founded by Joyce Lian, a Singapore Polytechnic perfumery graduate with an NUS chemistry degree, through the NUS Venture Building Programme. Uses regional botanicals like pandan.",
+  "links": {
+   "website": "https://scentjourner.com/",
+   "instagram": "https://www.instagram.com/scentjourner/",
+   "tiktok": "https://www.tiktok.com/@scentjourner"
   },
-  {
-    "id": "maison-21g",
-    "name": "Maison 21G",
-    "tier": "Indie",
-    "founded": "2019",
-    "area": "Duxton Hill + malls",
-    "address": "Duxton Hill; Marina Bay Sands; Ngee Ann City",
-    "makes": "Custom-blend perfumes and workshops",
-    "story": "Founded in Singapore by French scent designer Johanna Monange, who previously worked at IFF and Firmenich. Built around making your own perfume.",
-    "links": {
-      "website": "https://www.maison21g.com/",
-      "tiktok": "https://www.tiktok.com/@maison21gparis"
-    },
-    "sources": [
-      {
-        "title": "Tatler: Maison 21G",
-        "url": "https://www.tatlerasia.com/style/beauty/maison21g-bespoke-perfume-boutique-singapore-duxton-ion-orchard"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Vulcan Post: Scent Journer",
+    "url": "https://vulcanpost.com/908679/scent-journer-singapore/"
+   }
+  ]
+ },
+ {
+  "id": "maison-21g",
+  "name": "Maison 21G",
+  "tier": "Indie",
+  "founded": "2019",
+  "area": "Duxton Hill + malls",
+  "address": "Duxton Hill; Marina Bay Sands; Ngee Ann City",
+  "makes": "Custom-blend perfumes and workshops",
+  "story": "Founded in Singapore by French scent designer Johanna Monange, who previously worked at IFF and Firmenich. Built around making your own perfume.",
+  "links": {
+   "website": "https://www.maison21g.com/",
+   "tiktok": "https://www.tiktok.com/@maison21gparis"
   },
-  {
-    "id": "oo-la-lab",
-    "name": "Oo La Lab",
-    "tier": "Indie",
-    "founded": "2016",
-    "area": "Singapore + Dubai",
-    "address": "See website for the current studio",
-    "makes": "Craft perfumes; perfume-making workshops",
-    "story": "Founded by South Africa-born Dan Terry (formerly Terry Jacobson), around the Chemistry of Oo, a table of 27 core notes you blend from.",
-    "links": {
-      "website": "https://sg.oola-lab.com/",
-      "facebook": "https://www.facebook.com/CraftedinOoLa/",
-      "tiktok": "https://www.tiktok.com/@oolalab"
-    },
-    "sources": [
-      {
-        "title": "Her World: home-grown artisanal fragrances",
-        "url": "https://www.herworld.com/style/fashion/support-local-singapore-artisanal-fragrances-perfumes"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Tatler: Maison 21G",
+    "url": "https://www.tatlerasia.com/style/beauty/maison21g-bespoke-perfume-boutique-singapore-duxton-ion-orchard"
+   }
+  ],
+  "mapq": "Maison 21G"
+ },
+ {
+  "id": "oo-la-lab",
+  "name": "Oo La Lab",
+  "tier": "Indie",
+  "founded": "2016",
+  "area": "Singapore + Dubai",
+  "address": "See website for the current studio",
+  "makes": "Craft perfumes; perfume-making workshops",
+  "story": "Founded by South Africa-born Dan Terry (formerly Terry Jacobson), around the Chemistry of Oo, a table of 27 core notes you blend from.",
+  "links": {
+   "website": "https://sg.oola-lab.com/",
+   "facebook": "https://www.facebook.com/CraftedinOoLa/",
+   "tiktok": "https://www.tiktok.com/@oolalab"
   },
-  {
-    "id": "the-lab-fragrances",
-    "name": "The LAB Fragrances",
-    "tier": "Indie",
-    "founded": "2017",
-    "area": "Online + stockists",
-    "address": "Online; DORS, KrisShop",
-    "makes": "Small-batch vegan perfumes with your name on the label",
-    "story": "A Singapore niche house built around ingredient transparency. Its best seller is Earl Grey.",
-    "links": {
-      "website": "https://thelabfragrances.com/",
-      "instagram": "https://www.instagram.com/thelabfragrances/",
-      "facebook": "https://www.facebook.com/thelabfragrances/"
-    },
-    "sources": [
-      {
-        "title": "Honeycombers: perfume in Singapore",
-        "url": "https://thehoneycombers.com/singapore/perfume-in-singapore/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Her World: home-grown artisanal fragrances",
+    "url": "https://www.herworld.com/style/fashion/support-local-singapore-artisanal-fragrances-perfumes"
+   }
+  ],
+  "mapq": "Oo La Lab, 71 Amoy St"
+ },
+ {
+  "id": "the-lab-fragrances",
+  "name": "The LAB Fragrances",
+  "tier": "Indie",
+  "founded": "2017",
+  "area": "Online + stockists",
+  "address": "Online; DORS, KrisShop",
+  "makes": "Small-batch vegan perfumes with your name on the label",
+  "story": "A Singapore niche house built around ingredient transparency. Its best seller is Earl Grey.",
+  "links": {
+   "website": "https://thelabfragrances.com/",
+   "instagram": "https://www.instagram.com/thelabfragrances/",
+   "facebook": "https://www.facebook.com/thelabfragrances/"
   },
-  {
-    "id": "nefertum",
-    "name": "Nefertum Fragrances",
-    "tier": "Indie",
-    "founded": "",
-    "area": "City Hall",
-    "address": "The Adelphi #04-59, 1 Coleman St",
-    "makes": "Extraits de parfum made in Singapore; workshops",
-    "story": "Makes extraits with 40 to 50% perfume oil, aimed at lasting in tropical heat, and runs perfume workshops at The Adelphi.",
-    "links": {
-      "website": "https://nefertumfragrances.com/",
-      "instagram": "https://www.instagram.com/nefertumsg/",
-      "tiktok": "https://www.tiktok.com/@nefertumsg"
-    },
-    "sources": [
-      {
-        "title": "Nefertum on TikTok",
-        "url": "https://www.tiktok.com/@nefertumsg"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Honeycombers: perfume in Singapore",
+    "url": "https://thehoneycombers.com/singapore/perfume-in-singapore/"
+   }
+  ]
+ },
+ {
+  "id": "nefertum",
+  "name": "Nefertum Fragrances",
+  "tier": "Indie",
+  "founded": "",
+  "area": "City Hall",
+  "address": "The Adelphi #04-59, 1 Coleman St",
+  "makes": "Extraits de parfum made in Singapore; workshops",
+  "story": "Makes extraits with 40 to 50% perfume oil, aimed at lasting in tropical heat, and runs perfume workshops at The Adelphi.",
+  "links": {
+   "website": "https://nefertumfragrances.com/",
+   "instagram": "https://www.instagram.com/nefertumsg/",
+   "tiktok": "https://www.tiktok.com/@nefertumsg"
   },
-  {
-    "id": "epilogue",
-    "name": "Epilogue",
-    "tier": "New & small",
-    "founded": "2024",
-    "area": "Boat Quay",
-    "address": "The Scent Parlor; online",
-    "makes": "Extraits and EDPs",
-    "story": "Brothers Joshua and Izak Foong, with no formal perfumery training, bottle everyday Singapore life: notes include calamansi, rambutan, mandarin and tea.",
-    "links": {
-      "instagram": "https://www.instagram.com/epilogue.fragrance/"
-    },
-    "sources": [
-      {
-        "title": "Grazia: Senator, I'm Singaporean",
-        "url": "https://grazia.sg/beauty/senator-im-singaporean-the-story-behind-the-fragrance-the-home-grown-house-that-made-it/"
-      },
-      {
-        "title": "Vogue Singapore",
-        "url": "https://vogue.sg/homegrown-fragrance-brands/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Nefertum on TikTok",
+    "url": "https://www.tiktok.com/@nefertumsg"
+   }
+  ],
+  "mapq": "Nefertum Fragrances, The Adelphi, 1 Coleman St"
+ },
+ {
+  "id": "epilogue",
+  "name": "Epilogue",
+  "tier": "New & small",
+  "founded": "2024",
+  "area": "Boat Quay",
+  "address": "The Scent Parlor; online",
+  "makes": "Extraits and EDPs",
+  "story": "Brothers Joshua and Izak Foong, with no formal perfumery training, bottle everyday Singapore life: notes include calamansi, rambutan, mandarin and tea.",
+  "links": {
+   "instagram": "https://www.instagram.com/epilogue.fragrance/"
   },
-  {
-    "id": "frmytd",
-    "name": "Frmytd",
-    "tier": "New & small",
-    "founded": "",
-    "area": "Online + Chinatown",
-    "address": "Online; Late Morning, Chinatown",
-    "makes": "Small-batch perfumes",
-    "story": "Makes perfumes inspired by moments from the past, in small batches with personal stories. Scents include A New Page.",
-    "links": {
-      "website": "https://frmytd.com/",
-      "instagram": "https://www.instagram.com/frm.ytd/"
-    },
-    "sources": [
-      {
-        "title": "Vogue Singapore",
-        "url": "https://vogue.sg/homegrown-fragrance-brands/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Grazia: Senator, I'm Singaporean",
+    "url": "https://grazia.sg/beauty/senator-im-singaporean-the-story-behind-the-fragrance-the-home-grown-house-that-made-it/"
+   },
+   {
+    "title": "Vogue Singapore",
+    "url": "https://vogue.sg/homegrown-fragrance-brands/"
+   }
+  ]
+ },
+ {
+  "id": "frmytd",
+  "name": "Frmytd",
+  "tier": "New & small",
+  "founded": "",
+  "area": "Online + Chinatown",
+  "address": "Online; Late Morning, Chinatown",
+  "makes": "Small-batch perfumes",
+  "story": "Makes perfumes inspired by moments from the past, in small batches with personal stories. Scents include A New Page.",
+  "links": {
+   "website": "https://frmytd.com/",
+   "instagram": "https://www.instagram.com/frm.ytd/"
   },
-  {
-    "id": "rahasya",
-    "name": "Rahasya",
-    "tier": "New & small",
-    "founded": "2024",
-    "area": "Online + stockists",
-    "address": "Amaris; The Scent Parlor",
-    "makes": "Unisex niche perfumes inspired by modern India",
-    "story": "Founded in Singapore in 2024 by Sai Pogaru, Sachit Sood and Utkarsh Vijayvargiya. In April 2026 it became the first Singapore fragrance brand at Selfridges.",
-    "links": {
-      "instagram": "https://www.instagram.com/rahasyafragrances/"
-    },
-    "sources": [
-      {
-        "title": "The Star / ST: Rahasya at Selfridges",
-        "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/04/24/rahasya-is-first-singapore-fragrance-brand-to-launch-in-britains-selfridges"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Vogue Singapore",
+    "url": "https://vogue.sg/homegrown-fragrance-brands/"
+   }
+  ]
+ },
+ {
+  "id": "rahasya",
+  "name": "Rahasya",
+  "tier": "New & small",
+  "founded": "2024",
+  "area": "Online + stockists",
+  "address": "Amaris; The Scent Parlor",
+  "makes": "Unisex niche perfumes inspired by modern India",
+  "story": "Founded in Singapore in 2024 by Sai Pogaru, Sachit Sood and Utkarsh Vijayvargiya. In April 2026 it became the first Singapore fragrance brand at Selfridges.",
+  "links": {
+   "instagram": "https://www.instagram.com/rahasyafragrances/"
   },
-  {
-    "id": "aroma-nostalgia",
-    "name": "Aroma Nostalgia",
-    "tier": "New & small",
-    "founded": "",
-    "area": "Online",
-    "address": "Online; workshops",
-    "makes": "Perfumes and perfume-making workshops",
-    "story": "Calls itself an olfactory storyteller, drawing on the memories, rituals and everyday life of the Nusantara. Ran a Singapore HeritageFest workshop.",
-    "links": {
-      "website": "https://www.aromanostalgia.com/",
-      "instagram": "https://www.instagram.com/aromanostalgiasg/"
-    },
-    "sources": [
-      {
-        "title": "Singapore HeritageFest",
-        "url": "https://www.heritage.sg/sgheritagefest/programmes/scents-of-the-nusantara-perfumemaking-workshop"
-      }
-    ]
+  "sources": [
+   {
+    "title": "The Star / ST: Rahasya at Selfridges",
+    "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/04/24/rahasya-is-first-singapore-fragrance-brand-to-launch-in-britains-selfridges"
+   }
+  ]
+ },
+ {
+  "id": "aroma-nostalgia",
+  "name": "Aroma Nostalgia",
+  "tier": "New & small",
+  "founded": "",
+  "area": "Online",
+  "address": "Online; workshops",
+  "makes": "Perfumes and perfume-making workshops",
+  "story": "Calls itself an olfactory storyteller, drawing on the memories, rituals and everyday life of the Nusantara. Ran a Singapore HeritageFest workshop.",
+  "links": {
+   "website": "https://www.aromanostalgia.com/",
+   "instagram": "https://www.instagram.com/aromanostalgiasg/"
   },
-  {
-    "id": "zubyr",
-    "name": "ZUBYR Parfums",
-    "tier": "New & small",
-    "founded": "",
-    "area": "Little India",
-    "address": "1 Syed Alwi Rd #03-01, Song Lin Building",
-    "makes": "Perfume workshops; Middle Eastern fragrances",
-    "story": "A perfume studio with a library of 200+ ingredients, where a perfumer guides you through blending your own scent.",
-    "links": {
-      "instagram": "https://www.instagram.com/zubyr.co/"
-    },
-    "sources": [
-      {
-        "title": "Klook: ZUBYR workshop",
-        "url": "https://www.klook.com/activity/192908-personalised-perfume-making-workshop"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Singapore HeritageFest",
+    "url": "https://www.heritage.sg/sgheritagefest/programmes/scents-of-the-nusantara-perfumemaking-workshop"
+   }
+  ]
+ },
+ {
+  "id": "zubyr",
+  "name": "ZUBYR Parfums",
+  "tier": "New & small",
+  "founded": "",
+  "area": "Little India",
+  "address": "1 Syed Alwi Rd #03-01, Song Lin Building",
+  "makes": "Perfume workshops; Middle Eastern fragrances",
+  "story": "A perfume studio with a library of 200+ ingredients, where a perfumer guides you through blending your own scent.",
+  "links": {
+   "instagram": "https://www.instagram.com/zubyr.co/"
   },
-  {
-    "id": "lilee",
-    "name": "Lilee Perfume",
-    "tier": "New & small",
-    "founded": "2023",
-    "area": "Online + Orchard",
-    "address": "Online; Therapy Market, Wheelock Place",
-    "makes": "Handcrafted indie perfumes",
-    "story": "Each scent explores a big question about life and existence, inspired by Nietzsche.",
-    "links": {},
-    "sources": [
-      {
-        "title": "Honeycombers: niche perfume",
-        "url": "https://thehoneycombers.com/singapore/shop-niche-perfume-singapore/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Klook: ZUBYR workshop",
+    "url": "https://www.klook.com/activity/192908-personalised-perfume-making-workshop"
+   }
+  ],
+  "mapq": "ZUBYR Parfums, 1 Syed Alwi Rd"
+ },
+ {
+  "id": "lilee",
+  "name": "Lilee Perfume",
+  "tier": "New & small",
+  "founded": "2023",
+  "area": "Online + Orchard",
+  "address": "Online; Therapy Market, Wheelock Place",
+  "makes": "Handcrafted indie perfumes",
+  "story": "Each scent explores a big question about life and existence, inspired by Nietzsche.",
+  "links": {},
+  "sources": [
+   {
+    "title": "Honeycombers: niche perfume",
+    "url": "https://thehoneycombers.com/singapore/shop-niche-perfume-singapore/"
+   }
+  ]
+ },
+ {
+  "id": "freda-d",
+  "name": "Freda'D",
+  "tier": "New & small",
+  "founded": "2014",
+  "area": "Online",
+  "address": "Online; 61 Ubi Road 1",
+  "makes": "Artisanal and bespoke perfumes, workshops",
+  "story": "Started by Faridah Yusuf, who grew up in her father's perfume store, and her husband Hairul Azhar.",
+  "links": {
+   "website": "https://freda-d.com/",
+   "instagram": "https://www.instagram.com/fredadparfum/",
+   "facebook": "https://www.facebook.com/fredad.parfum.sg/"
   },
-  {
-    "id": "freda-d",
-    "name": "Freda'D",
-    "tier": "New & small",
-    "founded": "2014",
-    "area": "Online",
-    "address": "Online; 61 Ubi Road 1",
-    "makes": "Artisanal and bespoke perfumes, workshops",
-    "story": "Started by Faridah Yusuf, who grew up in her father's perfume store, and her husband Hairul Azhar.",
-    "links": {
-      "website": "https://freda-d.com/",
-      "instagram": "https://www.instagram.com/fredadparfum/",
-      "facebook": "https://www.facebook.com/fredad.parfum.sg/"
-    },
-    "sources": [
-      {
-        "title": "SilverKris: 7 Singapore perfume brands",
-        "url": "https://silverkris.singaporeair.com/experience/7-singapore-perfume-brands-scents/"
-      }
-    ]
+  "sources": [
+   {
+    "title": "SilverKris: 7 Singapore perfume brands",
+    "url": "https://silverkris.singaporeair.com/experience/7-singapore-perfume-brands-scents/"
+   }
+  ]
+ },
+ {
+  "id": "code-deco",
+  "name": "Code Deco",
+  "tier": "Online-first",
+  "founded": "",
+  "area": "Online",
+  "address": "Online",
+  "makes": "Artisan perfumes and sample sets",
+  "story": "Perfumer Gauri Garodia began her fragrance career at Unilever. Her Tasman in Grey is her take on a Singapore thunderstorm.",
+  "links": {
+   "instagram": "https://www.instagram.com/codedeco/",
+   "facebook": "https://www.facebook.com/CodeDecoPerfume/"
   },
-  {
-    "id": "code-deco",
-    "name": "Code Deco",
-    "tier": "Online-first",
-    "founded": "",
-    "area": "Online",
-    "address": "Online",
-    "makes": "Artisan perfumes and sample sets",
-    "story": "Perfumer Gauri Garodia began her fragrance career at Unilever. Her Tasman in Grey is her take on a Singapore thunderstorm.",
-    "links": {
-      "instagram": "https://www.instagram.com/codedeco/",
-      "facebook": "https://www.facebook.com/CodeDecoPerfume/"
-    },
-    "sources": [
-      {
-        "title": "Time Out: Code Deco",
-        "url": "https://www.timeout.com/singapore/shopping/code-deco"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Time Out: Code Deco",
+    "url": "https://www.timeout.com/singapore/shopping/code-deco"
+   }
+  ]
+ },
+ {
+  "id": "lynk",
+  "name": "Lynk Fragrances",
+  "tier": "Online-first",
+  "founded": "2019",
+  "area": "Online + stores",
+  "address": "Online; Changi Airport T2",
+  "makes": "Candles, home scents, body and hair fragrance",
+  "story": "A family business that began hand-pouring candles in their kitchen. In late 2024 it scented Downtown Line MRT stations with SBS Transit.",
+  "links": {
+   "instagram": "https://www.instagram.com/lynkfragrances/"
   },
-  {
-    "id": "lynk",
-    "name": "Lynk Fragrances",
-    "tier": "Online-first",
-    "founded": "2019",
-    "area": "Online + stores",
-    "address": "Online; Changi Airport T2",
-    "makes": "Candles, home scents, body and hair fragrance",
-    "story": "A family business that began hand-pouring candles in their kitchen. In late 2024 it scented Downtown Line MRT stations with SBS Transit.",
-    "links": {
-      "instagram": "https://www.instagram.com/lynkfragrances/"
-    },
-    "sources": [
-      {
-        "title": "Vulcan Post: Lynk Fragrances",
-        "url": "https://vulcanpost.com/888018/lynk-fragrances-all-natural-scents-brand-singapore"
-      },
-      {
-        "title": "Mothership: scented MRT stations",
-        "url": "https://mothership.sg/2025/01/downtown-line-mrt-stations-scented"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Vulcan Post: Lynk Fragrances",
+    "url": "https://vulcanpost.com/888018/lynk-fragrances-all-natural-scents-brand-singapore"
+   },
+   {
+    "title": "Mothership: scented MRT stations",
+    "url": "https://mothership.sg/2025/01/downtown-line-mrt-stations-scented"
+   }
+  ],
+  "mapq": "Lynk Fragrances, Changi Airport Terminal 2"
+ },
+ {
+  "id": "postcard",
+  "name": "Postcard",
+  "tier": "Online-first",
+  "founded": "",
+  "area": "Online + stores",
+  "address": "Online; Takashimaya B2; DORS @ Design Orchard",
+  "makes": "'Anywhere' fragrances to wear or spray on linen",
+  "story": "Founded by Hildra. Everything is formulated and made in Singapore, with plant-based perfume alcohol.",
+  "links": {
+   "website": "https://www.wearepostcard.com/",
+   "tiktok": "https://www.tiktok.com/@wearepostcard"
   },
-  {
-    "id": "postcard",
-    "name": "Postcard",
-    "tier": "Online-first",
-    "founded": "",
-    "area": "Online + stores",
-    "address": "Online; Takashimaya B2; DORS @ Design Orchard",
-    "makes": "'Anywhere' fragrances to wear or spray on linen",
-    "story": "Founded by Hildra. Everything is formulated and made in Singapore, with plant-based perfume alcohol.",
-    "links": {
-      "website": "https://www.wearepostcard.com/",
-      "tiktok": "https://www.tiktok.com/@wearepostcard"
-    },
-    "sources": [
-      {
-        "title": "Postcard: Beauty kitchen",
-        "url": "https://www.wearepostcard.com/pages/beauty-kitchen"
-      }
-    ]
+  "sources": [
+   {
+    "title": "Postcard: Beauty kitchen",
+    "url": "https://www.wearepostcard.com/pages/beauty-kitchen"
+   }
+  ]
+ },
+ {
+  "id": "placement",
+  "name": "Placement Perfumes",
+  "tier": "Online-first",
+  "founded": "",
+  "area": "Online",
+  "address": "Online",
+  "makes": "Handmade fine fragrance",
+  "story": "An independent perfume studio from Singapore making handmade fine fragrance.",
+  "links": {
+   "instagram": "https://www.instagram.com/placementperfumes/"
   },
-  {
-    "id": "placement",
-    "name": "Placement Perfumes",
-    "tier": "Online-first",
-    "founded": "",
-    "area": "Online",
-    "address": "Online",
-    "makes": "Handmade fine fragrance",
-    "story": "An independent perfume studio from Singapore making handmade fine fragrance.",
-    "links": {
-      "instagram": "https://www.instagram.com/placementperfumes/"
-    },
-    "sources": [
-      {
-        "title": "Fonts In Use: Placement Perfumes",
-        "url": "https://www.fontsinuse.com/uses/47989/placement-perfumes-branding"
-      }
-    ]
-  }
+  "sources": [
+   {
+    "title": "Fonts In Use: Placement Perfumes",
+    "url": "https://www.fontsinuse.com/uses/47989/placement-perfumes-branding"
+   }
+  ]
+ }
 ]

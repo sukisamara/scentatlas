@@ -287,7 +287,7 @@ function noteTile(n) {
     <div class="tile-icon">${n.story ? noteIcon(n.story.id, 46) : familyIcon(n.family, 40)}</div>
     <strong>${n.story ? "★ " : ""}${esc(n.name)}</strong>
     ${n.story ? `<span class="tile-tag">${esc(n.story.tagline)}</span>` : ""}
-    <small>${count ? `${count} perfume${count > 1 ? "s" : ""}` : "Not in a perfume yet"}</small>
+    ${count ? `<small>${count} perfume${count > 1 ? "s" : ""}</small>` : ""}
   </a>`;
 }
 
@@ -326,15 +326,11 @@ function pageNote(key) {
            <p class="muted">This note shows up in local perfumes but doesn't have a Singapore story yet.</p>`}
       </div>
       <div>
-        <h3>Perfumes with this note</h3>
-        ${n.perfumes.length
-          ? `<div class="mini-bottles">${n.perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>`
-          : `<p class="muted">None of the local perfumes we've found use it yet. It's here because it's part of how Singapore smells.</p>`}
-        ${st ? `<h3 style="margin-top:22px">Smell it in Singapore</h3>
-          ${places.length || stops.length
-            ? `<ul>${places.map(e => `<li>${esc(e.name)} <span class="muted">(${esc(e.area)})</span></li>`).join("")}
-                 ${stops.length ? `<li><a href="#/trail">On the scent trail</a></li>` : ""}</ul>`
-            : `<p class="muted">Not on the trail yet.</p>`}` : ""}
+        ${n.perfumes.length ? `<h3>Perfumes with this note</h3>
+          <div class="mini-bottles">${n.perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>` : ""}
+        ${st && (places.length || stops.length) ? `<h3${n.perfumes.length ? ' style="margin-top:22px"' : ""}>Smell it in Singapore</h3>
+          <ul>${places.map(e => `<li>${esc(e.name)} <span class="muted">(${esc(e.area)})</span></li>`).join("")}
+            ${stops.length ? `<li><a href="#/trail">On the scent trail</a></li>` : ""}</ul>` : ""}
       </div>
     </div>
   </article>
@@ -347,6 +343,9 @@ function pageNote(key) {
 /* ---------- Scent trail (interactive map) ----------
    Leaflet draws a real street map. Each stop has lat/lon in data/trail.json.
    "Play the walk" draws the route stop by stop and moves a walker along it. */
+const mapsQuery = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q + ", Singapore")}`;
+const PIN_ICON = `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="#EA4335" stroke="#0B0F2E" stroke-width="1.4"/><circle cx="12" cy="10" r="2.6" fill="#FAF5CF"/></svg>`;
+const mapsLink = (q, label = "Google Maps") => `<a class="maps-link" href="${mapsQuery(q)}" target="_blank" rel="noopener">${PIN_ICON}<span>${label}</span></a>`;
 const mapsSearch = s => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ", " + s.address)}`;
 function mapsRoute(stops) {
   const q = s => encodeURIComponent(s.address);
@@ -387,6 +386,7 @@ function pageTrail() {
           ${s.why ? `<p class="why">${esc(s.why)}</p>` : ""}
           <p>${esc(s.blurb)}</p>
           ${s.notes.length ? `<div class="chips">${s.notes.map(id => storyChip(noteById(id))).join("")}</div>` : ""}
+          ${s.eats ? `<div class="eats"><span class="eats-h">Where to eat</span><ul>${s.eats.map(f => `<li><a href="${mapsQuery(f.name + ", " + f.where)}" target="_blank" rel="noopener"><strong>${esc(f.name)}</strong></a> <span class="muted">${esc(f.hours)}</span></li>`).join("")}</ul></div>` : ""}
           <div class="stop-links">
             <button class="link-btn" data-show="${i}">Show on map</button>
             <a href="${mapsSearch(s)}" target="_blank" rel="noopener">Google Maps ↗</a>
@@ -396,7 +396,7 @@ function pageTrail() {
       </li>`).join("")}
     </ol>
   </div>
-  <p class="notice">${esc(t.tip)} Walking times are rough estimates. Map © OpenStreetMap contributors.</p>`;
+`;
 }
 
 function setUpTrailMap() {
@@ -501,6 +501,7 @@ function pageBrands() {
       <p>${esc(b.story)}</p>
       <p class="muted">${esc(b.makes)}</p>
       <p><strong>Where:</strong> ${esc(b.address)}</p>
+      ${b.mapq ? `<p>${mapsLink(b.mapq, "Find the store")}</p>` : ""}
       ${perfumes.length ? `<p>${perfumes.map(p => `<a href="#/perfume/${p.id}">${esc(p.name)}</a>`).join(" · ")}</p>` : ""}
       <div class="brand-foot">
         <div class="social-row">${["website", "instagram", "tiktok", "facebook"].filter(k => b.links[k]).map(k =>
@@ -521,17 +522,18 @@ function pageExperiences() {
           <span class="kicker">${esc(e.area)} · ${esc(e.host)}</span>
           <h3>${esc(e.name)}</h3>
           <p>${esc(e.what)}</p>
+          ${e.cost ? `<p class="cost"><span class="cost-tag cost-${e.cost.tier}">${e.cost.tier === "free" ? "Free" : "$".repeat(e.cost.tier)}</span> ${esc(e.cost.text)}</p>` : ""}
           <p class="muted">${esc(e.address)}</p>
           ${e.notes.length ? `<div class="chips">${e.notes.map(id => storyChip(noteById(id))).join("")}</div>` : ""}
           <div class="links">
+            ${e.mapq ? mapsLink(e.mapq) : ""}
             ${e.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}
-            ${e.check ? `<span class="badge check">To verify</span>` : ""}
           </div>
         </div>`).join("")}</div></section>`;
   };
   return `
   <h1>Experiences</h1>
-  <p class="lead">Make your own perfume, or go and smell the history for yourself. Book directly or through the third-party links.</p>
+  <p class="lead">Make your own perfume, or go and smell the history for yourself. Prices are per person and approximate: <strong>$</strong> under S$50, <strong>$$</strong> S$50–150, <strong>$$$</strong> over S$150.</p>
   ${block("Workshop", "Make your own", "Perfume-making workshops around the island.")}
   ${block("Place", "Smell the history", "Gardens, streets and temples where the notes come from. Most are free.")}`;
 }
@@ -553,14 +555,16 @@ function pageWorld() {
     <${e.status === "live" ? `a href="${esc(e.link)}"` : `button type="button" data-zoom="${esc(e.country)}"`} class="stamp stamp-${e.status}">
       <span class="stamp-status">${e.status === "live" ? esc(e.edition) : e.status === "origin" ? "Origin story" : "Coming soon"}</span>
       <strong>${esc(e.name)}</strong>
-      <small>${esc(e.status === "soon" ? e.tagline.replace(/^Coming soon:?\s*/, "") || "Notes to be mapped" : e.tagline)}</small>
+      ${e.status === "soon" && e.scents
+        ? `<span class="stamp-scents">${e.scents.map(s => `<span>${esc(s)}</span>`).join("")}</span>`
+        : `<small>${esc(e.tagline)}</small>`}
     </${e.status === "live" ? "a" : "button"}>`).join("");
 
   return `
   <section class="world-intro">
     <p class="hand">An atlas of scent</p>
     <h1>Smell the world,<br>one city at a time</h1>
-    <p class="lead">Each edition maps a place through the scents in its history: the spices it traded, the flowers it prays with, the breakfasts it wakes up to. Tap the red pin to begin, or click any country to zoom in.</p>
+    <p class="lead">Every place has a smell, and every smell has a history. Each edition follows the trade winds, migrations and rituals that shaped a place, from the spices its ports traded to the flowers its people pray with, so you know what to breathe in when you travel there. Tap the red pin to begin, or click any country to zoom in.</p>
   </section>
 
   <section class="map-frame">
@@ -653,9 +657,10 @@ function setUpWorldMap() {
   for (const f of [...countries].sort((a, b) => d3.geoArea(b) - d3.geoArea(a))) {
     if (big.length >= BIG_COUNTRY_STAMPS) break;
     if (editionByCountry.has(f.properties.name)) continue;
+    if (["Somaliland", "N. Cyprus", "Kosovo", "W. Sahara"].includes(f.properties.name)) continue; // disputed: no stamp
     const [x, y] = path.centroid(mainlandOf(f));
-    const w = Math.max(30, shortName(f.properties.name).length * 4.1 + 10);
-    const box = [x - w / 2 - 3, y - 12, x + w / 2 + 3, y + 12];
+    const w = Math.max(40, shortName(f.properties.name).length * 5.9 + 14);
+    const box = [x - w / 2 - 3, y - 15, x + w / 2 + 3, y + 15];
     if (placed.some(b => !(box[2] < b[0] || box[0] > b[2] || box[3] < b[1] || box[1] > b[3]))) continue;
     placed.push(box); big.push(f);
   }
@@ -666,12 +671,12 @@ function setUpWorldMap() {
     .on("click", (ev, d) => { ev.stopPropagation(); zoomTo(d); });
   stampG.each(function (d) {
     const name = shortName(d.properties.name);
-    const w = Math.max(30, name.length * 4.1 + 10);
+    const w = Math.max(40, name.length * 5.9 + 14);
     const g = d3.select(this).append("g").attr("class", "stamp-body")
       .attr("transform", `rotate(${(hashOf(name) % 9) - 4})`);
-    g.append("rect").attr("x", -w / 2).attr("y", -9).attr("width", w).attr("height", 18).attr("class", "stamp-paper");
-    g.append("rect").attr("x", -w / 2 + 2.5).attr("y", -6.5).attr("width", w - 5).attr("height", 13).attr("class", "stamp-inner");
-    g.append("text").attr("y", 2.6).attr("text-anchor", "middle").text(name.toUpperCase());
+    g.append("rect").attr("x", -w / 2).attr("y", -12).attr("width", w).attr("height", 24).attr("class", "stamp-paper");
+    g.append("rect").attr("x", -w / 2 + 3).attr("y", -9).attr("width", w - 6).attr("height", 18).attr("class", "stamp-inner");
+    g.append("text").attr("y", 3.4).attr("text-anchor", "middle").text(name.toUpperCase());
   });
 
   // City pins (one group per country, drawn only when zoomed in)

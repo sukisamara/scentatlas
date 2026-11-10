@@ -1,63 +1,88 @@
 [
-  {
-    "id": "singapore",
-    "name": "Singapore",
-    "status": "live",
-    "edition": "Edition 01",
-    "tagline": "Spice trade, garden city, kopitiam mornings.",
-    "link": "#/singapore",
-    "icons": [
-      "orchid",
-      "pandan",
-      "jasmine",
-      "agarwood-sandalwood",
-      "nutmeg"
-    ],
-    "country": "Singapore",
-    "city": "Singapore"
-  },
-  {
-    "id": "malaysia",
-    "name": "Malaysia",
-    "status": "soon",
-    "tagline": "Coming soon",
-    "showDot": false,
-    "country": "Malaysia"
-  },
-  {
-    "id": "indonesia",
-    "name": "Indonesia",
-    "status": "soon",
-    "tagline": "Coming soon: clove, patchouli, vetiver",
-    "country": "Indonesia"
-  },
-  {
-    "id": "thailand",
-    "name": "Thailand",
-    "status": "soon",
-    "tagline": "Coming soon",
-    "country": "Thailand"
-  },
-  {
-    "id": "philippines",
-    "name": "Philippines",
-    "status": "soon",
-    "tagline": "Coming soon: ylang-ylang",
-    "country": "Philippines"
-  },
-  {
-    "id": "vietnam",
-    "name": "Vietnam",
-    "status": "soon",
-    "tagline": "Coming soon: agarwood, cinnamon",
-    "country": "Vietnam"
-  },
-  {
-    "id": "taiwan",
-    "name": "Taiwan",
-    "status": "origin",
-    "tagline": "Where it started: making a scent in Amping, Tainan",
-    "country": "Taiwan",
-    "city": "Tainan"
-  }
+ {
+  "id": "singapore",
+  "name": "Singapore",
+  "status": "live",
+  "edition": "Edition 01",
+  "tagline": "Spice trade, garden city, kopitiam mornings.",
+  "link": "#/singapore",
+  "icons": [
+   "orchid",
+   "pandan",
+   "jasmine",
+   "agarwood-sandalwood",
+   "nutmeg"
+  ],
+  "country": "Singapore",
+  "city": "Singapore"
+ },
+ {
+  "id": "malaysia",
+  "name": "Malaysia",
+  "status": "soon",
+  "tagline": "Coming soon: agarwood (gaharu), pandan, jasmine",
+  "showDot": false,
+  "country": "Malaysia",
+  "scents": [
+   "Agarwood (gaharu)",
+   "Pandan",
+   "Jasmine"
+  ]
+ },
+ {
+  "id": "indonesia",
+  "name": "Indonesia",
+  "status": "soon",
+  "tagline": "Coming soon: patchouli, clove, nutmeg",
+  "country": "Indonesia",
+  "scents": [
+   "Patchouli",
+   "Clove",
+   "Nutmeg"
+  ]
+ },
+ {
+  "id": "thailand",
+  "name": "Thailand",
+  "status": "soon",
+  "tagline": "Coming soon: jasmine, lemongrass, kaffir lime",
+  "country": "Thailand",
+  "scents": [
+   "Jasmine",
+   "Lemongrass",
+   "Kaffir lime"
+  ]
+ },
+ {
+  "id": "philippines",
+  "name": "Philippines",
+  "status": "soon",
+  "tagline": "Coming soon: sampaguita, ylang-ylang, waling-waling orchid",
+  "country": "Philippines",
+  "scents": [
+   "Sampaguita",
+   "Ylang-ylang",
+   "Waling-waling orchid"
+  ]
+ },
+ {
+  "id": "vietnam",
+  "name": "Vietnam",
+  "status": "soon",
+  "tagline": "Coming soon: agarwood, cinnamon, star anise",
+  "country": "Vietnam",
+  "scents": [
+   "Agarwood",
+   "Cinnamon",
+   "Star anise"
+  ]
+ },
+ {
+  "id": "taiwan",
+  "name": "Taiwan",
+  "status": "origin",
+  "tagline": "Where it started: making a scent in Amping, Tainan",
+  "country": "Taiwan",
+  "city": "Tainan"
+ }
 ]

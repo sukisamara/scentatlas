@@ -367,7 +367,7 @@ body:not(.is-world) .nav-world { opacity: .85; }
 .map-stamp { cursor: pointer; }
 .map-stamp .stamp-paper { fill: #fffdf0; stroke: var(--navy); stroke-width: .8; stroke-dasharray: 1.6 1.2; }
 .map-stamp .stamp-inner { fill: none; stroke: #D63B2F; stroke-width: .6; }
-.map-stamp text { font: 700 5.6px var(--font-body); letter-spacing: .04em; fill: var(--navy); pointer-events: none; }
+.map-stamp text { font: 700 8.2px var(--font-body); letter-spacing: .04em; fill: var(--navy); pointer-events: none; }
 .map-stamp:hover .stamp-body { transform: scale(1.25); }
 .map-stamp .stamp-body { transition: transform .15s; }
 
@@ -572,3 +572,28 @@ main { min-height: 50vh; }
 
 /* Footer in navy (headings and links stay maroon) */
 .site-footer { background: var(--navy); border-top: 4px solid var(--coral); }
+
+/* World page: let the map use more of the screen */
+body.is-world main { max-width: 1480px; }
+body.is-world .map-frame { padding: clamp(8px, 1.4vw, 18px); }
+
+/* Coming-soon editions: their three signature scents */
+.stamp-scents { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+.stamp-scents span { font-size: .74rem; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--cream); border: 1.5px solid var(--navy); color: var(--navy); }
+.stamp-soon { opacity: .85; }
+
+/* Trail: hawker picks */
+.eats { margin: 12px 0 6px; padding: 10px 12px; background: #fff7e0; border: 1.5px dashed rgba(11,15,46,.3); border-radius: 10px; }
+.eats-h { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--maroon); margin-bottom: 4px; }
+.eats ul { margin: 0; padding-left: 18px; }
+.eats li { margin: 3px 0; font-size: .92rem; }
+.eats li .muted { display: block; font-size: .82rem; }
+.map-credit { font-size: .75rem; opacity: .6; margin-top: 10px; }
+
+/* Experiences: cost, Google Maps link */
+.cost { margin: 6px 0; font-size: .92rem; }
+.cost-tag { display: inline-block; min-width: 36px; text-align: center; font-weight: 700; font-size: .78rem; padding: 2px 8px; border-radius: 999px; border: 1.5px solid var(--navy); margin-right: 4px; }
+.cost-free { background: var(--olive); }
+.cost-1, .cost-2, .cost-3 { background: var(--pink); }
+.maps-link { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; }
+.maps-link svg { flex: none; }
