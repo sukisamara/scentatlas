@@ -708,7 +708,7 @@ function setUpWorldMap() {
 
   function shortName(n) {
     return ({ "United States of America": "USA", "Russia": "Russia", "Dem. Rep. Congo": "DR Congo",
-      "Central African Rep.": "C. Africa", "Saudi Arabia": "Saudi", "South Africa": "S. Africa" })[n] || n;
+      "Central African Rep.": "C. Africa", "Saudi Arabia": "Saudi", "South Africa": "S. Africa", "Colombia": "Colombia ^^" })[n] || n;
   }
 
   function sizePins() {

@@ -569,3 +569,6 @@ main { min-height: 50vh; }
 
 .site-footer .sign .heart { vertical-align: -4px; margin-left: 2px; }
 .site-footer p { max-width: none; }
+
+/* Footer in navy (headings and links stay maroon) */
+.site-footer { background: var(--navy); border-top: 4px solid var(--coral); }
