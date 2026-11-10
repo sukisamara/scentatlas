@@ -570,11 +570,12 @@ function pageWorld() {
   <section class="map-frame">
     <div class="map-cartouche"><span class="hand">Scent Atlas</span><small>Edition 01 · 2026</small></div>
     <div class="map-wrap">
-      <div class="map-canvas">
+      <p class="map-swipe">Swipe the map to explore →</p>
+      <div class="map-scroll"><div class="map-canvas">
         <svg class="world-svg" viewBox="0 0 ${MAP_W} ${MAP_H}" role="img" aria-label="Interactive world map of Scent Atlas editions"></svg>
         <div class="map-tip" hidden></div>
         <div class="zoom-panel" hidden></div>
-      </div>
+      </div></div>
       <div class="map-popup" role="dialog" hidden></div>
     </div>
     ${compassRose()}
@@ -882,7 +883,12 @@ function render() {
   document.querySelector(".wordmark-sub").textContent = onWorld ? "Smell the world" : "Singapore edition";
   document.querySelector(".footer-edition").textContent = onWorld ? "Scent Atlas" : "Singapore Edition";
   document.querySelector(".wordmark").setAttribute("href", onWorld ? "#/" : "#/singapore");
-  if (onWorld) setUpWorldMap();
+  if (onWorld) {
+    setUpWorldMap();
+    // On phones the map is wider than the screen: start it centred on Southeast Asia
+    const sc = app.querySelector(".map-scroll");
+    if (sc && sc.scrollWidth > sc.clientWidth) sc.scrollLeft = sc.scrollWidth * 0.77 - sc.clientWidth / 2;
+  }
 
   // Highlight the current menu item
   document.querySelectorAll(".site-nav a").forEach(a => {
