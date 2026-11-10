@@ -4,7 +4,7 @@
   --navy:   #0B0F2E;
   --cream:  #FAF5CF;
   --coral:  #E57B62;
-  --maroon: #1F4A3F;
+  --maroon: #6B1C1E;
   --olive:  #B8B455;
   --pink:   #E8A8C4;
 
@@ -517,7 +517,7 @@ button.stamp-soon:hover { opacity: .85; }
 button.btn { font-family: var(--font-body); font-size: inherit; cursor: pointer; }
 
 /* ============ Detailed note sections ============ */
-.note-h { font-family: var(--font-body); font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--maroon); margin: 26px 0 8px; padding-bottom: 6px; border-bottom: 2px dashed rgba(31,74,63,.3); }
+.note-h { font-family: var(--font-body); font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--maroon); margin: 26px 0 8px; padding-bottom: 6px; border-bottom: 2px dashed rgba(107,28,30,.3); }
 .facts-list { list-style: none; padding: 0; margin: 0; }
 .facts-list li { display: grid; grid-template-columns: 30px 1fr; gap: 8px; margin-bottom: 12px; }
 .fact-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--coral); color: var(--cream); border: 2px solid var(--navy); font-size: .9rem; font-weight: 700; }
@@ -547,7 +547,7 @@ h1 + .lead { margin-top: 0; }
 .known-tile.c-coral .known-icon { background: var(--coral); }
 .known-tile.c-olive .known-icon { background: var(--olive); }
 .known-tile.c-pink .known-icon { background: var(--pink); }
-.known-tile.c-maroon .known-icon { background: #c9dccf; }
+.known-tile.c-maroon .known-icon { background: #e9c7b8; }
 .known-name { font-weight: 700; font-size: 1rem; line-height: 1.2; }
 .more-link { margin-top: 16px; font-weight: 700; }
 @media (max-width: 520px) { .known-grid { grid-template-columns: repeat(2, 1fr); } }
