@@ -104,6 +104,9 @@ function sourcesList(sources) {
 
 /* ---------- Pages ---------- */
 
+// The eight notes shown on the Singapore landing page
+const HOME_PICKS = ["pandan", "kopi-teh", "bandung", "durian", "jasmine", "joss-sticks", "kaya", "tiger-balm"];
+
 function pageHome() {
   const featured = DATA.perfumes.slice(0, 3);
   return `
@@ -117,7 +120,18 @@ function pageHome() {
       <a class="btn" href="#/trail">Walk the scent trail</a>
       <a class="btn ghost" href="#/notes">Explore the notes</a>
     </div>
-    <div class="hero-chips">${DATA.notes.map(storyChip).join("")}</div>
+  </section>
+
+  <section class="section">
+    <h2>Start with a smell you know</h2>
+    <p class="section-sub">Eight everyday Singapore smells. Tap one for its story and the perfumes that use it.</p>
+    <div class="known-grid">
+      ${HOME_PICKS.map(noteById).filter(Boolean).map(n => `<a class="known-tile c-${n.color}" href="#/notes/${n.id}">
+        <span class="known-icon">${noteIcon(n.id, 56)}</span>
+        <span class="known-name">${esc(n.name)}</span>
+      </a>`).join("")}
+    </div>
+    <p class="more-link"><a href="#/notes">See all ${noteIndex().size} notes →</a></p>
   </section>
 
   <section class="section">
@@ -382,7 +396,7 @@ function pageTrail() {
       </li>`).join("")}
     </ol>
   </div>
-  <p class="notice">${esc(t.tip)} Walking times are rough estimates. Map tiles © OpenStreetMap contributors © CARTO.</p>`;
+  <p class="notice">${esc(t.tip)} Walking times are rough estimates. Map © OpenStreetMap contributors.</p>`;
 }
 
 function setUpTrailMap() {
@@ -391,9 +405,10 @@ function setUpTrailMap() {
   const stops = DATA.trail.stops;
   const pts = stops.map(s => [s.lat, s.lon]);
   const map = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-    subdomains: "abcd", maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  // OpenStreetMap's own tiles: free, no API key (CARTO now watermarks keyless requests)
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, className: "osm-tiles",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
   map.fitBounds(pts, { padding: [48, 48] });
 
