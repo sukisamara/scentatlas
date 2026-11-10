@@ -9,7 +9,7 @@
 
 const PALETTE = {
   navy: "#0B0F2E", cream: "#FAF5CF", coral: "#E57B62",
-  maroon: "#6B1C1E", olive: "#B8B455", pink: "#E8A8C4"
+  maroon: "#1F4A3F", olive: "#B8B455", pink: "#E8A8C4"
 };
 
 // Turn a word into a stable number, so each perfume always gets the same bottle
