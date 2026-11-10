@@ -872,6 +872,7 @@ function render() {
   const onWorld = page === "";
   document.body.classList.toggle("is-world", onWorld);
   document.querySelector(".wordmark-sub").textContent = onWorld ? "Smell the world" : "Singapore edition";
+  document.querySelector(".footer-edition").textContent = onWorld ? "Scent Atlas" : "Singapore Edition";
   document.querySelector(".wordmark").setAttribute("href", onWorld ? "#/" : "#/singapore");
   if (onWorld) setUpWorldMap();
 
