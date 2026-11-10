@@ -267,18 +267,6 @@ function factList(title, mark, facts) {
     <ul class="facts-list">${facts.map(f => `<li><span class="fact-mark" aria-hidden="true">${mark}</span><span>${esc(f.text)}</span></li>`).join("")}</ul>`;
 }
 
-// A real photo of the note (from Wikimedia Commons, credited under the image)
-function notePhoto(n) {
-  const ph = DATA.photos[n.key];
-  if (!ph) return "";
-  const src = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(ph.file)}?width=1200`;
-  const page = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(ph.file)}`;
-  return `<figure class="note-photo">
-    <img src="${src}" alt="${esc(ph.alt || n.name)}" loading="lazy">
-    <figcaption>${esc(ph.caption || n.name)}. Photo: ${esc(ph.author)}, <a href="${esc(ph.licenseUrl || page)}" target="_blank" rel="noopener">${esc(ph.license)}</a>, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a>.</figcaption>
-  </figure>`;
-}
-
 function noteTile(n) {
   const count = n.perfumes.length;
   return `<a class="note-tile${n.story ? " has-story" : ""}" href="#/notes/${n.key}">
@@ -311,7 +299,6 @@ function pageNote(key) {
       </div>
       <div class="icon-medallion">${st ? noteIcon(st.id, 64) : familyIcon(fam.id, 64)}</div>
     </div>
-    ${notePhoto(n)}
     <div class="note-body">
       <div>
         ${st ? `
@@ -894,7 +881,7 @@ function render() {
 /* ---------- Start ---------- */
 
 async function loadData() {
-  const files = ["photos", "notes", "perfumes", "brands", "experiences", "trail", "families", "editions", "cities", "world"];
+  const files = ["notes", "perfumes", "brands", "experiences", "trail", "families", "editions", "cities", "world"];
   const results = await Promise.all(files.map(f => fetch(`data/${f}.json`).then(r => r.json())));
   files.forEach((f, i) => DATA[f] = results[i]);
 }

@@ -532,9 +532,3 @@ h1 + .lead { margin-top: 0; }
 
 /* Footer about */
 .site-footer .about { margin: 8px 0 12px; font-size: .95rem; }
-
-/* Real photo on each note page */
-.note-photo { margin: 0; border-bottom: 3px solid var(--navy); background: var(--navy); }
-.note-photo img { display: block; width: 100%; height: clamp(220px, 38vw, 420px); object-fit: cover; }
-.note-photo figcaption { background: var(--cream); color: #555; font-size: .78rem; padding: 6px 18px; }
-.note-photo figcaption a { color: inherit; }
