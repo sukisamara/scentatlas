@@ -848,5 +848,387 @@
     "family": "spices",
     "everyday": [],
     "lore": []
+  },
+  {
+    "id": "bandung",
+    "name": "Bandung",
+    "local": "Air bandung",
+    "color": "pink",
+    "family": "beverages",
+    "aliases": [
+      "bandung",
+      "rose milk",
+      "rose syrup"
+    ],
+    "tagline": "Pink rose syrup and milk, over a lot of ice.",
+    "communities": [
+      "Hawker culture"
+    ],
+    "story": [
+      "Rose cordial stirred into evaporated or condensed milk, which turns it bright pink. It's a drinks-stall staple in Singapore, Malaysia and Brunei.",
+      "It's usually traced to the rose milk served in India, made here with evaporated milk."
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Bandung (drink)",
+        "url": "https://en.wikipedia.org/wiki/Bandung_(drink)"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "TIME magazine once described it as looking exactly like a cold glass of Pepto-Bismol.",
+        "src": {
+          "title": "TIME: Air bandung",
+          "url": "https://content.time.com/time/specials/packages/article/0,28804,1934455_1934447_1933864,00.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "durian",
+    "name": "Durian",
+    "local": "King of fruits",
+    "color": "olive",
+    "family": "fruits",
+    "aliases": [
+      "durian"
+    ],
+    "tagline": "The smell that got banned from the MRT.",
+    "communities": [
+      "Everyday Singapore"
+    ],
+    "story": [
+      "Singapore's favourite fruit and its most argued-about smell. In 1988 the MRT Corporation banned durians from trains because the smell lingers long after the fruit is gone, and air-conditioning makes it worse. The crossed-out durian sign is still up on trains and buses.",
+      "A wild species, Durio singaporensis, is named after Singapore."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Durian",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_871_2005-01-11.html"
+      },
+      {
+        "title": "Remember Singapore: roadside durian stalls",
+        "url": "https://remembersingapore.org/2025/12/10/singapore-roadside-durian-stalls/"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Durians are mostly eaten at roadside stalls. Singapore's first durian restaurant opened in Hougang in 1983.",
+        "src": {
+          "title": "Remember Singapore: roadside durian stalls",
+          "url": "https://remembersingapore.org/2025/12/10/singapore-roadside-durian-stalls/"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "An old saying sums it up: the flavour of heaven and the smell of hell.",
+        "src": {
+          "title": "Remember Singapore: roadside durian stalls",
+          "url": "https://remembersingapore.org/2025/12/10/singapore-roadside-durian-stalls/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "kaya",
+    "name": "Kaya",
+    "local": "Serikaya",
+    "color": "olive",
+    "family": "gourmand",
+    "aliases": [
+      "kaya",
+      "coconut jam"
+    ],
+    "tagline": "Coconut, egg and pandan, spread on toast.",
+    "communities": [
+      "Hainanese",
+      "Malay",
+      "Peranakan",
+      "Kopitiam"
+    ],
+    "story": [
+      "Kaya is coconut cream, eggs, sugar and pandan cooked slowly into a thick custard jam. It's eaten on toast with cold butter, next to kopi and soft-boiled eggs.",
+      "Nobody agrees where it started. Some say it's a Eurasian take on a Portuguese egg jam, some credit Hainanese cooks, and a 1920s coffee-shop worker recalled it as Malay food that Hainanese coffee shops adapted."
+    ],
+    "sources": [
+      {
+        "title": "NLB Infopedia: Kaya",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2022-07-20_115932.html"
+      },
+      {
+        "title": "Visit Singapore: Kaya toast",
+        "url": "https://www.visitsingapore.com/dining-drinks-singapore/local-dishes/kaya-toast/"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Kheng Hoe Heng, opened in 1919, is the oldest Hainanese coffee shop in Singapore; Ya Kun has been toasting since 1944.",
+        "src": {
+          "title": "Visit Singapore: Kaya toast",
+          "url": "https://www.visitsingapore.com/dining-drinks-singapore/local-dishes/kaya-toast/"
+        }
+      },
+      {
+        "text": "At Chin Mee Chin in Katong, the kaya was cooked over slow-burning charcoal.",
+        "src": {
+          "title": "NLB Infopedia: Chin Mee Chin Confectionery",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_618_2004-12-15.html"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "gula-melaka",
+    "name": "Gula melaka",
+    "local": "Palm sugar",
+    "color": "maroon",
+    "family": "gourmand",
+    "aliases": [
+      "gula melaka",
+      "palm sugar"
+    ],
+    "tagline": "Smoky dark sugar from a coconut palm's flower.",
+    "communities": [
+      "Malay",
+      "Peranakan"
+    ],
+    "story": [
+      "Gula melaka is made from the sap of the coconut palm's flower bud. Tappers cut slits in the bud, tie a pot underneath, then boil the sap down into dark, caramel-like blocks. It's named after Melaka.",
+      "It's the dark syrup in chendol, the molten centre of ondeh-ondeh, and the pour over sago pudding."
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Palm sugar",
+        "url": "https://en.wikipedia.org/wiki/Palm_sugar"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The nipah palm of the mangroves is tapped for sugar too, and its sap also goes into gula melaka.",
+        "src": {
+          "title": "NParks Buzz: Eat straight from your palm",
+          "url": "https://nparks.gov.sg/nparksbuzz/july-issue-2021/gardening/eat-straight-from-your-palm"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "chempaka",
+    "name": "Chempaka",
+    "local": "Cempaka",
+    "color": "coral",
+    "family": "white-flowers",
+    "aliases": [
+      "chempaka",
+      "champaca",
+      "champak"
+    ],
+    "tagline": "The temple flower perfumers prize.",
+    "communities": [
+      "Hindu",
+      "Buddhist",
+      "Malay"
+    ],
+    "story": [
+      "Magnolia champaca is a tall tree with fragrant pale-yellow flowers that deepen to orange, blooming through the year here. The flowers are rich in essential oil, used for perfume and hair oil.",
+      "Its white cousin, Magnolia × alba, is the cempaka putih, or white chempaka."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Magnolia champaca",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3025"
+      },
+      {
+        "title": "NParks Flora & Fauna Web: Magnolia × alba",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3024"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "The flowers are used as offerings at Hindu and Buddhist temples.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Magnolia champaca",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3025"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "Names overlap: NParks also lists cempaka among the Malay names for frangipani.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Plumeria obtusa",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/3/0/3072"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tembusu",
+    "name": "Tembusu",
+    "local": "Cyrtophyllum fragrans",
+    "color": "cream",
+    "family": "white-flowers",
+    "aliases": [
+      "tembusu"
+    ],
+    "tagline": "The $5-note tree that smells sweetest at night.",
+    "communities": [
+      "Native plant",
+      "Garden City"
+    ],
+    "story": [
+      "A native tree up to 30 m tall with deeply grooved bark. Its cream flowers turn yellow, are fragrant at night, and are followed by red berries that bats and birds eat.",
+      "The tree on the back of the Singapore $5 note is a real one: it stands on Lawn E in the Singapore Botanic Gardens."
+    ],
+    "sources": [
+      {
+        "title": "NParks Flora & Fauna Web: Cyrtophyllum fragrans",
+        "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2895"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Eight tembusu are listed as Heritage Trees around Singapore.",
+        "src": {
+          "title": "NParks Flora & Fauna Web: Cyrtophyllum fragrans",
+          "url": "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2895"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "joss-sticks",
+    "name": "Joss sticks",
+    "local": "Incense",
+    "color": "maroon",
+    "family": "resins",
+    "aliases": [
+      "joss sticks",
+      "joss stick",
+      "incense"
+    ],
+    "tagline": "The smoke of the seventh month.",
+    "communities": [
+      "Chinese",
+      "Taoist",
+      "Buddhist"
+    ],
+    "story": [
+      "Joss sticks burn at Chinese temples and home altars all year, but most of all in the seventh lunar month, Zhong Yuan Jie, when offerings are made to wandering spirits.",
+      "During the month, temples hold prayers and burn offerings, and estates fill with the smell of incense and joss paper."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Zhong Yuan Jie (Hungry Ghost Festival)",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/zhong-yuan-jie-hungry-ghost-festival"
+      },
+      {
+        "title": "Ang Mo Kio Town Council: Burning joss paper",
+        "url": "https://www.amktc.org.sg/burning-joss-paper-keep-it-safe-and-clean"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Town councils put out metal burning bins in the seventh month and ask residents not to burn incense or joss paper on grass, walkways or near cars.",
+        "src": {
+          "title": "Ang Mo Kio Town Council: Burning joss paper",
+          "url": "https://www.amktc.org.sg/burning-joss-paper-keep-it-safe-and-clean"
+        }
+      }
+    ],
+    "lore": [
+      {
+        "text": "The spirits are called hungry because they have no descendants left to make offerings to them.",
+        "src": {
+          "title": "Roots: Zhong Yuan Jie (Hungry Ghost Festival)",
+          "url": "https://www.roots.gov.sg/ich-landing/ich/zhong-yuan-jie-hungry-ghost-festival"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bunga-rampai",
+    "name": "Bunga rampai",
+    "local": "Malay potpourri",
+    "color": "pink",
+    "family": "greens",
+    "aliases": [
+      "bunga rampai",
+      "potpourri"
+    ],
+    "tagline": "Shredded pandan and flowers, handed out at weddings.",
+    "communities": [
+      "Malay"
+    ],
+    "story": [
+      "Bunga rampai is finely cut pandan leaves mixed with flowers scented with rosewater or orange blossom water. Guests at a Malay wedding are given some to mark the occasion.",
+      "The pandan in it is the same leaf that flavours kaya and kueh; its fragrance has long been used in potpourri for ceremonies."
+    ],
+    "sources": [
+      {
+        "title": "Roots: Malay Weddings",
+        "url": "https://www.roots.gov.sg/ich-landing/ich/malay-weddings"
+      },
+      {
+        "title": "NLB Infopedia: Pandan",
+        "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2021-11-15_140111.html"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Community clubs run bunga rampai workshops where you shred the pandan and blend in flowers and oils yourself.",
+        "src": {
+          "title": "onePA: Bunga rampai workshop",
+          "url": "https://www.onepa.gov.sg/events/bunga-rampai-workshop-78042757"
+        }
+      }
+    ],
+    "lore": []
+  },
+  {
+    "id": "tiger-balm",
+    "name": "Tiger Balm",
+    "local": "Camphor & menthol",
+    "color": "coral",
+    "family": "greens",
+    "aliases": [
+      "tiger balm",
+      "camphor",
+      "menthol"
+    ],
+    "tagline": "Camphor and menthol in a little hexagonal jar.",
+    "communities": [
+      "Chinese",
+      "Everyday Singapore"
+    ],
+    "story": [
+      "Tiger Balm began as an ointment made by Aw Chu Kin, a Chinese herbalist in Rangoon. After he died in 1908, his sons Aw Boon Haw ('gentle tiger') and Aw Boon Par ('gentle leopard') refined it. Boon Haw moved to Singapore in 1926 and built a much bigger factory here.",
+      "Its smell is mostly camphor and menthol, with clove and cajuput oils. In Singapore, the red and white balms are 25% camphor."
+    ],
+    "sources": [
+      {
+        "title": "Wikipedia: Tiger Balm",
+        "url": "https://en.wikipedia.org/wiki/Tiger_Balm"
+      },
+      {
+        "title": "South China Morning Post: The Tiger Balm story",
+        "url": "https://amp.scmp.com/lifestyle/health-beauty/article/2133311/tiger-balm-story-how-ointment-every-ailment-was-created-fell"
+      }
+    ],
+    "everyday": [
+      {
+        "text": "Haw Par Villa, the park of painted statues on Pasir Panjang Road, opened in 1937 as Tiger Balm Gardens.",
+        "src": {
+          "title": "Time Out Singapore: Tiger Balm",
+          "url": "https://www.timeout.com/singapore/property/haw-par-tiger-balm-building"
+        }
+      }
+    ],
+    "lore": []
   }
 ]

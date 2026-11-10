@@ -167,6 +167,50 @@ const NOTE_ICONS = {
     ${[0, 72, 144, 216, 288].map(r => `<path ${S} fill="#fffdf0" d="M32 30 Q24 10 34 6 Q44 12 34 30 Z" transform="rotate(${r} 32 32)"/>`).join("")}
     <circle ${S} fill="#c8283a" cx="32" cy="32" r="6"/>`,
 
+  bandung: `
+    <path ${S} fill="#fffdf0" d="M18 14 H46 L42 58 H22 Z"/>
+    <path fill="${PALETTE.pink}" d="M20 26 H44 L41 56 H23 Z"/>
+    <rect ${S} fill="#fffdf0" opacity=".8" x="26" y="30" width="7" height="7" rx="1.5"/>
+    <path ${S} fill="none" d="M36 4 L32 40"/>`,
+
+  durian: `
+    <ellipse ${S} fill="${PALETTE.olive}" cx="32" cy="36" rx="20" ry="22"/>
+    ${[[22, 24], [32, 20], [42, 24], [18, 36], [30, 32], [44, 36], [24, 46], [36, 46], [32, 56]].map(([x, y]) => `<path ${S} fill="#d9c25a" d="M${x - 3} ${y + 2} L${x} ${y - 4} L${x + 3} ${y + 2} Z"/>`).join("")}
+    <path ${S} fill="none" d="M32 14 V6 Q36 4 38 8"/>`,
+
+  kaya: `
+    <path ${S} fill="#fffdf0" d="M10 20 H54 V50 Q54 54 50 54 H14 Q10 54 10 50 Z"/>
+    <path fill="#9bbf5a" d="M14 24 H50 V34 Q32 40 14 34 Z"/>
+    <rect fill="#f2cf3c" x="20" y="40" width="24" height="6" rx="2"/>`,
+
+  "gula-melaka": `
+    <path ${S} fill="${PALETTE.maroon}" d="M14 34 Q14 22 32 22 Q50 22 50 34 V44 Q50 54 32 54 Q14 54 14 44 Z"/>
+    <ellipse ${S} fill="#a0522d" cx="32" cy="32" rx="18" ry="8"/>
+    <path ${S} fill="none" d="M44 18 Q50 10 56 14"/>`,
+
+  chempaka: `
+    ${[0, 40, 80, 120, 160, 200, 240, 280, 320].map(r => `<ellipse ${S} fill="#f5b85a" cx="32" cy="16" rx="4" ry="12" transform="rotate(${r} 32 32)"/>`).join("")}
+    <circle ${S} fill="${PALETTE.coral}" cx="32" cy="32" r="5"/>`,
+
+  tembusu: `
+    <rect ${S} fill="#8a6a4a" x="28" y="34" width="8" height="26" rx="2"/>
+    <path ${S} fill="${PALETTE.olive}" d="M10 34 Q8 14 32 10 Q56 14 54 34 Q44 42 32 38 Q20 42 10 34 Z"/>
+    ${[[20, 24], [32, 18], [44, 24], [26, 32], [40, 31]].map(([x, y]) => `<circle fill="#fbf0c4" stroke="${PALETTE.navy}" stroke-width="1.5" cx="${x}" cy="${y}" r="3"/>`).join("")}`,
+
+  "joss-sticks": `
+    <path ${S} fill="${PALETTE.coral}" d="M14 46 H50 L46 58 H18 Z"/>
+    ${[24, 32, 40].map(x => `<path ${S} fill="none" stroke="${PALETTE.maroon}" d="M${x} 46 V22"/><circle fill="${PALETTE.coral}" cx="${x}" cy="21" r="2"/>`).join("")}
+    <path ${S} fill="none" d="M24 16 Q20 10 24 4 M32 16 Q28 10 32 4 M40 16 Q36 10 40 4"/>`,
+
+  "bunga-rampai": `
+    <path ${S} fill="#fffdf0" d="M12 30 Q32 22 52 30 L48 54 Q32 60 16 54 Z"/>
+    ${[[22, 30], [30, 26], [38, 28], [44, 32], [26, 36], [36, 36]].map(([x, y], i) => i % 2 ? `<path ${S} fill="${PALETTE.olive}" d="M${x - 6} ${y} L${x + 6} ${y - 3}"/>` : `<circle ${S} fill="${PALETTE.pink}" cx="${x}" cy="${y}" r="3.5"/>`).join("")}`,
+
+  "tiger-balm": `
+    <path ${S} fill="#f2cf3c" d="M14 26 L22 16 H42 L50 26 V48 L42 56 H22 L14 48 Z"/>
+    <path ${S} fill="${PALETTE.coral}" d="M18 30 H46 V44 H18 Z"/>
+    <path ${S} fill="none" d="M24 40 Q30 32 36 36 Q40 38 42 34"/>`,
+
   "kopi-teh": `
     <path ${S} fill="#fffdf0" d="M12 30 H46 V44 Q46 56 29 56 Q12 56 12 44 Z"/>
     <path ${S} fill="none" d="M46 34 Q56 34 54 42 Q52 48 45 47"/>

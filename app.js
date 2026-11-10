@@ -240,7 +240,7 @@ function pageNotes(id) {
 
   return `
   <h1>The notes</h1>
-  <p class="lead">${index.size} notes from ${DATA.perfumes.length} Singapore perfumes, sorted into ${families.length} families. Tap a family to jump to it, or a note to see which perfumes use it. ★ = has a Singapore story (${storyCount}).</p>
+  <p class="lead">${index.size} notes in ${families.length} families: everything in Singapore's local perfumes, plus everyday Singapore smells like bandung and joss sticks. Tap a family to jump to it, or a note for its story and the perfumes that use it. ★ = has a Singapore story (${storyCount}).</p>
 
   <div class="family-bar">
     ${families.map(f => `<a class="family-pill" href="#/notes/family-${f.id}">${familyIcon(f.id, 26)}<span>${esc(f.name)}</span><small>${familyNotes(f).length}</small></a>`).join("")}
@@ -273,7 +273,7 @@ function noteTile(n) {
     <div class="tile-icon">${n.story ? noteIcon(n.story.id, 46) : familyIcon(n.family, 40)}</div>
     <strong>${n.story ? "★ " : ""}${esc(n.name)}</strong>
     ${n.story ? `<span class="tile-tag">${esc(n.story.tagline)}</span>` : ""}
-    <small>${count ? `${count} perfume${count > 1 ? "s" : ""}` : "On the trail"}</small>
+    <small>${count ? `${count} perfume${count > 1 ? "s" : ""}` : "Not in a perfume yet"}</small>
   </a>`;
 }
 
@@ -315,12 +315,12 @@ function pageNote(key) {
         <h3>Perfumes with this note</h3>
         ${n.perfumes.length
           ? `<div class="mini-bottles">${n.perfumes.map(p => `<a class="mini-bottle" href="#/perfume/${p.id}">${perfumeVisual(p, 46)}<span><strong>${esc(p.name)}</strong><br><small>${esc(brandById(p.brand)?.name || "")}</small></span></a>`).join("")}</div>`
-          : `<p class="muted">None listed yet.</p>`}
+          : `<p class="muted">None of the local perfumes we've found use it yet. It's here because it's part of how Singapore smells.</p>`}
         ${st ? `<h3 style="margin-top:22px">Smell it in Singapore</h3>
           ${places.length || stops.length
             ? `<ul>${places.map(e => `<li>${esc(e.name)} <span class="muted">(${esc(e.area)})</span></li>`).join("")}
                  ${stops.length ? `<li><a href="#/trail">On the scent trail</a></li>` : ""}</ul>`
-            : `<p class="muted">Coming soon.</p>`}` : ""}
+            : `<p class="muted">Not on the trail yet.</p>`}` : ""}
       </div>
     </div>
   </article>

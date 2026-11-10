@@ -1,26 +1,135 @@
 [
-  { "id": "citrus", "name": "Citrus", "color": "olive", "blurb": "Bright, zesty peels. Usually the first thing you smell.",
-    "notes": ["bergamot", "citrus", "lemon", "mandarin orange"] },
-  { "id": "fruits", "name": "Fruits & nuts", "color": "pink", "blurb": "Juicy, sweet flesh, from orchard fruit to tropical lychee.",
-    "notes": ["litchi", "pear", "rambutan"] },
-  { "id": "flowers", "name": "Flowers", "color": "pink", "blurb": "Petals of every kind: roses, orchids and wild native blooms.",
-    "notes": ["hibiscus", "lotus", "magnolia", "rose", "violet", "water lily"] },
-  { "id": "white-flowers", "name": "White flowers", "color": "cream", "blurb": "Heady, creamy blossoms that bloom at night and fill a room.",
-    "notes": ["honeysuckle", "orange blossom", "orange flower", "tuberose", "ylang-ylang", "white ginger lily"] },
-  { "id": "greens", "name": "Greens & herbs", "color": "olive", "blurb": "Leaves, stems and herbs. Fresh, crushed and a little bitter.",
-    "notes": ["green tobacco leaf", "myrtle"] },
-  { "id": "spices", "name": "Spices", "color": "maroon", "blurb": "Warm or sharp, and the reason Singapore became a port.",
-    "notes": ["ginger", "saffron"] },
-  { "id": "gourmand", "name": "Sweets & gourmand", "color": "coral", "blurb": "Edible, dessert-like notes: vanilla, caramel, tonka.",
-    "notes": ["praline", "vanilla", "tonka bean"] },
-  { "id": "woods", "name": "Woods & mosses", "color": "maroon", "blurb": "Dry, deep and long-lasting. The base most perfumes sit on.",
-    "notes": ["cedar", "teakwood", "vetiver", "woods"] },
-  { "id": "resins", "name": "Resins & balsams", "color": "coral", "blurb": "Sticky tree saps burned as incense for thousands of years.",
-    "notes": [] },
-  { "id": "musk", "name": "Musk, amber & animalic", "color": "navy", "blurb": "Soft, skin-like warmth, plus leather and suede.",
-    "notes": ["amber", "musk", "leather", "suede"] },
-  { "id": "beverages", "name": "Beverages", "color": "navy", "blurb": "Drinks in a bottle: coffee, tea and the kopitiam counter.",
-    "notes": ["tea", "green tea"] },
-  { "id": "natural", "name": "Natural & synthetic", "color": "cream", "blurb": "The air itself: sea spray, salt and water.",
-    "notes": ["aqua", "sea salt"] }
+  {
+    "id": "citrus",
+    "name": "Citrus",
+    "color": "olive",
+    "blurb": "Bright, zesty peels. Usually the first thing you smell.",
+    "notes": [
+      "bergamot",
+      "citrus",
+      "lemon",
+      "mandarin orange"
+    ]
+  },
+  {
+    "id": "fruits",
+    "name": "Fruits & nuts",
+    "color": "pink",
+    "blurb": "Juicy, sweet flesh, from orchard fruit to tropical lychee.",
+    "notes": [
+      "litchi",
+      "pear",
+      "rambutan"
+    ]
+  },
+  {
+    "id": "flowers",
+    "name": "Flowers",
+    "color": "pink",
+    "blurb": "Petals of every kind: roses, orchids and wild native blooms.",
+    "notes": [
+      "hibiscus",
+      "lotus",
+      "magnolia",
+      "rose",
+      "violet",
+      "water lily"
+    ]
+  },
+  {
+    "id": "white-flowers",
+    "name": "White flowers",
+    "color": "cream",
+    "blurb": "Heady, creamy blossoms that bloom at night and fill a room.",
+    "notes": [
+      "honeysuckle",
+      "orange blossom",
+      "orange flower",
+      "tuberose",
+      "ylang-ylang",
+      "white ginger lily"
+    ]
+  },
+  {
+    "id": "greens",
+    "name": "Greens & herbs",
+    "color": "olive",
+    "blurb": "Leaves, stems and herbs. Fresh, crushed and a little bitter.",
+    "notes": [
+      "green tobacco leaf",
+      "myrtle"
+    ]
+  },
+  {
+    "id": "spices",
+    "name": "Spices",
+    "color": "maroon",
+    "blurb": "Warm or sharp, and the reason Singapore became a port.",
+    "notes": [
+      "ginger",
+      "saffron"
+    ]
+  },
+  {
+    "id": "gourmand",
+    "name": "Sweets & gourmand",
+    "color": "coral",
+    "blurb": "Edible, dessert-like notes: vanilla, caramel, tonka.",
+    "notes": [
+      "praline",
+      "vanilla",
+      "tonka bean"
+    ]
+  },
+  {
+    "id": "woods",
+    "name": "Woods & mosses",
+    "color": "maroon",
+    "blurb": "Dry, deep and long-lasting. The base most perfumes sit on.",
+    "notes": [
+      "cedar",
+      "teakwood",
+      "vetiver",
+      "woods"
+    ]
+  },
+  {
+    "id": "resins",
+    "name": "Resins & balsams",
+    "color": "coral",
+    "blurb": "Sticky tree saps burned as incense for thousands of years.",
+    "notes": []
+  },
+  {
+    "id": "musk",
+    "name": "Musk, amber & animalic",
+    "color": "navy",
+    "blurb": "Soft, skin-like warmth, plus leather and suede.",
+    "notes": [
+      "amber",
+      "musk",
+      "leather",
+      "suede"
+    ]
+  },
+  {
+    "id": "beverages",
+    "name": "Beverages",
+    "color": "navy",
+    "blurb": "Drinks in a bottle: coffee, tea and the kopitiam counter.",
+    "notes": [
+      "tea",
+      "green tea"
+    ]
+  },
+  {
+    "id": "natural",
+    "name": "Natural & synthetic",
+    "color": "cream",
+    "blurb": "The air itself: sea spray, salt and water.",
+    "notes": [
+      "aqua",
+      "sea salt"
+    ]
+  }
 ]
