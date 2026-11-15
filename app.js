@@ -512,6 +512,8 @@ function pageBrands() {
   }).join("")}</div>`;
 }
 
+const WAITLIST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfBne6oGbCe8lb1ubFGJNTpPOLw5PcW8GXpJf3Ih8x225rnxA/viewform";
+
 function pageWalks() {
   const stops = [
     ["jasmine", "Little India", "Jasmine and marigold garlands strung for the temples."],
@@ -524,6 +526,8 @@ function pageWalks() {
     <span class="soon-badge">Coming soon</span>
     <h1>Scent walks, together</h1>
     <p class="lead">Small-group walks along the scent trail, smelling Singapore as we go: from garland stalls to attar shops, spice gardens and temple incense, with the stories behind each smell.</p>
+    <a class="btn waitlist-btn" href="${WAITLIST_URL}" target="_blank" rel="noopener">Join the waitlist ↗</a>
+    <p class="waitlist-note">Takes 30 seconds. You'll hear first when dates are out.</p>
   </div>
   <section class="section">
     <h2>What we'll smell</h2>
@@ -535,7 +539,7 @@ function pageWalks() {
   </section>
   <section class="section">
     <h2>Until then</h2>
-    <p>Dates, prices and sign-up are coming soon. In the meantime you can walk it yourself with the <a href="#/trail">one-day scent trail</a>, or <a href="#/experiences">make your own perfume</a>.</p>
+    <p>Dates and prices are coming soon, and the waitlist hears first: <a href="${WAITLIST_URL}" target="_blank" rel="noopener">join here</a>. In the meantime you can walk it yourself with the <a href="#/trail">one-day scent trail</a>, or <a href="#/experiences">make your own perfume</a>.</p>
   </section>`;
 }
 

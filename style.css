@@ -632,3 +632,5 @@ body.is-world .map-frame { padding: clamp(8px, 1.4vw, 18px); }
 .walk-stop { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #fffdf0; border: 2px solid var(--navy); border-radius: 14px; box-shadow: 4px 4px 0 var(--navy); }
 .walk-stop p { margin: 2px 0 0; font-size: .92rem; }
 .walk-icon { flex: none; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: var(--cream); border: 2px solid var(--navy); }
+.walks-hero .waitlist-btn { margin-top: 22px; background: var(--coral); color: var(--navy); }
+.walks-hero .waitlist-note { color: var(--pink); font-size: .85rem; margin: 10px 0 0; }
