@@ -142,6 +142,7 @@ function pageHome() {
       ${homeCard("Scent trail", "One walkable day: garlands, attar, spices, incense.", "#/trail", "pink")}
       ${homeCard("Brands", `${DATA.brands.length} homegrown perfume houses, old and new.`, "#/brands", "maroon")}
       ${homeCard("Experiences", "Make your own perfume, or visit the places behind the notes.", "#/experiences", "navy")}
+      ${homeCard("Scent walks", "Walk the trail together in a small group. Join the waitlist.", "#/walks", "olive", "Soon")}
     </div>
   </section>
 
@@ -152,10 +153,10 @@ function pageHome() {
   </section>`;
 }
 
-function homeCard(title, text, href, color) {
+function homeCard(title, text, href, color, badge) {
   return `<a class="card" href="${href}">
     <div class="swatch-top bg-${color}"></div>
-    <h3>${title}</h3><p>${text}</p></a>`;
+    <h3>${title}${badge ? ` <span class="nav-soon">${badge}</span>` : ""}</h3><p>${text}</p></a>`;
 }
 
 function perfumeCard(p) {
