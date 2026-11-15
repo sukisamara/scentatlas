@@ -218,7 +218,7 @@ function pagePerfume(id) {
     <div>
       <p class="fam-line big">${familiesOf(p).map(f => `<a href="#/notes/family-${f.id}">${familyIcon(f.id, 22)}${esc(f.name)}</a>`).join("")}</p>
       ${notesHtml}
-      ${p.notesComplete ? "" : `<p class="notice">We've only found part of this perfume's notes so far. Full list coming soon.</p>`}
+      ${p.notesComplete ? "" : `<p class="notice">We have only found part of this perfume's notes so far. Full list coming soon.</p>`}
     </div>
   </div>
 
@@ -324,7 +324,7 @@ function pageNote(key) {
           ${factList("In everyday life", "✦", st.everyday)}
           ${factList("Folklore &amp; ritual", "☾", st.lore)}`
         : `<p>${esc(fam.blurb)}</p>
-           <p class="muted">This note shows up in local perfumes but doesn't have a Singapore story yet.</p>`}
+           <p class="muted">This note shows up in local perfumes but does not have a Singapore story yet.</p>`}
       </div>
       <div>
         ${n.perfumes.length ? `<h3>Perfumes with this note</h3>
@@ -528,10 +528,10 @@ function pageWalks() {
     <h1>Scent walks, together</h1>
     <p class="lead">Small-group walks along the scent trail, smelling Singapore as we go: from garland stalls to attar shops, spice gardens and temple incense, with the stories behind each smell.</p>
     <a class="btn waitlist-btn" href="${WAITLIST_URL}" target="_blank" rel="noopener">Join the waitlist ↗</a>
-    <p class="waitlist-note">Takes 30 seconds. You'll hear first when dates are out.</p>
+    <p class="waitlist-note">Takes 30 seconds. You will hear first when dates are out.</p>
   </div>
   <section class="section">
-    <h2>What we'll smell</h2>
+    <h2>What we will smell</h2>
     <div class="walk-stops">${stops.map(([id, area, text]) => `
       <div class="walk-stop">
         <span class="walk-icon">${noteIcon(id, 44)}</span>
@@ -665,7 +665,7 @@ function setUpWorldMap() {
 
   const editionByCountry = new Map(DATA.editions.map(e => [e.country, e]));
   let k = 1;            // current zoom level
-  let current = null;   // the country we're zoomed into
+  let current = null;   // the country we are zoomed into
 
   // Layers
   const layer = svg.append("g").attr("class", "zoom-layer");
@@ -848,7 +848,7 @@ function setUpWorldMap() {
       html = `
         <span class="kicker">Coming soon</span>
         <h3>${esc(city.n)}</h3>
-        <p class="popup-stats">${esc(countryName || "")}${city.cap ? " · capital" : ""}. This city hasn't been mapped yet. Its notes, perfumes and scent trail are still to come.</p>`;
+        <p class="popup-stats">${esc(countryName || "")}${city.cap ? " · capital" : ""}. This city has not been mapped yet. Its notes, perfumes and scent trail are still to come.</p>`;
     }
     popup.innerHTML = `<button class="popup-close" aria-label="Close">×</button>` + html;
     popup.querySelector(".popup-close").addEventListener("click", e2 => { e2.stopPropagation(); closePopup(); });
@@ -888,7 +888,7 @@ function setUpWorldMap() {
 }
 
 function pageNotFound() {
-  return `<h1>Lost the scent</h1><p class="lead">That page doesn't exist. <a href="#/">Back to the world map</a>.</p>`;
+  return `<h1>Lost the scent</h1><p class="lead">That page does not exist. <a href="#/">Back to the world map</a>.</p>`;
 }
 
 /* ---------- Router ---------- */
@@ -955,7 +955,7 @@ loadData()
   .then(() => { render(); window.addEventListener("hashchange", render); })
   .catch(err => {
     console.error(err);
-    app.innerHTML = `<h1>Couldn't load the data</h1>
+    app.innerHTML = `<h1>Could not load the data</h1>
       <p class="lead">If you opened index.html straight from your computer, browsers block the data files.
       Open the GitHub Pages link instead (or run a local server).</p>`;
   });
