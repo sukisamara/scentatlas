@@ -528,7 +528,6 @@ function pageWalks() {
     <h1>Scent walks, together</h1>
     <p class="lead">Small-group walks along the scent trail, smelling Singapore as we go: from garland stalls to attar shops, spice gardens and temple incense, with the stories behind each smell.</p>
     <a class="btn waitlist-btn" href="${WAITLIST_URL}" target="_blank" rel="noopener">Join the waitlist ↗</a>
-    <p class="waitlist-note">Takes 30 seconds. You will hear first when dates are out.</p>
   </div>
   <section class="section">
     <h2>What we will smell</h2>
