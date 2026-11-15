@@ -621,3 +621,14 @@ body.is-world .map-frame { padding: clamp(8px, 1.4vw, 18px); }
   .site-footer .sign .heart { width: 18px; height: 18px; vertical-align: -3px; }
   .site-footer .footer-small { font-size: .72rem; margin-top: 18px; padding-top: 10px; }
 }
+
+/* Scent walks (coming soon) */
+.nav-soon { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; background: var(--coral); color: var(--navy); padding: 1px 6px; border-radius: 999px; vertical-align: 2px; margin-left: 2px; }
+.walks-hero { background: var(--navy); color: var(--cream); border-radius: 22px; padding: clamp(24px, 5vw, 48px); }
+.walks-hero h1 { color: var(--cream); margin: 10px 0 8px; }
+.walks-hero .lead { color: var(--cream); max-width: 60ch; margin: 0; }
+.soon-badge { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--pink); color: var(--navy); padding: 4px 12px; border-radius: 999px; transform: rotate(-2deg); }
+.walk-stops { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.walk-stop { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #fffdf0; border: 2px solid var(--navy); border-radius: 14px; box-shadow: 4px 4px 0 var(--navy); }
+.walk-stop p { margin: 2px 0 0; font-size: .92rem; }
+.walk-icon { flex: none; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: var(--cream); border: 2px solid var(--navy); }

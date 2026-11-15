@@ -512,6 +512,33 @@ function pageBrands() {
   }).join("")}</div>`;
 }
 
+function pageWalks() {
+  const stops = [
+    ["jasmine", "Little India", "Jasmine and marigold garlands strung for the temples."],
+    ["attar", "Kampong Gelam", "Alcohol-free attar in the city's oldest perfume shops."],
+    ["nutmeg", "Fort Canning", "Nutmeg, clove and pepper in a replica of the 1822 spice garden."],
+    ["joss-sticks", "Chinatown", "Incense coils drifting out of a Teochew temple."],
+  ];
+  return `
+  <div class="walks-hero">
+    <span class="soon-badge">Coming soon</span>
+    <h1>Scent walks, together</h1>
+    <p class="lead">Small-group walks along the scent trail, smelling Singapore as we go: from garland stalls to attar shops, spice gardens and temple incense, with the stories behind each smell.</p>
+  </div>
+  <section class="section">
+    <h2>What we'll smell</h2>
+    <div class="walk-stops">${stops.map(([id, area, text]) => `
+      <div class="walk-stop">
+        <span class="walk-icon">${noteIcon(id, 44)}</span>
+        <div><strong>${esc(area)}</strong><p>${esc(text)}</p></div>
+      </div>`).join("")}</div>
+  </section>
+  <section class="section">
+    <h2>Until then</h2>
+    <p>Dates, prices and sign-up are coming soon. In the meantime you can walk it yourself with the <a href="#/trail">one-day scent trail</a>, or <a href="#/experiences">make your own perfume</a>.</p>
+  </section>`;
+}
+
 function pageExperiences() {
   const block = (kind, title, intro) => {
     const items = DATA.experiences.filter(e => e.kind === kind);
@@ -874,6 +901,7 @@ function render() {
     "trail": pageTrail,
     "brands": pageBrands,
     "experiences": pageExperiences,
+    "walks": pageWalks,
   };
   app.innerHTML = (routes[page] || pageNotFound)();
 
